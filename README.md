@@ -136,7 +136,6 @@ usuario necesita.
 * Este proyecto se debe resolver en duplas.
 * El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
@@ -439,6 +438,7 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * [ ] Pasa tests (`npm test`)
 * [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
+* [ ] Incluye un _plan de acción_ de tus objetivos de aprendizaje prioritizado en `README.md` (o otro archivo).
 * [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
 * [ ] Incluye historias de usuario en `README.md`.
 * [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
