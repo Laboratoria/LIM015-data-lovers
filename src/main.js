@@ -1,7 +1,7 @@
 import data from './data/athletes/athletes.js';
 //muestra la opción seleccionada en el select(caja de filtrado) y guarda el valor de la selección en una variable;
-const select= document.querySelector('#select');
-const options =document.querySelector('#options');
+const select= document.querySelector('.select');
+const options =document.querySelector('.options');
 const contentSelect = document.querySelector('#select .content-select');
 const hiddenInput = document.querySelector('#userSelection');
 
