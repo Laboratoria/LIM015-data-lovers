@@ -1,0 +1,91 @@
+*{
+    font-family: 'Mulish', sans-serif;
+    margin: 0px;
+}
+footer .rings-logo{
+    background:#02A650;
+    position: relative;
+    left: 0%;
+    right: 0%;
+    top: 1.29%;
+    bottom: 1.29%;
+    width: 94px;
+    height: 66.25px;
+}
+/* box filter*/
+/* Caja dónde se selecciona las opciones*/
+.select-box{
+    width: 270px;
+}
+.select{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 36px;
+    left: 0px;
+    top: 1px;
+    background: white;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.03);
+    border: 1px solid  #BABFC3;
+    border-radius: 15px;
+}
+.select .content-select{
+    width: 217px;
+    height: 20px;
+    left: 26.5px;
+    top: 8px;
+    border-radius: 4px;
+}
+.filter-criteria{
+    width: fit-content;
+    height: 18px;
+    left: -3.5px;
+    top: 1px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    text-align: center;
+}
+.select .down-icon{
+    width: 10px;
+    height: 20px;
+}
+.select.active,
+.select:hover{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
+}
+/*Desplegable de opciones*/
+.options{
+    display: none;
+    background: white;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.03);
+    border: 1px solid  #BABFC3;
+    border-radius: 15px;
+    max-height: 200px;
+    overflow: auto;
+}
+.options.active{
+    display: block;
+}
+.content-option{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all;
+    height: 64px;
+}
+.content-option img {
+    width: 40px;
+    height: 40px;
+}
+.content-option:hover {
+    background:#02A650; 
+}
+.content-option:hover p{
+    color: white; 
+}
