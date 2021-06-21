@@ -1,0 +1,63 @@
+header {
+  background-color: #ffd200;  
+}
+.suscribirse {
+  width: 70px;
+  height: 16px;
+  margin-left: 1000px;
+  padding-top: -10px;
+  color: #ffffff;
+}
+.slogan {
+  padding-left: 10px;  
+}
+.botones {
+  text-align: center;
+  padding: 20px;
+}
+.container {
+background-color: #000000;
+display: flex;
+width: 100%;
+}
+.column1 {
+  color: #ffffff;
+  margin-left: 40px;
+}
+.column2 {
+  color: #ffffff;
+  margin-left: 100px;
+}
+.column3 {
+  color: #ffffff;
+  margin-left: 100px;
+}
+.containerFooter {
+  background-color: #ffd200;
+  text-align: center;
+}
+.olimpiadas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.relevo1 {
+  text-align: right;
+  margin-top: -100px;
+  margin-right: 30px;
+}
+.relevo2 {
+  text-align: right;
+  margin-left: 500px;
+  margin-right: 30px;
+}
+.relevo3 {
+  text-align: right;
+}
+.antorcha {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+.socios {
+  text-align: center;
+}

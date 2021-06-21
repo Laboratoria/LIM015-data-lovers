@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="firstScreen">
+    <header>
+      <label class="slogan">OLYMPEDIA</label>
+      <img>
+      <nav>
+        <label class="suscribirse">SUSCRIBETE</label>
+      </nav>
+    </header>
+
+    <section>
+      <div class="botones">
+        <button id="atletas">ATLETAS</button>
+        <button id="paises">PAISES</button>
+      </div>
+      <div class="olimpiadas">
+        <img src="imagen1.jpg" alt="Olimpiadas">
+      </div>
+
+      <main>
+        <img src="antorcha.png" alt="antorcha" class="antorcha">
+        <h2 class="relevo1">RELEVO DE LA ANTORCHA</h2>
+        <p class="relevo2">En la Antigua Grecia se tenía la tradición de mantener un fuego encendido durante los Juegos
+          Olímpicos; sin embargo, durante muchos años esto se dejó de hacer hasta que en la edición de Ámsterdam 1928 se
+          retomó, aunque fue hasta 1936 cuando se comenzaron a hacer relevos para transportarla.</p>
+        <button class="relevo3">Ver mas</button>
+      </main>
+      <figure>
+        <h2 class="socios">SOCIOS MUNDIALES DE LOS JUEGOS OLIMPICOS</h2>
+      </figure>
+
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="column1">
+          <h3>Sobre los juegos</h3>
+          <label>Vision</label><br>
+          <label>Emblema</label><br>
+          <label>Mascota</label><br>
+          <label>Sostenibilidad</label>
+        </div>
+        <div class="column2">
+          <h3>Noticias</h3>
+          <label>Podcast</label><br>
+          <label>Temas</label>
+        </div>
+        <div class="column3">
+          <h3>Redes Sociales</h3>
+          <label>Idioma</label>
+        </div>
+      </div>
+      <div class="containerFooter">
+        <label class="copyright">Olympedia 2021 - Todos los derechos reservados</label>
+      </div>
+    </footer>
+  </div>
+
+  <div id="secondScreen" style="display:none;">
+    <header>
+      <label class="slogan">OLYMPEDIA</label>
+      <img>
+    </header>
+
+    <div class="botones">
+      <button id="paises2">PAISES</button>
+      <button id="home">HOME</button>
+    </div>
+    <select id="gender">
+      <option value="">GENERO</option>
+      <option value="femenino">FEMENINO</option>
+      <option value="masculino">MASCULINO</option>
+    </select>
+
+    <select id="sport">
+      <option value="">DISCIPLINA</option>
+
+    </select>
+
+  </div>
+
+  <div id="thirdScreen" style="display:none;">
+    <header>
+      <label class="slogan">OLYMPEDIA</label>
+      <img>
+    </header>
+    <div class="botones">
+      <button id="atletas2">ATLETAS</button>
+      <button id="home2">HOME</button>
+    </div>
+    <select id="medals">
+      <option value="">N° DE MEDALLAS</option>
+      <option value="max">MAXIMO</option>
+      <option value="min">MINIMO</option>
+    </select>
+  </div>
+
+
+
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
