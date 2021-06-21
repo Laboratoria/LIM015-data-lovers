@@ -3,12 +3,84 @@
   <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <title>holaaaaaaaaaaaaaa</title>
+    <link rel="stylesheet" href="normalize.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/4177a2ab13.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <h1>DataLovers</h1>
     <div id="root"></div>
+
+    <section class="filter-container">
+      <section class="select-box">
+        <label class="select" id="select">
+          <div class="content-select">
+            <p class="filter-criteria">criterio de filtro</p>
+          </div>
+          <i class="down-icon fas fa-sort-down"></i>
+        </label>
+        <label class="options" id="options">
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/001-paraguay.png" alt="">
+              <p class="data">Paraguay</p>
+            </div>
+          </a>
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/002-senegal.png" alt="">
+              <p class="data">Senegal</p>
+            </div>
+          </a>
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/003-democratic republic of congo.png" alt="">
+              <p class="data">Republica del Congo</p>
+            </div>
+          </a>
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/004-estonia.png" alt="">
+              <p class="data">Estonia</p>
+            </div>
+          </a>
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/005-georgia.png" alt="">
+              <p class="data">Georgia</p>
+            </div>
+          </a>
+          <a href="#" class="option">
+            <div class="content-option">
+              <img src="./img-paises/006-ghana.png" alt="">
+              <p class="data">Ghana</p>
+            </div>
+          </a>
+        </label>
+      </section>
+      <input type="hidden" class="user-selection" id="userSelection">
+    </section>
+  
+
+    <footer>
+      <img class="rings-logo"src="img-logo/rings.png"/>
+      <section>
+        <div>
+          <i class="linkedin-icon fab fa-linkedin"></i>
+          <i class="github-icon fab fa-github"></i>
+        </div>
+        <div>
+          <i class="linkedin-icon fab fa-linkedin"></i>
+          <i class="github-icon fab fa-github"></i>
+        </div>
+      </section>
+      <section>
+        <p>© by Cristina Rebaza Garcia</p>
+        <p>© by Alisson Cruz Holguin</p>
+      </section>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
