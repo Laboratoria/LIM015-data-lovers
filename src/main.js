@@ -17,12 +17,12 @@ navToggle.addEventListener("click", () => {
     }
 });
 
-document.getElementById("atletas").addEventListener("click", () => {
+document.getElementById("athletes").addEventListener("click", () => {
     document.getElementById("firstScreen").style.display = "none";
-    document.getElementById("thirdScreen").style.display = "none";
     document.getElementById("secondScreen").style.display = "block";
+    document.getElementById("thirdScreen").style.display = "none";
 });
-document.getElementById("paises").addEventListener("click", () => {
+document.getElementById("countries").addEventListener("click", () => {
     document.getElementById("firstScreen").style.display = "none";
     document.getElementById("secondScreen").style.display = "none";
     document.getElementById("thirdScreen").style.display = "block";

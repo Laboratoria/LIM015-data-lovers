@@ -6,47 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div class="container logo-nav-container">
-            <a id="home">OLYMPEDIA</a>
+            <div class="logo">
+                <a id="home">OLYMPEDIA</a>
+                <img src="img/logo.png" class="img-logo">
+            </div>
             <button class="nav-toggle" aria-label="Abrir menú">
                 <i class="fas fa-bars"></i>
               </button>
-            <img src="" alt="">
             <nav class="navigation">
                 <ul class="nav-menu">
-                    <li><a id="atletas">Atletas</a></li>
-                    <li><a id="paises">Países</a></li>
-                    <li><a id="home">Suscribete</a></li>
+                    <li><a id="athletes">ATLETAS</a></li>
+                    <li><a id="countries">PAISES</a></li>
+                    <li><a id="suscribe">SUSCRIBETE</a></li>
                 </ul>
             </nav>
         </div>
 
     </header>
     <main>
-        <section id="firstScreen">
-            <aside><img src="antorcha.png" alt="antorcha" class="antorcha"></aside>
-            <h2 class="relevo1">RELEVO DE LA ANTORCHA</h2>
-            <p class="relevo2">En la Antigua Grecia se tenía la tradición de mantener un fuego encendido durante los Juegos Olímpicos; sin embargo, durante muchos años esto se dejó de hacer hasta que en la edición de Ámsterdam 1928 se retomó, aunque fue hasta 1936 cuando
-                se comenzaron a hacer relevos para transportarla.</p>
-            <button class="relevo3">Ver mas</button>
-            <figure>
-                <h2 class="socios">SOCIOS MUNDIALES DE LOS JUEGOS OLIMPICOS</h2>
-            </figure>
+        <section id="firstScreen" class="firstScreen">
+            <h2 class="partners">SOCIOS MUNDIALES DE LOS JUEGOS OLIMPICOS</h2>
+            <ul class="list-partners">
+                <li class="partners-item">
+                    <img class="img-partner" src="img/airbnb.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/alibaba.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/allianz.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/bridgestone.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/intel.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/samsung.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/toyota.png"></img>
+                </li>
+                <li class="partners-item">
+                    <img class="img-partner" src="img/visa.png"></img>
+                </li>
+            </ul>
         </section>
 
         <section id="secondScreen" style="display:none;">
-            <div class="botones">
-                <button id="paises2">PAISES</button>
-                <button id="home">HOME</button>
-            </div>
             <select id="gender">
               <option value="">GENERO</option>
-              <option value="femenino">FEMENINO</option>
-              <option value="masculino">MASCULINO</option>
+              <option value="female">FEMENINO</option>
+              <option value="male">MASCULINO</option>
             </select>
 
             <select id="sport">
@@ -56,10 +79,6 @@
 
 
         <section id="thirdScreen" style="display:none;">
-            <div class="botones">
-                <button id="atletas2">ATLETAS</button>
-                <button id="home2">HOME</button>
-            </div>
             <select id="medals">
               <option value="">N° DE MEDALLAS</option>
               <option value="max">MAXIMO</option>
@@ -68,21 +87,23 @@
         </section>
     </main>
     <footer>
-        <div class="column1">
-            <h3>Sobre los juegos</h3>
-            <label>Vision</label><br>
-            <label>Emblema</label><br>
-            <label>Mascota</label><br>
-            <label>Sostenibilidad</label>
-        </div>
-        <div class="column2">
-            <h3>Noticias</h3>
-            <label>Podcast</label><br>
-            <label>Temas</label>
-        </div>
-        <div class="column3">
-            <h3>Redes Sociales</h3>
-            <label>Idioma</label>
+        <div class="container-column">
+            <div class="column">
+                <h3>Sobre los juegos</h3>
+                <label>Vision</label><br>
+                <label>Emblema</label><br>
+                <label>Mascota</label><br>
+                <label>Sostenibilidad</label>
+            </div>
+            <div class="column">
+                <h3>Noticias</h3>
+                <label>Podcast</label><br>
+                <label>Temas</label>
+            </div>
+            <div class="column">
+                <h3>Redes Sociales</h3>
+                <label>Idioma</label>
+            </div>
         </div>
         <div class="containerFooter">
             <label class="copyright">Olympedia 2021 - Todos los derechos reservados</label>
