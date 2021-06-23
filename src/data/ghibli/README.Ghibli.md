@@ -24,5 +24,5 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
 	[X]Sprint y retrospectiva.
 	[X]Ajustar plan de Acción.
 	[X]Figma definitivo, ajustado a plan de Acción producto del feedback.
-	[]Sprint checkout (entrega de resultados de retrospectiva).
+	[X]Sprint checkout (entrega de resultados de retrospectiva).
 	[]Comenzar código base del proyecto (HTML).
