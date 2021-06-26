@@ -14,7 +14,7 @@ Personas interesadas en obtener más información sobre sus películas favoritas
 La interfaz de la aplicación debe ser llamativa, y permitir al usuario utilizarla, aún en caso de que no domine el idioma, además debe estar acorde a su contenido, ya que Studio ghibli se caracteriza por sus animaciones.
 Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la información que desee, mediante filtros, por ejemplo, de una forma sencilla y amigable.
 
-# Diseño de interfaz (*Proceso de Diseño*):
+**Diseño de interfaz (*Proceso de Diseño*):**
 
 1. Consideraciones generales:
    Analizar tipografías.
@@ -40,13 +40,13 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
 https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1
 
 4. Definición de listo (17/06 al 23/06):
-	[X]Hacer skecth de baja fidelidad.
-	[X]Hacer skecth em Figma.
-	[X]Feedback.
-	[X]Sprint y retrospectiva.
-	[X]Ajustar plan de Acción.
-	[X]Figma definitivo, ajustado a plan de Acción producto del feedback.
-	[X]Sprint checkout (entrega de resultados de retrospectiva).
+[X]Hacer skecth de baja fidelidad.
+[X]Hacer skecth em Figma.
+[X]Feedback.
+[X]Sprint y retrospectiva.
+[X]Ajustar plan de Acción.
+[X]Figma definitivo, ajustado a plan de Acción producto del feedback.
+[X]Sprint checkout (entrega de resultados de retrospectiva).
 
 # Ordenar:
 
@@ -60,7 +60,7 @@ A través de la toma de feedback, se realizan los siguientes cambios:
 - Se agregan los títulos de las películas en el homepage, para que el usuario pueda identificarlas mejor.
 - Se realiza test de usabilidad para determinar cuántas películas mostrar en la versión móvil del homepage con los siguientes resultados:
 	* "Un póster es demasiado grande, hace incoveniente buscar una película sin usar los filtros"
-	* "No molestan tres poster, pero difuculta ubicar una película visualmente"
+	* "No molestan tres poster, pero dificulta ubicar una película visualmente"
 	* "Mostrar dos películas me parece lo más óptimo"
 - Se adiciona diseño de interfaz en caso de que la película seleccionada no posea locación o vehículos.
 - Se agrega un botón para limpiar filtros.
