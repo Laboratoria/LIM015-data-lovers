@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 0px;
+    background-color: #00283A;
+    align-items: center;
+}
+input[type=search] {
+    width: 50%;
+}
+input[type=submit] {
+    background-color: #FD7D24;
+}
+.search input {
+    padding: 10px
+}
+header ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+ol {
+    list-style: none;
+}
+header a {
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
