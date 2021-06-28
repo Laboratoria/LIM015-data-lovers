@@ -2,30 +2,33 @@
 .bio{
     display: flex;
     background: #6686AC;
-    padding: 0.5px 0.5px;
+    padding: 50px 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     justify-content: center;
-
+    align-items: center;
 
 }
 .questionbio{
     text-align: left;
     width: 320px;
+    padding-bottom: 18px;
+    line-height: 44px;
 
 }
 .ghiblibio{
     text-align: left;
     width: 50%;
+    line-height: 34px;
 }
 .biocontainer{
     display: flex;
-    align-items: center;
+
 }
 .totoroimage{
 
-    width: 190px;
-    height: 180px;
+    width: 280px;
+    height: 250px;
     border-radius: 50%;
     text-align: right;
     padding-left: 15px;
@@ -39,6 +42,8 @@ background: rgba(197, 198, 199, 0.91);
 padding: 1px 1px;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 18px;
+padding-top: 50px ;
+padding-bottom: 50px;
 }
 .imagefounders{
     width: 170px;
@@ -59,10 +64,6 @@ font-size: 18px;
     text-align: center;
     object-fit: cover;
 }
-.h2founders{
-    text-align: center;
-    align-items:flex-start;
-}
 
 .founderscontainer{
     display: flex;
@@ -71,5 +72,88 @@ font-size: 18px;
 }
 .titlefounder{
     text-align: center;
+    padding-bottom: 40px;
     
+}
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+header{
+    background-color: rgba(53,91,145,90%);
+    height: 600px;
+    width: 100%;
+}
+.logo-del-estudio{
+    top: 30%;
+    height: 400px;
+    left: 70%;
+    position: relative;
+    width: 30%;
+}
+.letras {
+    left: -20%;
+    position: relative;
+    top: 15%;
+    width: 60%;
+}
+.bordeado{
+    border: white 5px solid;
+    border-radius: 80px;
+    height: 50%;
+    left: 10%;
+    position: relative;
+    top: -35%;
+    width: 60%;
+}
+.menu-principal{
+    height: 0;
+    width: 100%;
+}
+ul{
+    background-color: rgba(0,0,0,90%);
+    height: 120px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    top: -705px;
+}
+li{
+    float: left;
+    position: relative;
+    top: 36px;
+    right: -25px;
+}
+li a{
+    color: white;
+    display: block;
+    font-size: 33px;
+    padding: 10px;
+    margin-inline: 8px;
+    text-align: center;
+    text-decoration: none;
+}
+footer{
+    background-color: rgba(0,0,0,90%);
+    display:flex;
+    flex-wrap: nowrap;
+    height: 100px;
+    justify-content: space-around;
+    width: 100%;
+}
+.pie-de-pagina{
+    align-self: center;
+    bottom: -200px;
+    color: rgba(239,197,46,100%);
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.imagen-totoro{
+    position: relative;
+    z-index: 3;
 }
