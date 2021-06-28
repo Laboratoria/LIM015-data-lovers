@@ -47,9 +47,24 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
    #### Alta fidelidad
 
    * Boceto de alta fidelidad para el Homepage
+
    ![Protipo alta fidelidad](../../assets/boceto_AF1.png)
+
    * Boceto de alta fidelidad para la sección pelicula
+
    ![Protipo alta fidelidad](../../assets/boceto_AF2.png)
+
+   * Boceto de alta fidelidad para el Homepage en versión Móvil
+
+   ![Protipo alta fidelidad](../../assets/version_movil.jpg)
+
+   * Boceto de alta fidelidad para la sección pelicula en versión Móvil
+
+   ![Protipo alta fidelidad](../../assets/movil_Película.png)
+
+   * Boceto de alta fidelidad para información de Personaje en versión Móvil
+
+   ![Protipo alta fidelidad](../../assets/card.png)
 
    * [Enlace a Figma](https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1)
 
