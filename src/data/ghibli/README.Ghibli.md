@@ -51,12 +51,6 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
    * [X] Figma definitivo, ajustado a plan de acción producto del feedback.
    * [X] Sprint checkout (entrega de resultados de retrospectiva).
 
-# Ordenar:
-
-# Filtrar:
-
-# Calcular
-
 # Test de Usabilidad:
 A través de la toma de feedback, se realizan los siguientes cambios:
 - Se cambia la paleta de color seleccionada inicialmente, aplicando una nueva mantiendo el tema inicial.
