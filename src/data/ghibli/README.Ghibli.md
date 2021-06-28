@@ -17,12 +17,11 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
 **Diseño de interfaz (*Proceso de Diseño*):**
 
 1. Consideraciones generales:
-   Analizar tipografías.
-   Selección de paleta de colores. (color, contraste)
-   Composición.
-   Experiencia de usuario.
-   formatos de imágenes.
-   Feedback, a través de terceros para identificar fallas en el diseño de la interfaz y aplicar cambios pertinentes, a través de Sprint review y Retrospectiva.
+   * Analizar tipografías.
+   * Selección de paleta de colores. (color, contraste)
+   * Composición.
+   * Experiencia de usuario.
+   * Feedback, a través de terceros para identificar fallas en el diseño de la interfaz y aplicar cambios Spertinentes, a través de Sprint review y Retrospectiva.
 
 2. De acuerdo a la data recibida y teniendo en cuentas las necesidades del usuario se aplican los siguientes pasos en el diseño de la interfaz:
 	- Se selecciona una paleta de colores en tonos azules acorde al concepto de Ghibli, cuyo nombre se inspira en el cielo, el viento y volar (aviones).
