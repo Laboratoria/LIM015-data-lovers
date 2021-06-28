@@ -5,6 +5,13 @@
 
 
 
+
 import data from './data/ghibli/ghibli.js'
-console.log(data);
+console.log(data.films[5].title);
+
+
+
+
+
+
 
