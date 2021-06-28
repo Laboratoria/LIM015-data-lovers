@@ -43,13 +43,13 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
 
 
 4. Definición de listo (17/06 al 23/06):
-   [X]Hacer skecth de baja fidelidad.
-[X]Hacer skecth em Figma.
-[X]Feedback.
-[X]Sprint y retrospectiva.
-[X]Ajustar plan de Acción.
-[X]Figma definitivo, ajustado a plan de Acción producto del feedback.
-[X]Sprint checkout (entrega de resultados de retrospectiva).
+   * [X] Hacer skecth de baja fidelidad.
+   * [X] Hacer skecth em Figma.
+   * [X] Feedback.
+   * [X] Sprint y retrospectiva.
+   * [X] Ajustar plan de Acción.
+   * [X] Figma definitivo, ajustado a plan de acción producto del feedback.
+   * [X] Sprint checkout (entrega de resultados de retrospectiva).
 
 # Ordenar:
 
