@@ -5,7 +5,7 @@ Se aplican una serie de datos sobre Studio Ghibli, entendiendo la necesidad de u
 
 En el conjunto de datos mostrados, encontramos 22 películas, con sus respectivos personajes y locaciones, y en caso de tener, sus vehículos.
 
-# Historias de Ususario:
+# Historias de Usuario:
 
 **Perfil de Usuario:**
 Personas interesadas en obtener más información sobre sus películas favoritas, personajes, locaciones y vehículos de Studio Ghibli, con la necesidad de poder accededer a la data, a través de la interación con la aplicación.
@@ -31,15 +31,19 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
 	- Se diseña en alta fidelidad un prototipo para versión movil, que se adapte a la premisa de "responsive".
 
 3. Resultado:
-   - La aplicación muestra una homepage, que permite al usuario navegar a través de los posters de las películas de Studio Ghibli
+   - La aplicación muestra una homepage, que permite al usuario navegar a través de los posters de las películas de Studio Ghibli.
    - Permite al usuario aplicar filtros, lo que le facilita encontrar la información que desea, ya que puede buscar a sus personajes favoritos, a través de un buscador.
    - Permite al usuario ordenar las películas, por sus directores/productores, años de lanzamientos, rating y alfabéticamente. O encontrarlas a través de un buscador.
 
-**Link figma:**
-https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1
+**Prototipos :**
+   [Enlace a Figma](https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1)
+
+   ![Protipo alta fidelidad](../../assets/boceto_AF1.png)
+
+
 
 4. Definición de listo (17/06 al 23/06):
-[X]Hacer skecth de baja fidelidad.
+   [X]Hacer skecth de baja fidelidad.
 [X]Hacer skecth em Figma.
 [X]Feedback.
 [X]Sprint y retrospectiva.
@@ -61,5 +65,4 @@ A través de la toma de feedback, se realizan los siguientes cambios:
 	* "Un póster es demasiado grande, hace incoveniente buscar una película sin usar los filtros"
 	* "No molestan tres poster, pero dificulta ubicar una película visualmente"
 	* "Mostrar dos películas me parece lo más óptimo"
-- Se adiciona diseño de interfaz en caso de que la película seleccionada no posea locación o vehículos.
-- Se agrega un botón para limpiar filtros.
+- Se agrega un botón para reset de filtros.
