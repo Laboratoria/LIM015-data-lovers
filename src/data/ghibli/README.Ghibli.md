@@ -10,11 +10,11 @@ En el conjunto de datos mostrados, encontramos 22 películas, con sus respectivo
 **Perfil de Usuario:**
 Personas interesadas en obtener más información sobre sus películas favoritas, personajes, locaciones y vehículos de Studio Ghibli, con la necesidad de poder accededer a la data, a través de la interación con la aplicación.
 
-# Visualización:
+## Visualización:
 La interfaz de la aplicación debe ser llamativa, y permitir al usuario utilizarla, aún en caso de que no domine el idioma, además debe estar acorde a su contenido, ya que Studio ghibli se caracteriza por sus animaciones.
 Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la información que desee, mediante filtros, por ejemplo, de una forma sencilla y amigable.
 
-**Diseño de interfaz (*Proceso de Diseño*):**
+## Diseño de interfaz (*Proceso de Diseño*):
 
 1. Consideraciones generales:
    * Analizar tipografías.
@@ -35,14 +35,25 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
    - Permite al usuario aplicar filtros, lo que le facilita encontrar la información que desea, ya que puede buscar a sus personajes favoritos, a través de un buscador.
    - Permite al usuario ordenar las películas, por sus directores/productores, años de lanzamientos, rating y alfabéticamente. O encontrarlas a través de un buscador.
 
-**Prototipos :**
-   [Enlace a Figma](https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1)
+### Prototipos
+*****
+   #### Baja fidelidad
 
+   * Boceto de baja fidelidad para el Homepage
+   ![Protipo baja fidelidad](../../assets/boceto_BF1.png)
+   * Boceto de baja fidelidad para la sección pelicula
+   ![Protipo baja fidelidad](../../assets/boceto_BF2.png)
+
+   #### Alta fidelidad
+
+   * Boceto de alta fidelidad para el Homepage
    ![Protipo alta fidelidad](../../assets/boceto_AF1.png)
+   * Boceto de alta fidelidad para la sección pelicula
+   ![Protipo alta fidelidad](../../assets/boceto_AF2.png)
 
+   * [Enlace a Figma](https://www.figma.com/file/wnPznJtjqGAKLOSSewKmeg/Data-Lovers-Copy?node-id=0%3A1)
 
-
-4. Definición de listo (17/06 al 23/06):
+4. **Definición de listo** (17/06 al 23/06):
    * [X] Hacer skecth de baja fidelidad.
    * [X] Hacer skecth em Figma.
    * [X] Feedback.
@@ -51,7 +62,7 @@ Lograr que la experiencia de usuario sea intuitiva, permitiéndole acceder a la 
    * [X] Figma definitivo, ajustado a plan de acción producto del feedback.
    * [X] Sprint checkout (entrega de resultados de retrospectiva).
 
-# Test de Usabilidad:
+## Test de Usabilidad:
 A través de la toma de feedback, se realizan los siguientes cambios:
 - Se cambia la paleta de color seleccionada inicialmente, aplicando una nueva mantiendo el tema inicial.
 - Se agregan los títulos de las películas en el homepage, para que el usuario pueda identificarlas mejor.
