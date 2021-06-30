@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title></title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -15,18 +15,45 @@
 
     <!-- contenido de las diferentes ventanas -->
     <main>
+
         <!-- Ficha Tecnica -->
-        <article>
-            <figure id="imgDataSheet"></figure>
-            <table>
-                <th></th>
+        <article id="id-datasheet">
+            <figure class="imgdatasheet"><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="" class="imgdatasheet">Ibysaur</figure>
+            <table class="d-datasheet">
+                <tr>
+                    <th>Altura</th>
+                    <th>Categoria</th>
+                    <th>Peso</th>
+                    <th>Habilidad</th>
+                    <th>Sexo</th>
+                </tr>
+                <tr>
+                    <td>0.7 m</td>
+                    <td>Semilla</td>
+                    <td>6.9 kg</td>
+                    <td>Espesura</td>
+                    <td>
+                        <figure>F</figure>
+                        <figure>M</figure>
+                    </td>
+                </tr>
             </table>
+            <br>
+            <form class="frm-datasheet">
+                <p>PUNTOS BASE</p>
+                <label class="lb-pb">Ataque<progress class="progressBasePoints" value="50" max="100"></progress></label><br><br>
+                <label class="lb-pb">Defensa<progress class="progressBasePoints" value="22" max="100"></progress></label><br><br>
+                <label class="lb-pb">Aguante<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
+                <label class="lb-pb">Max - CP<progress class="progressBasePoints" value="10" max="100"></progress></label><br><br>
+                <label class="lb-pb">Max - HP<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
+            </form>
+            <button id="btn-salir" class="boton">Salir</button>
         </article>
     </main>
 
     <!-- pie de pagina -->
     <footer>
-        Copyright &copy; pokémongo.com.pe - Todos los derechos reservados
+
     </footer>
 </body>
 
