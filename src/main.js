@@ -4,9 +4,9 @@ console.log(data.films[5].title);
 
 
 
-const films = data.films
-const namefilms = films.map((names) => names.title)
-console.log(namefilms);
+// const films = data.films
+// const namefilms = films.map((names) => names.title)
+// console.log(namefilms);
 
 
 
