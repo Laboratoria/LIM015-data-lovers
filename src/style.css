@@ -113,10 +113,8 @@ header{
 }
 ul{
     background-color: rgba(0,0,0,90%);
-    height: 120px;
+    height: 80px;
     list-style: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     position: relative;
     top: -705px;
@@ -129,11 +127,8 @@ li{
 }
 li a{
     color: white;
-    display: block;
-    font-size: 33px;
-    padding: 10px;
+    font-size: 23px;
     margin-inline: 8px;
-    text-align: center;
     text-decoration: none;
 }
 footer{
