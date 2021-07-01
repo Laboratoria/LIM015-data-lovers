@@ -1,0 +1,116 @@
+:root{
+    --color-main: rgba(0, 9, 43, 0.85);
+    --color-secondary: rgba(0, 173, 255, 1);
+    --color-white: #fff;
+    --color-gradient: linear-gradient(180deg, #02617E 16.45%, #00092B 100%);
+    --font-main: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-main);
+    font-size: 12px;
+    color: var(--color-white);
+    background: var(--color-gradient);
+    background: url(assets/background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header, footer{
+    padding: 0.5rem 1rem;
+    background-color: var(--color-main);
+}
+
+/* ************* Header************* */
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo{
+    height: 5rem;
+}
+
+.menu{
+    flex-grow: 1;
+}
+
+.menu__dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.menu__item{
+    padding: 0.5rem 0rem;
+}
+
+/* ************* Home ************* */
+.container{
+    padding: 0rem 1rem;
+}
+
+.container__films {
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(11.875em,1fr));
+    justify-items: center;
+    row-gap: 1.875em;
+    column-gap: 1em;
+}
+
+.container__card{
+    position: relative;
+    width: 11.875em;
+    height: 16.875em;
+    border-radius: 10px;
+    box-shadow: 0 0 0.313rem var(--color-white);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.container__card:hover{
+    box-shadow: 0 0 0.5rem var(--color-secondary);
+    transform: translateY(-3%);
+}
+
+.card__title{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: var(--color-main);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    padding: 0rem 0.5rem;
+}
+.card__image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/*
+queries para pc
+body{
+font-size: 16px;
+}
+.container {
+    padding: 0rem 4rem;
+}
+*/
