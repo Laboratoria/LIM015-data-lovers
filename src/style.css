@@ -1,24 +1,7 @@
-
-.imgdatasheet {
-    width: 200px;
-    height: 250px;
-    float: left;
-    background-color: aquamarine;
-}
-
-.d-datasheet {
-    background-color: aquamarine;
-    padding-bottom: 170px;
-}
-
-.progressBasePoints {
-    width: 20%;
-    height: 30px;
 *{
-    margin: 0px;
-    padding: 0px;
+    margin:0;
+    padding:0;
 }
-
 body{
     background: blue;
 }
@@ -122,4 +105,21 @@ header{
 
 
     }
+}
+
+.imgdatasheet {
+    width: 200px;
+    height: 250px;
+    float: left;
+    background-color: aquamarine;
+}
+
+.d-datasheet {
+    background-color: aquamarine;
+    padding-bottom: 170px;
+}
+
+.progressBasePoints {
+    width: 20%;
+    height: 30px;
 }
