@@ -35,7 +35,6 @@
               </li>
             </ul>
           </li>
-
           <li class="menu__item container-submenu3">
             <a href="#" class="menu__link3 submenu3-btn3">Elementos<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
             </a>
@@ -83,7 +82,42 @@
           </li>
         </ul>
       </nav>
+
+        <!-- Ficha Tecnica -->
+        <article id="id-datasheet">
+            <figure class="imgdatasheet"></figure>
+            <table class="d-datasheet">
+                <tr>
+                    <th>Altura</th>
+                    <th>Categoria</th>
+                    <th>Peso</th>
+                    <th>Habilidad</th>
+                    <th>Sexo</th>
+                </tr>
+                <tr>
+                    <td>0.7 m</td>
+                    <td>Semilla</td>
+                    <td>6.9 kg</td>
+                    <td>Espesura</td>
+                    <td>
+                        <figure>F</figure>
+                        <figure>M</figure>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <form class="frm-datasheet">
+                <p>PUNTOS BASE</p>
+                <label class="lb-pb">Ataque<progress class="progressBasePoints" value="50" max="100"></progress></label><br><br>
+                <label class="lb-pb">Defensa<progress class="progressBasePoints" value="22" max="100"></progress></label><br><br>
+                <label class="lb-pb">Aguante<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
+                <label class="lb-pb">Max - CP<progress class="progressBasePoints" value="10" max="100"></progress></label><br><br>
+                <label class="lb-pb">Max - HP<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
+            </form>
+            <button id="btn-salir" class="boton">Salir</button>
+        </article>
     </header>
     <script src="main.js" type="module"></script>
   </body>
 </html>
+
