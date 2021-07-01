@@ -5,119 +5,101 @@
     <meta charset="utf-8">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header >
-      <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
-      <nav class="main-nav">
-        <ul class="menu" id="menu">
-          <li class="menu__item"><a href="#" class="menu__link0">Home</a></li>
-          <li class="menu__item container-submenu1">
-            <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
-            </a>
-            <ul class="submenu1">
-              <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link1">A-Z</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link1">Z-A</a>
-              </li>
-            </ul>
-          </li>
+</head>
 
-          <li class="menu__item container-submenu2">
-            <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+<body>
+    <!-- menu de navegacion -->
+    <header>
+        <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
+        <nav class="main-nav">
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="#" class="menu__link0">Home</a></li>
+                <li class="menu__item container-submenu1">
+                    <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
             </a>
-            <ul class="submenu2">
-              <li class="menu__item"><a href="#" class="menu__link2">Johto</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link2">Kanto</a>
-              </li>
-            </ul>
-          </li>
-          <li class="menu__item container-submenu3">
-            <a href="#" class="menu__link3 submenu3-btn3">Elementos<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
-            </a>
-            <ul class="submenu3">
-              <li class="menu__item"><a href="#" class="menu__link3">Agua</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Bicho</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Dragón</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Eléctrico</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Fantasma</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Fuego</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Hielo</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Lucha</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Normal</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Planta</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Psiquico</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Roca</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Tierra</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Veneno</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Volador</a>
-              </li>
-            </ul>
-          </li>
-          </li>
-          <li class="menu__item container-submenu4">
-            <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
-            </a>
-            <ul class="submenu4">
-              <li class="menu__item"><a href="#" class="menu__link4">Guía</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+                    <ul class="submenu1">
+                        <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">A-Z</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">Z-A</a>
+                        </li>
+                    </ul>
+                </li>
 
-        <!-- Ficha Tecnica -->
-        <article id="id-datasheet">
-            <figure class="imgdatasheet"></figure>
-            <table class="d-datasheet">
-                <tr>
-                    <th>Altura</th>
-                    <th>Categoria</th>
-                    <th>Peso</th>
-                    <th>Habilidad</th>
-                    <th>Sexo</th>
-                </tr>
-                <tr>
-                    <td>0.7 m</td>
-                    <td>Semilla</td>
-                    <td>6.9 kg</td>
-                    <td>Espesura</td>
-                    <td>
-                        <figure>F</figure>
-                        <figure>M</figure>
-                    </td>
-                </tr>
-            </table>
-            <br>
-            <form class="frm-datasheet">
-                <p>PUNTOS BASE</p>
-                <label class="lb-pb">Ataque<progress class="progressBasePoints" value="50" max="100"></progress></label><br><br>
-                <label class="lb-pb">Defensa<progress class="progressBasePoints" value="22" max="100"></progress></label><br><br>
-                <label class="lb-pb">Aguante<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
-                <label class="lb-pb">Max - CP<progress class="progressBasePoints" value="10" max="100"></progress></label><br><br>
-                <label class="lb-pb">Max - HP<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br>
-            </form>
-            <button id="btn-salir" class="boton">Salir</button>
-        </article>
+                <li class="menu__item container-submenu2">
+                    <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            </a>
+                    <ul class="submenu2">
+                        <li class="menu__item"><a href="#" class="menu__link2">Johto</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link2">Kanto</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu__item container-submenu3">
+                    <a href="#" class="menu__link3 submenu3-btn3">Elementos<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            </a>
+                    <ul class="submenu3">
+                        <li class="menu__item"><a href="#" class="menu__link3">Agua</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Bicho</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Dragón</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Eléctrico</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Fantasma</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Fuego</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Hielo</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Lucha</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Normal</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Planta</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Psiquico</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Roca</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Tierra</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Veneno</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Volador</a>
+                        </li>
+                    </ul>
+                </li>
+                </li>
+                <li class="menu__item container-submenu4">
+                    <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            </a>
+                    <ul class="submenu4">
+                        <li class="menu__item"><a href="#" class="menu__link4">Guía</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
+    <main>
+        <p id="mypokemon"></p>
+        <button id="btn-show" class="boton">VER +</button>
+        <!-- Ficha Tecnica -->
+        <article id="DatasheetPokemon">
+            <section id="infoPokemon">
+            </section>
+            <ul class="featuresPokemon"></ul>
+            <form class="pbPokemon">
+                <!-- <label class="lb-pb">Max - HP<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br> -->
+            </form>
+            <button id="btn-return" class="boton">SALIR</button>
+        </article>
+    </main>
     <script src="main.js" type="module"></script>
-  </body>
-</html>
+</body>
 
+</html>
