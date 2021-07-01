@@ -11,23 +11,61 @@
       <figure>
         <img src="/src/img/studio_ghibli_logo.png" height="100" width="" alt="">
       </figure>
-      <div class="search">
-        <input type="search" name="search" placeholder="Busca animes, personajes, etc.">
-        <input type="submit" value="Buscar">
-      </div>
       <nav class="menu">
         <ol>
           <li>
             <a href="#">Collection</a>
           </li>
           <li>
-            <a href="#">Title</a>
+            <a href="#">Characters</a>
+          </li>
+          <li>
+            <a href="#">Locations</a>
           </li>
         </ol>
       </nav>
     </header>
+    <main class="home-main">
+      <div class="search">
+        <input type="search" name="search" placeholder="Search movie titles">
+      </div>
+      <div class="list-title">
+        <p>List studio Ghibli</p>
+      </div>
+      <div class="filter">
+        <form action="">
+          <select name="" id="list20" class="list20">
+            <option value="0">--Filter by title--</option>
+            <option value="1">Castle in the sky</option>
+            <option value="2">My neighbor totoro</option>
+            <option value="3">Kiki´s delivery service</option>
+            <option value="4">Grave of the fireflies</option>
+            <option value="5">Only yesterday</option>
+            <option value="6">Porco rosso</option>
+            <option value="7">Pom poko</option>
+            <option value="8">Whisper of the heart</option>
+            <option value="9">Princess Mononoke</option>
+            <option value="10">My neighbors the yamadas</option>
+            <option value="11">Spirited away</option>
+            <option value="12">The cat returns</option>
+            <option value="13">Howl´s moving castle</option>
+            <option value="14">Ovarlden</option>
+            <option value="15">Ponyo on the cliff by the sea</option>
+            <option value="16">The borrower arriatty</option>
+            <option value="17">From up on pop py hill</option>
+            <option value="18">The wind rises</option>
+            <option value="19">The tale of the princess kaguya</option>
+            <option value="20">When marnie was there</option>
+          </select>
+          <select name="" id="list-order" class="list-order">
+            <option value="0">--Order by years--</option>
+            <option value="1">Upward</option>
+            <option value="2">Falling</option>
+          </select>
+        </form>
+        </div>
+    </main>
     <div id="root"></div>
-    <div id="root"> HOLA  EQUIPO</div>
     <script src="main.js" type="module"></script>
   </body>
 </html>
