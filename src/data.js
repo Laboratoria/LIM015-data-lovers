@@ -1,9 +1,17 @@
-// estas funciones son de ejemplo
+/*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
+Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
+procesar y manipular datos (tus funciones)*/
 
-export const example = () => {
+export function kanto(){
+
+}
+
+let objectoKanto = new kanto();
+
+export let name = () => {
   return 'example';
 };
 
-export const anotherExample = () => {
-  return 'OMG';
+export const data = () => {
+  return 'data';
 };
