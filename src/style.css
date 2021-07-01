@@ -108,7 +108,6 @@ header{
     width: 60%;
 }
 .menu-principal{
-    height: 0;
     width: 100%;
 }
 ul{
@@ -117,7 +116,7 @@ ul{
     list-style: none;
     overflow: hidden;
     position: relative;
-    top: -705px;
+
 }
 li{
     float: left;
