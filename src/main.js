@@ -36,3 +36,7 @@ function showDataFilms(films){
 }
 
 console.log(showDataFilms(data.films));
+
+const sortByName = data.films;
+sortByName.sort();
+console.log(sortByName);
