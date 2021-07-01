@@ -1,3 +1,4 @@
+
 .imgdatasheet {
     width: 200px;
     height: 250px;
@@ -13,4 +14,112 @@
 .progressBasePoints {
     width: 20%;
     height: 30px;
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background: blue;
+}
+
+header{
+    box-sizing: border-box;
+
+}
+
+.nav-bar{
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
+}
+
+.menu {
+    margin-left: -100%;
+    width: 100%;
+    transition: all 0.5s;
+
+}
+
+.menu, .submenu1, .submenu2, .submenu3, .submenu4 {
+    list-style: none;
+}
+
+ .menu__link0, .menu__link1, .menu__link2, .menu__link3, .menu__link4{
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+}
+
+.menu__link0{
+    background: red;
+    width: 100px;
+}
+.menu__link1{
+    background:#FFC700;
+    width: 100px;
+}
+
+.menu__link2{
+    background: #64B63D;
+    width: 100px;
+}
+
+.menu__link3{
+    background: #0083FC;
+    width: 100px;
+}
+
+.menu__link4 {
+    background: #F904D1;
+    width: 100px;
+}
+
+.submenu1 .menu__link1, .submenu2 .menu__link2, .submenu3 .menu__link3, .submenu4 .menu__link4{
+ padding-left: 08px;
+}
+.submenu1, .submenu2, .submenu3, .submenu4 {
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.mostrar{
+    margin-left: 0;
+}
+
+@media(min-width:1024px){
+    .nav-bar{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        margin-left: 0;
+    } 
+
+    .container-submenu1, .container-submenu2, .container-submenu3, .container-submenu4{
+        position: relative;   
+    }
+
+    .submenu1, .submenu2, .submenu3, .submenu4{
+        position: absolute;
+        top: 60px;
+        padding-left: -20px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .container-submenu1:hover .submenu1, .container-submenu2:hover .submenu2, .container-submenu3:hover .submenu3, .container-submenu4:hover .submenu4{
+        opacity: 1;
+        visibility: visible;
+
+
+    }
 }
