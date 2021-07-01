@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //import { pokemon } from './data.js';
 // import data from './data/lol/lol.js';
 import pokemon from './data/pokemon/pokemon.js';
@@ -7,7 +6,6 @@ import pokemon from './data/pokemon/pokemon.js';
 
 console.log(pokemon.pokemon[250].name);
 
-=======
 /* tenga que ver con mostrar los datos en la pantalla. 
 Con esto nos referimos básicamente a la interacción con el DOM. Operaciones como creación de nodos,
  registro de manejadores de eventos (event listeners o event handlers)*/
@@ -47,4 +45,3 @@ const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 // import data from './data/rickandmorty/rickandmorty.js';/*recorrer toda la data que muestre todos los atletas , desde el js crearon un di document created element
 
 console.log(pokemon.pokemon[2].name);
->>>>>>> 2c0fa6258cd890183bdbf9e651d6a26e1dbb511d
