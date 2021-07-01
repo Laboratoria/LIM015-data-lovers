@@ -51,4 +51,3 @@ for(let i=0; i < subMenuBtn1.length; i++) {
 const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
 const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
-
