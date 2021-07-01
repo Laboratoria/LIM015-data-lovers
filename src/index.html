@@ -10,11 +10,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="assets/icon.png">
     <link rel="stylesheet" href="style.css" />
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/971ef92afb.js" crossorigin="anonymous"></script>
+    <!-- Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <header>
+      <nav class="nav">
+        <section class="nav__brand">
+          <img class="nav__logo" src="assets/logo.png" alt="Studio Ghibli">
+        </section>
+        <i class="fas fa-bars"></i>
+        <section class="menu">
+          <ul class="menu__dropdown">
+            <li class="menu__item">
+              <a class="menu_link" href="#home">Films</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu_link" href="#people">Characters</a>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <section class="container" id="home">
+        <section class="menuBar">
+            <input type="text" class="menuBar__search" placeholder="Search">
+            <section class="filter">
+              <!-- revisar como eliminar label, y colocar placeholder a combox -->
+              <label class="filter__orderBy" for="filters">Order by:</label>
+              <select class="filter__comboBox">
+                <option value="title">Name</option>
+                <option value="rt_score">Rating</option>
+                <option value="release_date">Release date</option>
+              </select>
+              <!-- acá va ícono para ordenar mayor menos, e inverso -->
+            </section>
+        </section>
+        <section class="container__showing">Showing</section>
+        <section class="container__films">
+        </section>
+      </section>
+      <section class="container" id="film">
+      </section>
+      <section class="container" id="people">
+      </section>
+    </main>
+    <footer>
+      <section>
+        &copy; Copyright 2021
+      </section>
+      <section>
+        <a href="https://www.facebook.com/TheGhibliFamily/" target="_blank">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/hayaomiyazaki/?hl=es-la" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </section>
+    </footer>
     <script src="main.js" type="module"></script>
   </body>
 </html>
