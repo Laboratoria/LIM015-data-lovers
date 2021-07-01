@@ -183,7 +183,7 @@ section button i {
     opacity: 0.5;
 }*/
 main {
-    background-image: url(../src/img/studio_ghibli.jpg);
+    background-image: url(./img/studio_ghibli.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
