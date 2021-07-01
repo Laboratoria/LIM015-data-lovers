@@ -1,7 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
 /* Bio about Ghibli */
 .bio{
     display: flex;
-    background: #6686AC;
+    background: rgba(10, 147, 150, 80%);
     padding: 50px 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
@@ -75,11 +80,7 @@ padding-bottom: 50px;
     padding-bottom: 40px;
     
 }
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
+
 header{
     background-color: rgba(53,91,145,90%);
     height: 600px;
@@ -152,3 +153,7 @@ footer{
     position: relative;
     z-index: 3;
 }
+#parte-principal{
+    background: rgba(169, 208, 204, 0.76);
+}
+
