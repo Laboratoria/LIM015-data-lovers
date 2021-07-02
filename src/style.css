@@ -30,6 +30,10 @@ header, footer{
     background-color: var(--color-main);
 }
 
+menu{
+    flex-grow: 1;
+}
+
 /* ************* Header************* */
 .nav{
     display: flex;

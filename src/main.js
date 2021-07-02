@@ -8,6 +8,9 @@ const filmsContainer = document.querySelector('.container__films');
 const counter = document.querySelector(".container__showing");
 
 function showDataFilms(films){
+    //agregar funcion para limpiar para limpiar
+    filmsContainer.innerHTML = "";
+    // Inicio de todo
     films.forEach(film => {
         const container = document.createElement('section');
         container.className = 'container__card';
@@ -35,4 +38,4 @@ function showDataFilms(films){
     } */
 }
 
-console.log(showDataFilms(data.films));
+showDataFilms(data.films);
