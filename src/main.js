@@ -37,12 +37,12 @@ window.onload = function() {
 
 // funcion para el boton ver +
 document.getElementById("btn-show").addEventListener("click", () => {
-    document.getElementById("btn-show").style.display = "none";
+    document.getElementById("numpokemon").style.display = "none";
     document.getElementById("DatasheetPokemon").style.display = "block";
 });
 
 //funcion para el boton de la ficha tecnica
 document.getElementById("btn-return").addEventListener("click", () => {
-    document.getElementById("btn-show").style.display = "block";
+    document.getElementById("numpokemon").style.display = "block";
     document.getElementById("DatasheetPokemon").style.display = "none";
 });

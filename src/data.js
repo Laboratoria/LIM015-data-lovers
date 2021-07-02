@@ -16,7 +16,7 @@ function lookinfopokemon(objPokemon) {
         html = html + '<figure class="photoPokemon">';
         html = html + '<p class="num"">' + number + '</p>';
         html = html + '<img src="' + url + '"/>';
-        html = html + '<figcaption>' + name + '<button id="btn-show" class="boton" >' + '<p>ver mas</p>' + '</button>' + '</figcaption>';
+        html = html + '<figcaption>' + name + '<button id="btn_show" class="boton" >' + '<p>ver mas</p>' + '</button>' + '</figcaption>';
         html = html + '</figure>';
     }
     // console.log(html);
