@@ -35,8 +35,25 @@ function showDataFilms(films){
     } */
 }
 
-console.log(showDataFilms(data.films));
+showDataFilms(data.films);
 
-const sortByName = data.films;
-sortByName.sort();
-console.log(sortByName);
+//funcion filtrar
+function deleteDuplicate(data){
+    return data.filter((item, index)=>{
+        return data.indexOf(item) === index;
+    });
+}
+let directorProducer = (arr) => {
+    let newArray = [];
+    arr.forEach(arr => {
+        newArray.push(arr.director);
+        newArray.push(arr.producer);
+    })
+    return deleteDuplicate(newArray);
+}
+
+console.log(directorProducer(data.films));
+const array = directorProducer(data.films);
+
+let result = data.films.filter(film => (film.director === array[8] || film.producer === array[8] ));
+console.log(result);
