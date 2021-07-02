@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
     padding: 0px;
@@ -7,7 +8,6 @@ body {
     /* background: blue; */
     background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1));
 }
-
 header {
     box-sizing: border-box;
 }
@@ -127,7 +127,6 @@ header {
     }
 }
 
-
 /* OCULTAR FICHA TECNICA */
 
 #DatasheetPokemon {
@@ -156,4 +155,22 @@ header {
     padding: 2px;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
+    }
+}
+
+.imgdatasheet {
+    width: 200px;
+    height: 250px;
+    float: left;
+    background-color: aquamarine;
+}
+
+.d-datasheet {
+    background-color: aquamarine;
+    padding-bottom: 170px;
+}
+
+.progressBasePoints {
+    width: 20%;
+    height: 30px;
 }
