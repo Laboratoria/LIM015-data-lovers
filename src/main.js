@@ -1,6 +1,7 @@
 
-import data from './data/ghibli/ghibli.js'
-
+// import { setMoviesTitle } from './data.js'
+// import data from './data/ghibli/ghibli.js'
+import { setMoviesTitle } from './data.js';
 
 /*data.films.forEach(function (elem) {
     console.log(elem.poster)
@@ -12,7 +13,21 @@ navMovies.addEventListener("click", function () {
     const logo = document.querySelector("#logo");
     hideFirstSlide.style.display = "none";
     logo.style.display = "none";
+    //mostrar la imagen y el titulo
+    setMoviesTitle() // Filtrado seccion Peliculas con img + titulo
+    // anotherExample()
+
 });
+
+
+
+// function pruebaDos() {
+//     data.films.forEach(function (element) {
+//         const movieCover = `<img src="${element.poster}" alt = "portada de pelicula" loading="lazy"/> `,
+//             moviesTitle = `<h3> ${element.title.toUpperCase()} </h3>`
+//         document.querySelector("#name-pelis").innerHTML += movieCover + moviesTitle
+//     });
+// }
 
 
 // function prueba() {
@@ -28,18 +43,3 @@ navMovies.addEventListener("click", function () {
 
 //     });
 // }
-
-
-function pruebaDos() {
-    data.films.forEach(function (element) {
-        const movieCover = `<img src="${element.poster}" alt = "portada de pelicula" loading="lazy"/> `,
-            moviesTitle = `<h3> ${element.title.toUpperCase()} </h3>`
-        document.querySelector("#name-pelis").innerHTML += movieCover + moviesTitle
-    });
-}
-
-
-const boton = document.querySelector("#pelis");
-
-boton.addEventListener("click", prueba);
-
