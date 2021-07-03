@@ -9,64 +9,69 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <header>
-      <image class="logo-del-estudio
-      " src="/imagenes/totoro.gif" alt="nada" />
-      <img class="letras" src="imagenes/letras.png" alt="letras del logo del studio"/>
-      <div class="bordeado" ></div>
-      <nav class="menu-principal">
-        <ul>
-          <li><a href="#">PELICULAS</a></li>
-          <li><a href="#">CORTOMETRAJES</a></li>
-          <li><a href="#">COMERCIALES</a></li>
-          <li><a href="#">JUEGOS</a></li>
-          <li><a href="#">CURIOSIDADES</a></li>
-          <li><a href="#">MUSEO</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- Bio  -->
-    <section id="bio" class="bio">
-      <div class="ghiblibio">
-        <h2 class="questionbio">¿Donde nace el STUDIO GHIBLI?</h2>
-        <p>
-          Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la
-          crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la
-          actualidad.
-          Fue fundado el 15 de junio de 1985, el nombre “Ghibli” hace referencia a la palabra italiana “viento caliente
-          del
-          Sahara” ya que el estudio quería “dar un nuevo aire a la industria del anime”.
-        </p>
-      </div>
-      <div>
-        <img src="./images/totoro.gif" alt="" class="totoroimage" />
-      </div>
-    </section>
-    <!-- Fundadores -->
-    <section class="founders">
-      <h2 class="titlefounder">Fundadores</h2>
-      <div class="founderscontainer">
-        <div class="imagehayao">
-          <img class="imagefounders" src="./images/Hayao Misaki.jpeg" alt="" srcset="" />
-          <p class="name"> Hayao Misaki</p>
+    <div id="primera-pagina">
+      <header>
+        <image class="logo-del-estudio
+        " src="/imagenes/totoro.gif" alt="nada" />
+        <img class="letras" src="imagenes/letras.png" alt="letras del logo del studio"/>
+        <div class="bordeado" ></div>
+        <nav class="menu-principal">
+          <ul>
+            <li><a href="#">PELICULAS</a></li>
+            <li><a href="#">CORTOMETRAJES</a></li>
+            <li><a href="#">COMERCIALES</a></li>
+            <li><a href="#">JUEGOS</a></li>
+            <li><a href="#">CURIOSIDADES</a></li>
+            <li><a href="#">MUSEO</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- Bio  -->
+      <section id="bio" class="bio">
+        <div class="ghiblibio">
+          <h2 class="questionbio">¿Donde nace el STUDIO GHIBLI?</h2>
+          <p>
+            Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la
+            crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la
+            actualidad.
+            Fue fundado el 15 de junio de 1985, el nombre “Ghibli” hace referencia a la palabra italiana “viento caliente
+            del
+            Sahara” ya que el estudio quería “dar un nuevo aire a la industria del anime”.
+          </p>
         </div>
-        <div class="styleimage">
-          <img class="imagefounders" src="./images/Tokuma.jpeg" alt="" srcset="" />
-          <p class="name">Yasuyoshi Tokuma</p>
+        <div>
+          <img src="./images/totoro.gif" alt="" class="totoroimage" />
         </div>
-        <div class="styleimage">
-          <img class="imagefounders" src="./images/Toshio Suzuki.jpeg" alt="" srcset="" />
-          <p class="name">Toshio Suzuki</p>
+      </section>
+      <!-- Fundadores -->
+      <section class="founders">
+        <h2 class="titlefounder">Fundadores</h2>
+        <div class="founderscontainer">
+          <div class="imagehayao">
+            <img class="imagefounders" src="./images/Hayao Misaki.jpeg" alt="" srcset="" />
+            <p class="name"> Hayao Misaki</p>
+          </div>
+          <div class="styleimage">
+            <img class="imagefounders" src="./images/Tokuma.jpeg" alt="" srcset="" />
+            <p class="name">Yasuyoshi Tokuma</p>
+          </div>
+          <div class="styleimage">
+            <img class="imagefounders" src="./images/Toshio Suzuki.jpeg" alt="" srcset="" />
+            <p class="name">Toshio Suzuki</p>
+          </div>
+          <div class="styleimage">
+            <img class="imagefounders" src="./images/Isao Takahata.jpeg" alt="" srcset="" />
+            <p class="name">Isao Takahata</p>
+          </div>
         </div>
-        <div class="styleimage">
-          <img class="imagefounders" src="./images/Isao Takahata.jpeg" alt="" srcset="" />
-          <p class="name">Isao Takahata</p>
-        </div>
-      </div>
-    </section>
-    <main id="parte-principal">
+      </section>
       <button id="pelis">Films</button>
-      <article id="name-pelis"></article>
+    </div>
+
+    <main id="parte-principal" >
+      <article id="name-pelis">
+        <input id="buscador" type="search" placeholder="peliculas" style="none"/>
+      </article>
     </main>
     <footer>
       <p class="pie-de-pagina">Copyright &copy;2021</p><!--ANDREA-->
