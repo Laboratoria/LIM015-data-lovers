@@ -1,12 +1,6 @@
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-}
-/* Bio about Ghibli */
 .bio{
     display: flex;
-    background: rgba(10, 147, 150, 80%);
+    background: #6686AC;
     padding: 50px 50px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
@@ -80,7 +74,11 @@ padding-bottom: 50px;
     padding-bottom: 40px;
     
 }
-
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
 header{
     background-color: rgba(53,91,145,90%);
     height: 600px;
@@ -109,7 +107,6 @@ header{
     width: 60%;
 }
 .menu-principal{
-    height: 0;
     width: 100%;
 }
 ul{
@@ -118,7 +115,7 @@ ul{
     list-style: none;
     overflow: hidden;
     position: relative;
-    top: -705px;
+
 }
 li{
     float: left;
@@ -153,16 +150,8 @@ footer{
     position: relative;
     z-index: 3;
 }
-#parte-principal{
-    background: rgba(169, 208, 204, 0.76);
-}
-/*DODROWN*/
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
 
+/* .name-pelis {
+   
+    
+} */
