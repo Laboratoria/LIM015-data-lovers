@@ -14,17 +14,24 @@ export const setMoviesTitle = () => {
 };
 
 //filtrado sort por RT score (puntaje segun criticos)
-const reviewMovieScore = data.films.sort((a, b) => {
-  a.rt_score - b.rt_score
-
+const filmsCopy = [...data.films]
+// console.log (filmsCopy);
+const reviewMovieScore = filmsCopy.sort(( a , b ) => {
+   return parseInt(b.rt_score) - parseInt(a.rt_score) // conbierto a numero entero
+  
 });
-console.log(reviewMovieScore);
+// console.log(reviewMovieScore)
 
 // filtrado sort para orden alfabetico 
-const alphabeticOrder = data.films.sort((a, b) => {
-  a.title - b.title
+const alphabeticOrder = filmsCopy.sort(( a, b ) => {
+  if( a.title > b.title) {
+    return 1
+  }
+  if (a.title< b.title){
+    return -1
+  } return 0
 });
-console.log(alphabeticOrder);
+ //console.log(alphabeticOrder);
 
 
 
