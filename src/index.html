@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header class= "header" >
-      <img class = "header__img" src="./Logo.png" alt="logo">
+      <img class = "header__img" src="" alt="logo">
+      <div class="header-search">
+        <form action="/"></form>
+      </div>
+
+      <!--search-->
+      <div class="search">
+        <input type="text" id="searchtext" placeholder="Name or number">
+        <a href="" id="btn">
+            <i class="icon-name-or-number"></i>
+        </a>
+    </div>
+      
       <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
       <nav class="main-nav">
         <ul class="menu" id="menu">
-          <li class="menu__item"><a href="#" class="menu__link0">Home</a></li>
+          <li class="menu__item"><a href="#" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+          </li>
           <li class="menu__item container-submenu1">
-            <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
-            </a>
+            <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
             <ul class="submenu1">
               <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
               </li>
@@ -27,7 +39,7 @@
           </li>
 
           <li class="menu__item container-submenu2">
-            <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
             <ul class="submenu2">
               <li class="menu__item"><a href="#" class="menu__link2">Johto</a>
@@ -38,7 +50,7 @@
           </li>
 
           <li class="menu__item container-submenu3">
-            <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
             <ul class="submenu3">
               <li class="menu__item"><a href="#" class="menu__link3">Agua</a>
@@ -75,14 +87,16 @@
           </li>
           </li>
           <li class="menu__item container-submenu4">
-            <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
+            <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
             <ul class="submenu4">
-              <li class="menu__item"><a href="#" class="menu__link4">Guía</a>
+              <li class="menu__item"><a href="#" class="menu__link4">Guía<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
               </li>
             </ul>
           </li>
         </ul>
+          </a>
+        </div>
       </nav>
     </header>
     <script src="main.js" type="module"></script>

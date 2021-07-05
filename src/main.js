@@ -5,6 +5,23 @@ Con esto nos referimos básicamente a la interacción con el DOM. Operaciones co
 // import data from './data/lol/lol.js';
 import pokemon from './data/pokemon/pokemon.js';
 
+/*buscador*/
+
+const SEARCHTEXT = document.getElementById("searchtext");
+const BTNSEARCH = document.getElementById("btn");
+
+/*asignando un evento*/
+BTNSEARCH.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    let 
+
+});
+
+console.log(SEARCHTEXT);
+
+/*menu desplegable*/
+
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
 
@@ -19,7 +36,7 @@ const subMenuBtn1 = document.querySelectorAll(".submenu1-btn1");
 for(let i=0; i < subMenuBtn1.length; i++) {
     subMenuBtn1[i].addEventListener("click", function(){
         if(window.innerWidth < 1024){
-            const subMenu = actualy.nextElementSibling;/* definir constante que me permita pasar al otro item*/
+            const subMenu = this.nextElementSibling;/* definir constante que me permita pasar al otro item*/
             const height = subMenu.scrollheight;
             
             if(subMenu.classList.contains("desplegar")){
@@ -39,4 +56,4 @@ const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
 // import data from './data/rickandmorty/rickandmorty.js';/*recorrer toda la data que muestre todos los atletas , desde el js crearon un di document created element
 
-console.log(pokemon.pokemon.kanto[i]);
+
