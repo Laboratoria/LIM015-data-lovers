@@ -1,4 +1,6 @@
-import pokemon from './data/pokemon/pokemon.js';
+import data from './data/pokemon/pokemon.js';
+//
+import { filterData } from './data.js';
 
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
@@ -28,62 +30,74 @@ const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
 const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
-// funcion para mostrar datos del pokemon
-function lookinfopokemon(objPokemon) {
-    let html = '';
-    for (let i = 0; i < objPokemon.length; i++) {
-        let url = objPokemon[i].img;
-        let name = objPokemon[i].name;
-        let number = objPokemon[i].num;
+//la funcion onload espera que cargue todo DOM
+window.onload = function() {
+
+    let pok = filterData(data.pokemon, ''); //ingresamos a la data
+    showAllPokemon(pok); //llamamos la funcnion showAllPokemon
+
+    //funcion para el boton de la ficha tecnica
+    document.getElementById("btn-return").addEventListener("click", () => {
+        document.getElementById("numpokemon").style.display = "block";
+        document.getElementById("DatasheetPokemon").style.display = "none";
+    });
+}
+
+function showAllPokemon(data) {
+    var parent = document.getElementById('numpokemon'); // Recuperar tag padre
+
+    for (let i = 0; i < data.length; i++) {
+        //variables que almacena los datos que queremos que se muestre
+        let url = data[i].img;
+        let name = data[i].name;
+        let number = data[i].num;
 
         // insertando los obj con html dinamico
-        html = html + '<figure class="photoPokemon">';
-        html = html + '<p class="num"">' + number + '</p>';
-        html = html + '<img src="' + url + '"/>';
-        html = html + '<figcaption>' + name + '</figcaption>';
-        html = html + '</figure>';
-    }
-    // console.log(html);
+        // html = html + '<figure class="photoPokemon">';
+        // html = html + '<p class="num"">' + number + '</p>';
+        // html = html + '<img src="' + url + '"/>';
+        // html = html + '<figcaption>' + name + ' <a href="#" onclick="showInfo(\'' + number + '\');return false;">Ver +</a></figcaption>';
+        // html = html + '</figure>';
 
-    document.getElementById("infoPokemon").innerHTML = html;
+        //etiqueta padre figure
+        var elementFigure = document.createElement("figure"); // Crear tag Figure
+        elementFigure.classList.add("photoPokemon"); // Agregando una clase a tag Figure
+
+        var elementP = document.createElement("p"); //Crear tag P
+        elementP.classList.add("num"); // Agregando una clase a tag P
+        elementP.textContent = number; // Agregando contenido a tag P
+        elementFigure.appendChild(elementP); //Agregando tag al padre Figure
+
+        var elementimg = document.createElement("img");
+        elementimg.src = url;
+        elementFigure.appendChild(elementimg);
+
+        var elemetfigcaption = document.createElement("figcaption");
+        elemetfigcaption.textContent = name;
+        elementFigure.appendChild(elemetfigcaption);
+
+        var elementA = document.createElement("a");
+        // elementA.classlist.add("show")        elementA.href = "#";
+        elementA.textContent = " Ver +";
+
+        //funcnion para  ver +
+        elementA.addEventListener("click", () => {
+
+            showInfo(number);
+        });
+        elemetfigcaption.appendChild(elementA);
+
+
+        parent.appendChild(elementFigure); //Agregando tag al padre Article
+    }
 }
-// funcion para mostrar datos del pokemon
-// function principalpokemon() {
-//     data.card.forEach(function(elem)){
-//       const title = `<p>${elem.title}</p>` + `<img href = "elem.poster" target="self"</img>`;
-//     document.getElementById ("mypokemon")   }
-//     let html = '';
-//     let url = objPokemon.img;
-//     let name = objPokemon.name;
-//     let number = objPokemon.num;
 
-//     // insertando los obj con html dinamico
-//     html = html + '<p class="num"">' + number + '</p>';
-//     html = html + '<figure class="photoPokemon">';
-//     //html = html + '<p class='
-//     html = html + '<img src="' + url + '"/>';
-//     html = html + '<figcaption>' + name + '</figcaption>';
-//     html = html + '</figure>';
-
-//     // console.log(html);
-//     document.getElementById("infoPokemon").innerHTML = html;
-// }
 // funcion para el boton ver +
-document.getElementById("btn-show").addEventListener("click", () => {
-    //pokemon.pokemon.filter(lookinfopokemon);
-    lookinfopokemon(pokemon.pokemon);
-    document.getElementById("btn-show").style.display = "none";
+function showInfo(numPokemon) {
+    console.table(numPokemon);
+    //alert("hola " + name);
+    document.getElementById("numpokemon").style.display = "none";
     document.getElementById("DatasheetPokemon").style.display = "block";
-});
 
-//funcion para el boton de la ficha tecnica
-document.getElementById("btn-return").addEventListener("click", () => {
-    document.getElementById("btn-show").style.display = "block";
-    document.getElementById("DatasheetPokemon").style.display = "none";
-});
 
-/*mostrar  las imagenes de mi data pokemon*/
-const fnames = (names) => {
-        return names.name;
-    }
-    //console.table(pokemon.pokemon.filter(fnames));
+}

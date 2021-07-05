@@ -1,13 +1,19 @@
-
 * {
     margin: 0px;
     padding: 0px;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     /* background: blue; */
     background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 header {
     box-sizing: border-box;
 }
@@ -127,6 +133,7 @@ header {
     }
 }
 
+
 /* OCULTAR FICHA TECNICA */
 
 #DatasheetPokemon {
@@ -155,7 +162,7 @@ header {
     padding: 2px;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
-    }
+}
 .imgdatasheet {
     width: 200px;
     height: 250px;
