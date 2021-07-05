@@ -3,15 +3,7 @@
 
 
 
-
-
-
-
-
-
-
-
-export const dataMain = (gibli) => {
+//export const dataMain
  
 
 
