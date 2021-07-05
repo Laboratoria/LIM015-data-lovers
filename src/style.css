@@ -1,9 +1,3 @@
-
-/*
-empieza header antiguo
-
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -46,31 +40,24 @@ header a {
     padding: 0 10px;
 }
 
-/*
-termina del header antiguo */
-
-
 .detallePelicula{
-
     height: 90vh;;
     width: 95vw;
-    margin:1%;
+    margin: 1%;
     border: 2px solid #00283A ;
     display: flex;
 }
 
 
 .detallePelicula .imagenPelicula{
-
     height: 50vh;
     width: 50vw;
-    border:2px solid #00283A;
+    border: 2px solid #00283A;
     margin:  50px 20px  auto ;
-
 }
 
 .cuadros {
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
@@ -85,7 +72,6 @@ termina del header antiguo */
 
 
 .director, .fecha ,.producer ,.rtScore {
-
     height: 10vh;
     width: 10vw;
     background-color: violet;
@@ -94,12 +80,9 @@ termina del header antiguo */
     border:2px solid #00283A;
     justify-content: center;
     text-align: center;
-
-
 }
 
 #d1 {
-    
     background-color:#FBFBFF;
 }
 
@@ -109,7 +92,6 @@ termina del header antiguo */
 }
 
 #botonCharacters ,#botonLocation,#botonVehicles {
-    
     width: 30vh;
     background-color:#C8C34A;
     color: black;
@@ -121,15 +103,13 @@ termina del header antiguo */
     text-decoration:none;
     box-shadow:0px 0.5px 0px  ;
     border-radius: 10%;
-
 }
 
-section button i { 
+section button i {
     padding: 20px;
 }
 
 .cuadroLista {
-
     height: 90vh;
     width: 90vw;
     margin: 1%;
@@ -137,24 +117,19 @@ section button i {
     display: flex;
     border: solid #DBF0D9;
     border-radius: 1%;
-    
 }
 
 
 #imagen {
-
     margin:7%;
     height: 30vh;
     width: 18vw;
     background-color: chartreuse;
     display: flex;
     justify-content: center;
-
-
 }
 
 #per1 ,#per2 ,#per3 ,#per4 {
-
     margin: 1%;
     height: 70vh;
     width: 60vw;
@@ -165,19 +140,15 @@ section button i {
     background-color: cadetblue;
     align-content: center;
     text-align: center;
-
 }
 
 .cuadropersonal {
-
     margin: 1%  solid #00283A ;
     padding: auto;
     border-radius: 1%;
-    
 }
-
-main {
-    background-image: url(./img/studio_ghibli.jpg);
+.welcome-main {
+    background-image: url(./img/Image-Studio-ghibli.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -185,7 +156,7 @@ main {
     position: relative;
 
 }
-main::before {
+.welcome-main::before {
     content: "";
     width: 100%;
     height: 100vh;
@@ -193,12 +164,52 @@ main::before {
     position: absolute;
     opacity: 0.5;
 }
-
-.list-title p {
+.text {
     position: relative;
     color: white;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    padding: 20px 10px;
+}
+.button {
+    display: flex;
+    justify-content: center;
+}
+.button a{
+    background-color: #00283A;
+    position: relative;
+    border: 1px solid #00283A;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 18%;
+    padding: 12px;
+    margin-top: 12px;
+}
+/*.home-main {
+    background-image: url(./img/studio_ghibli.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.home-main::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+}*/
+.list-title p {
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 2rem;
     font-weight: bold;
     padding: 10px 0px;
 }
@@ -217,25 +228,41 @@ main::before {
 option {
     cursor: pointer;
 }
-
-#listaTitulo {
-    position: relative;
-    width: 16%;
+#container-animes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#image-poster {
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+#title {
+    background-color: #232323;
+    color: white;
+    font-size: 1rem;
     padding: 10px;
-    margin: 8px 15px;
+    width: 15vw;
+    display: block;
+    margin: auto;
+}
+#release {
+    background-color: #232323;
+    color: white;
+    display: block;
+    margin: auto;
+    width: 15vw;
+    height: 5vh;
+    padding: 0 10px;
+}
+footer {
+    background-color: #00283A;
+    color: white;
+    padding: 30px;
+}
+.footer-text {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-
-
-
-#boton {
-    position: relative;
-    width: 16%;
-    padding: 10px;
-    margin: 8px 15px;
-
-}
-
-.titulosPrincipales {
-    color:#C8C34A;
-}
