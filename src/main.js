@@ -10,8 +10,7 @@ const BTNSEARCH = document.getElementById("btn");
 /*asignando un evento*/
 BTNSEARCH.addEventListener("click", (e) => {
     e.preventDefault()
-
-    let 
+ 
 
 });
 
@@ -22,7 +21,7 @@ console.log(SEARCHTEXT);
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
 
-/*funcionalidad de cada elelemto*/
+/*funcionalidad de cada elelemto*///
 
 
 btnMenu.addEventListener("click", function(){
