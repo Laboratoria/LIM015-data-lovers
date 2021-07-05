@@ -13,8 +13,7 @@ const BTNSEARCH = document.getElementById("btn");
 /*asignando un evento*/
 BTNSEARCH.addEventListener("click", (e) => {
     e.preventDefault()
-
-    let 
+ 
 
 });
 
