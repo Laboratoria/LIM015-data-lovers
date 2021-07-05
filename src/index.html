@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -41,14 +41,16 @@
           <li class="menu__item container-submenu2">
             <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
-            <ul class="submenu2">
-              <li class="menu__item"><a href="#" class="menu__link2">Johto</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link2">Kanto</a>
-              </li>
-            </ul>
-          </li>
-
+                    <ul class="submenu1">
+                        <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">A-Z</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">Z-A</a>
+                        </li>
+                    </ul>
+                </li>
+          
           <li class="menu__item container-submenu3">
             <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
@@ -99,7 +101,24 @@
         </div>
       </nav>
     </header>
+    <main>
+        <article id="numpokemon">
+            <!-- html medianete js -->
+        </article>
+
+        <!-- Ficha Tecnica -->
+        <article id="DatasheetPokemon">
+            <section id="infoPokemon">
+            </section>
+            <ul class="featuresPokemon"></ul>
+            <form class="pbPokemon">
+                <!-- <label class="lb-pb">Max - HP<progress class="progressBasePoints" value="32" max="100"></progress></label><br><br> -->
+            </form>
+            <button id="btn-return" class="boton">SALIR</button>
+        </article>
+        <p>Prueba</p>
+    </main>
+    <footer></footer>
     <script src="main.js" type="module"></script>
   </body>
-  <footer></footer>
 </html>
