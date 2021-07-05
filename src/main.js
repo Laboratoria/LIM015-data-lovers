@@ -50,6 +50,7 @@ const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
 const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
+
 //la funcion onload espera que cargue todo DOM
 window.onload = function() {
 
@@ -103,7 +104,7 @@ function showAllPokemon(data) {
         //funcnion para  ver +
         elementA.addEventListener("click", () => {
 
-            showInfo(number);
+            showInfo(data[i]); 
         });
         elemetfigcaption.appendChild(elementA);
 
@@ -113,8 +114,14 @@ function showAllPokemon(data) {
 }
 
 // funcion para el boton ver +
-function showInfo(numPokemon) {
-    console.table(numPokemon);
+function showInfo(datapokemon) {
+    let ficha = document.getElementById('DatasheetPokemon');
+        ficha = document.createElement("img");
+        ficha.src = url;
+        ficha.appendChild(elementimg);
+
+
+    console.log(datapokemon);
     //alert("hola " + name);
     document.getElementById("numpokemon").style.display = "none";
     document.getElementById("DatasheetPokemon").style.display = "block";

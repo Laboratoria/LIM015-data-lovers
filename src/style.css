@@ -200,6 +200,13 @@ header {
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
+#numpokemon{
+    display: flex;
+    flex-flow: row wrap;
+    height: 40rem;
+    justify-content:space-between;
+}
+
 .photoPokemon {
     float: left;
     margin: 5px;
@@ -210,6 +217,7 @@ header {
     /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
     background: linear-gradient(#7CFFA8, #05ECFB);
+
 }
 
 .photoPokemon figcaption {
