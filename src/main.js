@@ -14,58 +14,15 @@ const dropDown = document.querySelector("#myDropdown");
 const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 
+//mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () =>
 {
     headerSection.style.display = "none";
     bioSection.style.display = "none";
     founderSection.style.display = "none";
-    movieList.innerHTML = setMoviesTitle(data.films);
+    movieList.innerHTML = setMoviesTitle(data.films).join("");
 })
-
+//ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", ()=>{
 dropDown.classList.toggle("show")
 })
-
-
-/*
-
-function renderMovies(content) {
-   // movieList.innerHTML = "";
-    movieList.innerHTML = content;
-}
-
-
-navMovies.addEventListener("click", function () {
-    const films = data.films;
-    //join es para eliminar la coma
-    const moviesListString = setMoviesTitle(films).join("");
-    //const filmsCopy = [...data.films];
-    renderMovies(moviesListString);
-})
-
-filmsSelector.onchange = function (e) {
-    const selectedFilter = e.target.value;
-    if (selectedFilter === "alphabeticallyMoreAndLess") {
-        const sortAlphabetically = alphabeticOrder(data.films);
-        const moviesListString = setMoviesTitle(sortAlphabetically).join("");
-
-        renderMovies(moviesListString);
-    }
-    if (selectedFilter === "alphabeticallyLessAndMore") {
-        const sortAlphabeticallyLess = alphabeticOrderLess(data.films);
-        const moviesLessString = setMoviesTitle(sortAlphabeticallyLess).join("");
-
-        renderMovies(moviesLessString);
-    }
-    if (selectedFilter === "rtScoreOrder") {
-        const sortRatingScore = ratingScore(data.films);
-        const filmsRt = setMoviesTitle(sortRatingScore).join("");
-
-        renderMovies(filmsRt);
-    }
-}
-
-
-
-//filterPeopleByMoviesI(data.films, getInputSearchMovie.value)
-*/
