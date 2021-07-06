@@ -20,6 +20,8 @@ navMovies.addEventListener("click", () =>
     headerSection.style.display = "none";
     bioSection.style.display = "none";
     founderSection.style.display = "none";
+    btnDropdown.style.display = "block";
+    document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
 })
 //ocultar el dopdrown y mostrar

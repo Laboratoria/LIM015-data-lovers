@@ -177,12 +177,12 @@ footer {
 }
 /* Dropdown Button */
 .dropbtn {
+  display: none;
   background-color: rgba(169, 208, 204, 76%);
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
-  cursor: pointer;
 }
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
@@ -211,4 +211,7 @@ footer {
 }
 .show {
   display: block;
+}
+.InputSearchMovie {
+  display: none;
 }
