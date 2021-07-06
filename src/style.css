@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: blanchedalmond;
+    font-family: "Open sans";
+  }
+  .navegador {
+    width: 90%;
+    max-width: 90%;
+    margin: 30px auto;
+  }
+  ul.menu {
+    width: 100%;
+    background: brown;
+    list-style: none; /*Para quitar los puntitos que vienen por defecto*/
+    display: flex; /*Para que los menus esten en horizontal*/
+  }
+  ul.menu li {
+    width: 18%; /**/
+  }
+  ul.menu li a {
+    /*Enlaces*/
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 20px 0px;
+  }
+  ul.menu li a:hover {
+    background: blueviolet;
+  }
+  .secciones {
+    width: 100%;
+    background: #fff;
+  }
+  .secciones article {
+    padding: 30px;
+  }
+  .secciones article p {
+    text-align: justify;
+  }
+  @media screen and (max-width: 700px) {
+    /*Para hacer cambios a la hora de achicar*/
+    ul.menu li {
+      width: none;
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    /*Para hacer cambios a la hora de achicar*/
+    ul.menu li a {
+      padding: 15px 0px;
+    }
+  }
+  .opciones {
+    padding: 6px 0;
+  }
+  .filtro {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 6px;
+    margin: 8px auto;
+    justify-content: space-between;
+    max-width: 500px;
+  }
+  .escoger {
+    background: #6EA0C9;
+    padding: 10px 2px;
+    border-radius: 15px;
+    border-style: 2px solid;
+    border-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+  }
+  .escoger:focus {
+    outline: none;
+  }
+  .escoger:focus::placeholder {
+    visibility: hidden;
+  }
+  .menu label {
+    display: inline-block;
+    padding: 20px;
+    color: rgb(66, 192, 41);
+    cursor: pointer;
+    transition: all 400ms ease;
+  }
+  .menu label:hover {
+    background: orange;
+  }
+  .contenido {
+    position: relative;
+  }
+  .contenido div {
+    position: absolute;
+    line-height: 1.8;
+    transition: all 600ms ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    padding: 30px;
+    background: yellow;
+    padding-bottom: 40px;
+  }
+  #nav1,
+  #nav2,
+  #nav3 {
+    display: none;
+  }
+  #nav1:checked ~ .tab1,
+  #nav2:checked ~ .tab2,
+  #nav3:checked ~ .tab3 {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+  }

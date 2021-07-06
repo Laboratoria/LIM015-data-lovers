@@ -11,7 +11,6 @@ describe('example', () => {
   });
 });
 
-
 describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
