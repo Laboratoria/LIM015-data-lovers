@@ -1,188 +1,214 @@
-#logo{
-    background-image: url("./imagenes/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.bio{
-    display: flex;
-    background: #6686AC;
-    padding: 50px 50px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
-    justify-content: center;
-    align-items: center;
-
+#logo {
+  background-image: url("./imagenes/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bio {
+  display: flex;
+  background: #6686ac;
+  padding: 50px 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  justify-content: center;
+  align-items: center;
 }
 
-.questionbio{
-    text-align: left;
-    width: 320px;
-    padding-bottom: 18px;
-    line-height: 44px;
-
+.questionbio {
+  text-align: left;
+  width: 320px;
+  padding-bottom: 18px;
+  line-height: 44px;
 }
-.ghiblibio{
-    text-align: left;
-    width: 50%;
-    line-height: 34px;
+.ghiblibio {
+  text-align: left;
+  width: 50%;
+  line-height: 34px;
 }
-.biocontainer{
-    display: flex;
-
+.biocontainer {
+  display: flex;
 }
-.totoroimage{
-
-    width: 280px;
-    height: 250px;
-    border-radius: 50%;
-    text-align: right;
-    padding-left: 15px;
-    margin: 55px 35px;
+.totoroimage {
+  width: 280px;
+  height: 250px;
+  border-radius: 50%;
+  text-align: right;
+  padding-left: 15px;
+  margin: 55px 35px;
 }
 
 /* Founder section */
-.founders{
-align-items: center;
-background: rgba(197, 198, 199, 0.91);
-padding: 1px 1px;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 18px;
-padding-top: 50px ;
-padding-bottom: 50px;
+.founders {
+  align-items: center;
+  background: rgba(197, 198, 199, 0.91);
+  padding: 1px 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.imagefounders{
-    width: 170px;
-    height: 160px;
-    border-radius: 50%;
-    padding-top: 0.5px;
-    padding-bottom: 0.5px;
-    
+.imagefounders {
+  width: 170px;
+  height: 160px;
+  border-radius: 50%;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
 }
-.imagehayao{
-    padding-left: 20px;
-    padding-right: 40px;
-    text-align: center;
-    object-fit: cover;
+.imagehayao {
+  padding-left: 20px;
+  padding-right: 40px;
+  text-align: center;
+  object-fit: cover;
 }
-.styleimage{
-    padding-right: 40px;
-    text-align: center;
-    object-fit: cover;
+.styleimage {
+  padding-right: 40px;
+  text-align: center;
+  object-fit: cover;
 }
 
-.founderscontainer{
-    display: flex;
-    justify-content: center;
-    
+.founderscontainer {
+  display: flex;
+  justify-content: center;
 }
-.titlefounder{
-    text-align: center;
-    padding-bottom: 40px;
-    
+.titlefounder {
+  text-align: center;
+  padding-bottom: 40px;
 }
-*{
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+
+header {
+  background-color: rgba(53, 91, 145, 90%);
+  height: 600px;
+  width: 100%;
 }
-header{
-    background-color: rgba(53,91,145,90%);
-    height: 600px;
-    width: 100%;
-}
-.logo-del-estudio{
-    top: 30%;
-    height: 400px;
-    left: 70%;
-    position: relative;
-    width: 30%;
+.logo-del-estudio {
+  top: 30%;
+  height: 400px;
+  left: 70%;
+  position: relative;
+  width: 30%;
 }
 .letras {
-    left: -20%;
-    position: relative;
-    top: 15%;
-    width: 60%;
+  left: -20%;
+  position: relative;
+  top: 15%;
+  width: 60%;
 }
-.bordeado{
-    border: white 5px solid;
-    border-radius: 80px;
-    height: 50%;
-    left: 10%;
-    position: relative;
-    top: -35%;
-    width: 60%;
+.bordeado {
+  border: white 5px solid;
+  border-radius: 80px;
+  height: 50%;
+  left: 10%;
+  position: relative;
+  top: -35%;
+  width: 60%;
 }
-.menu-principal{
-    width: 100%;
+.menu-principal {
+  width: 100%;
 }
-ul{
-    background-color: rgba(0,0,0,90%);
-    height: 80px;
-    list-style: none;
-    overflow: hidden;
-    position: relative;
-
+ul {
+  background-color: rgba(0, 0, 0, 90%);
+  height: 80px;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
 }
-li{
-    float: left;
-    position: relative;
-    top: 36px;
-    right: -25px;
+li {
+  float: left;
+  position: relative;
+  top: 36px;
+  right: -25px;
 }
-li a{
-    color: white;
-    font-size: 23px;
-    margin-inline: 8px;
-    text-decoration: none;
+li a {
+  color: white;
+  font-size: 23px;
+  margin-inline: 8px;
+  text-decoration: none;
 }
-footer{
-    background-color: rgba(0,0,0,90%);
-    display:flex;
-    flex-wrap: nowrap;
-    height: 100px;
-    justify-content: space-around;
-    width: 100%;
+footer {
+  background-color: rgba(0, 0, 0, 90%);
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100px;
+  justify-content: space-around;
+  width: 100%;
 }
-.pie-de-pagina{
-    align-self: center;
-    bottom: -200px;
-    color: rgba(239,197,46,100%);
-    display: flex;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
+.pie-de-pagina {
+  align-self: center;
+  bottom: -200px;
+  color: rgba(239, 197, 46, 100%);
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
 }
-.imagen-totoro{
-    position: relative;
-    z-index: 3;
+.imagen-totoro {
+  position: relative;
+  z-index: 3;
 }
-#movieList{
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    width: 100%;
-    grid-gap: 1rem;
-    padding: 2rem 0;
+#movieList {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  width: 100%;
+  grid-gap: 1rem;
+  padding: 2rem 0;
 }
-.movieItem{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+.movieItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 .movieItem img {
-    height: 300px;
-    width: auto;
-    margin-bottom: 1rem;
+  height: 300px;
+  width: auto;
+  margin-bottom: 1rem;
 }
-#parte-principal{
-    align-items: center;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
+#sectionMovies {
+  align-items: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
 }
-/* .name-pelis {
-   
-    
-} */
+/* Dropdown Button */
+.dropbtn {
+  background-color: rgba(169, 208, 204, 76%);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #2980b9;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.show {
+  display: block;
+}

@@ -2,9 +2,32 @@ import data from './data/ghibli/ghibli.js'
 
 import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore} from "./data.js";
 
-const navMovies = document.querySelector("#pelis");
+const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
-const filmsSelector = document.querySelector("#filmsFilter");
+//agregue nuevas constantes
+const headerSection = document.querySelector("#logo");
+const bioSection = document.querySelector("#bio");
+const founderSection = document.querySelector("#founders");
+const btnDropdown = document.querySelector("#dropbtn");
+const dropDown = document.querySelector("#myDropdown");
+//const de Alisson
+const filmsCopy = [...data.films];
+const getInputSearchMovie = document.querySelector("#InputSearchMovie");
+
+navMovies.addEventListener("click", () =>
+{
+    headerSection.style.display = "none";
+    bioSection.style.display = "none";
+    founderSection.style.display = "none";
+    movieList.innerHTML = setMoviesTitle(data.films);
+})
+
+btnDropdown.addEventListener("click", ()=>{
+dropDown.classList.toggle("show")
+})
+
+
+/*
 
 function renderMovies(content) {
    // movieList.innerHTML = "";
@@ -44,4 +67,5 @@ filmsSelector.onchange = function (e) {
 
 
 
-
+//filterPeopleByMoviesI(data.films, getInputSearchMovie.value)
+*/

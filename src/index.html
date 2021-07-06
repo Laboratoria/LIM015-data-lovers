@@ -35,28 +35,23 @@
     </header>
 
     <main id="container_to_display">
-      <!-- pendiente de colocar  -->
-      <div class="icono-de-flecha"></div>
       <!-- Bio  -->
       <section id="bio" class="bio">
         <div class="ghiblibio">
-          <h2 class="questionbio">¿Donde nace el STUDIO GHIBLI?</h2>
+          <h2 class="questionbio">WHERE WAS BORN THE STUDIO SHIBLI?</h2>
           <p>
-            Studio Ghibli (スタジオジブリ Sutajio Jiburi?) es un estudio japonés de animación, considerado por la
-            crítica especializada y muchos cinéfilos como uno de los mejores estudios de animación del mundo en la
-            actualidad.
-            Fue fundado el 15 de junio de 1985, el nombre “Ghibli” hace referencia a la palabra italiana “viento caliente
-            del
-            Sahara” ya que el estudio quería “dar un nuevo aire a la industria del anime”.
+            Studio Ghibli (スタジオジブリ Sutajio Jiburi) It`s a Japanese animation studio, considered by the specialized critics and many moviegoers as one of the best animation studios in the world in the present.
+            It was founded on June 15, 1985, the "Ghibli" name refers to the Italian word "hot wind of Sahara ”since the studio wanted to“ give a new air to the anime industry ”.
           </p>
         </div>
+        
         <div>
           <img src="./images/totoro.gif" alt="" class="totoroimage" />
         </div>
       </section>
-      <!-- Fundadores -->
-      <section class="founders">
-        <h2 class="titlefounder">Fundadores</h2>
+      <!-- founders -->
+      <section id="founders" class="founders">
+        <h2 class="titlefounder">FOUNDERS</h2>
         <div class="founderscontainer">
           <div class="imagehayao">
             <img class="imagefounders" src="./images/Hayao Misaki.jpeg" alt="" srcset="" />
@@ -76,30 +71,35 @@
           </div>
         </div>
       </section>
-      <section id="parte-principal">
-        <button id="pelis">Peliculas</button>
-        <div class="movieFilter">
-          <select id="filmsFilter" name="select">
-            <option value=""></option>
-            <option value="alphabeticallyMoreAndLess">Filter by Name (A-Z)</option>
-            <option value="alphabeticallyLessAndMore">Filter by Name (Z-A)</option>
-            <option value="rtScoreOrder">Filter by rating score</option>
-          </select>
+
+      <section id="sectionMovies">
+        <button id="btnPelisStart">MOVIES</button>
+
+        <label for="InputSearchMovie">Search the movie:</label>
+        <input id="InputSearchMovie" type="search" placeholder=" 🔎 here! write the movie name" />
+
+        <div id="dropdown" class="dropdown">
+          <button id="dropbtn" class="dropbtn">≡</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Filter by Name (A-Z)</a>
+            <a href="#">Filter by Name (Z-A)</a>
+            <a href="#">Filter by rating score ↑↓</a>
+            <a href="#">Filter by rating score ↓↑</a>
+            <a href="#">Filter by release date ↑↓</a>
+            <a href="#">Filter by release date ↓↑</a>
+          </div>
         </div>
+
         <div id="movieList"></div>
+
       </section>
     </main>
 
-    <article id="name-pelis" class="name-pelis">
-      
-    </article>
-
-
+    <!--footer-->
     <footer>
       <p class="pie-de-pagina">Copyright &copy;2021</p>
-      <!--ANDREA-->
       <p class="pie-de-pagina">All right reserved</p>
-      <image class="imagen-totoro" src="./imagenes/totoro2.png" alt="nada" />
+      <image class="imagen-totoro" src="./imagenes/totoro2.png" alt="totoro footer" />
     </footer>
     <script src="main.js" type="module"></script>
   </body>

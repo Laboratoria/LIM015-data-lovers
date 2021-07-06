@@ -42,7 +42,7 @@ export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
 })
 //extraer la descripcion de peliculas(Alisson)
 
-//extraer el nombre e imagen de los personajes
+//extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = element => {
   return element.map(e => e.people.map(el => {
     const peopleImage = `<div><img src="${el.img}" />`;
@@ -50,10 +50,32 @@ export const getPeople = element => {
     return peopleImage + peopleName;
   }));
 }
+//filtrar personajes por peliculas(y mostrar sus descripciones)
+export const filterPeopleByMovies = (filmsCopy, movieName) =>
+  filmsCopy.filter(e =>
+    e.title === movieName).map(el => el.people.map(elem => {
+      const cartoonName = `<div><h3>${elem.name}</h3>`;
+      const cartoonImage = `<img src="${elem.img}" />`;
+      const cartoonGender = `<p>Gender: ${elem.gender}</p>`;
+      const cartoonAge = `<p>Age: ${elem.age}</p>`;
+      const cartoonEyeColor = `<p>Eye color: ${elem.eye_color}</p>`;
+      const cartoonHairColor = `<p>Hair color: ${elem.hair_color}</p>`;
+      const cartoonSpecie = `<p>Specie:${elem.specie}</p></div>`;
+      return cartoonName + cartoonImage + cartoonGender + cartoonAge + cartoonEyeColor + cartoonHairColor + cartoonSpecie + cartoonHairColor
+    }
+    ))
+//locaciones y descripciones (Alisson)
 
-
-/*people y su descripciones (yo)
-
-locaciones y descripciones (Alisson)
-
-vehiculos y susdescripciones (yo)*/
+//vehiculos y susdescripciones (yo)
+export const getVehiclesAndDescripcions = (filmsCopy, movieName) =>
+  filmsCopy.filter(e =>
+    e.title === movieName).map(el => el.vehicles.map(elem => {
+      const vehiclesName = `<div><h3>${elem.name}</h3>`;
+      const vehiclesImage = `<img src="${elem.img}" />`;
+      const vehiclesDescription = `<p>Description: ${elem.description}</p>`;
+      const vehiclesType = `<p>Type: ${elem.vehicle_class}</p>`;
+      const vehiclesLength = `<p>Length: ${elem.length}</p>`;
+      const vehiclesPilot = `<p>Pilot: ${elem.pilot.name}</p></div>`;
+      return vehiclesName + vehiclesImage + vehiclesDescription + vehiclesType + vehiclesLength + vehiclesPilot
+    }
+    ))
