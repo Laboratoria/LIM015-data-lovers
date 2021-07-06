@@ -136,14 +136,14 @@ header {
 
 /* OCULTAR FICHA TECNICA */
 
-#DatasheetPokemon {
+#fichaTecnicaPokemon {
     display: none;
 }
 
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
-.photoPokemon {
+.fotoPokemon {
     float: left;
     margin: 5px;
     padding: 10px;
@@ -155,27 +155,59 @@ header {
     background: linear-gradient(#7CFFA8, #05ECFB);
 }
 
-.photoPokemon figcaption {
+.fotoPokemon figcaption {
     background-color: rgba(255, 255, 255, 1);
     color: black;
     font-style: roboto;
     padding: 2px;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
-}
-.imgdatasheet {
-    width: 200px;
-    height: 250px;
-    float: left;
-    background-color: aquamarine;
+    text-transform: capitalize;
 }
 
-.d-datasheet {
-    background-color: aquamarine;
-    padding-bottom: 170px;
+.datosPokemon {
+    color: rgba(255, 255, 255, 1);
+    font-style: roboto;
+    text-align: center;
 }
 
-.progressBasePoints {
-    width: 20%;
-    height: 30px;
+.verMas {
+    color: blue;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-style: roboto;
+}
+
+.imagenPokemon {
+    display: flex;
+    margin: 5px;
+    padding: 10px;
+    width: 120px;
+    border: 1px #E5E5E5 solid;
+    /* padding: 4px; */
+    /* margin: auto; */
+    border-radius: 15px 15px 15px 15px;
+    background: linear-gradient(#7CFFA8, #05ECFB);
+}
+
+.nombrePokemon {
+    text-transform: capitalize;
+    font-style: roboto;
+}
+
+.btnSalir {
+    font-style: roboto;
+    background: white;
+    padding: 8px 30px;
+    color: rgb(155, 211, 228);
+    text-decoration: none;
+    border-radius: 25px;
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.btnSalir:hover {
+    background: crimson;
+    color: white;
 }
