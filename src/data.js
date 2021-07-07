@@ -33,12 +33,10 @@ export const setMoviesTitle = () => {
 };
 
 //filtrado sort por RT score (puntaje segun criticos)
-const filmsCopy = [...data.films] // Copia del array original
+const filmsCopy = [...data.films];
 // console.log (filmsCopy);
-
-const reviewMovieScore = filmsCopy.sort(( a , b ) => {
-   return parseInt(b.rt_score) - parseInt(a.rt_score) // convierto a numero entero
-  
+const reviewMovieScore = filmsCopy.sort((a, b) => {
+  return parseInt(b.rt_score) - parseInt(a.rt_score); // conbierto a numero entero
 });
 // console.log(reviewMovieScore)
 
@@ -73,7 +71,10 @@ const lastestRealeaseDate = filmsCopy.sort(( a , b) => {
 
 
 
-// Funcion reduce
+// Funcion reduce 
+// acumulador obtiene los elementos lo convierte en numero luego suma los rt score 
+// llamo a mi variable que contiene la suma y divido entre la cantidad de films
+
 
 const sumRtScore = data.films.reduce((acumulator , value) => {
  return acumulator + parseInt (value.rt_score)
@@ -86,7 +87,7 @@ console.log(averageRtScore);
 
 
 
-// Funcion para obtener  todos los personajes y sin nombres 
+// Funcion para obtener  todos los personajes y sus nombres 
 
 const charactersName = data.films.map(film => {
   return  film.people.map(character => {
@@ -118,8 +119,12 @@ const locationName = data.films.map(element => {
 // })
 
 
+const sumRtScore = data.films.reduce((acumulator , value) => {
+ return acumulator + parseInt (value.rt_score)
+ 
+}, 0)
 
+const averageRtScore = sumRtScore /data.films.length;
+console.log(averageRtScore);
+//console.log(sumRtScore); 
 
-// export const anotherExample = () => {
-//   console.log('OMG');
-// };
