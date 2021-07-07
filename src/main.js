@@ -21,6 +21,15 @@ navMovies.addEventListener("click", function () {
 
 
 
+
+const getMoviePic = () => {
+    const namePelis = document.querySelector("#name-pelis");
+    console.log(namePelis);
+    //namePelis.addEventListener("click" , function (){
+
+    }
+
+
 // function pruebaDos() {
 //     data.films.forEach(function (element) {
 //         const movieCover = `<img src="${element.poster}" alt = "portada de pelicula" loading="lazy"/> `,

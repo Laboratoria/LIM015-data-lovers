@@ -1,4 +1,4 @@
-import validation, anotherExample  from '../src/data.js';
+import { setMoviesTitle}  from '../src/data.js';
 
 
 
