@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate} from "./data.js";
+import { setMoviesTitle, alphabeticOrder} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -9,6 +9,7 @@ const headerSection = document.querySelector("#logo");
 const bioSection = document.querySelector("#bio");
 const founderSection = document.querySelector("#founders");
 const btnDropdown = document.querySelector("#dropbtn");
+//atrapa al elemento select
 const dropDown = document.querySelector("#myDropdown");
 //const de Alisson
 const filmsCopy = [...data.films];
@@ -28,3 +29,11 @@ navMovies.addEventListener("click", () =>
 btnDropdown.addEventListener("click", ()=>{
 dropDown.classList.toggle("show")
 })
+
+dropDown.addEventListener("change",
+    (e) => {
+        e.target.value = "NameOrderMore";
+        console.log(alphabeticOrder(filmsCopy));
+        movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("");
+}
+)
