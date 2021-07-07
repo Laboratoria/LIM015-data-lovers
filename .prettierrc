@@ -1,4 +1,13 @@
 {
+<<<<<<< HEAD
+    "bracketSpacing": true,
+    "semi": true,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "jsxBracketSameLine": true,
+    "arrowParens": "always"
+}
+=======
     "alignObjectProperties": true,
     "arrayExpand": true,
     "arrowParens": "always",
@@ -8,3 +17,4 @@
     "tabWidth": 2
   }
   
+>>>>>>> 62a3f783e35007ee581de21a649349b4b8a2a553
