@@ -3,8 +3,13 @@ import data from './data/ghibli/ghibli.js';
 
 const containerAnimes = document.getElementById('container-animes');
 
-data.films.forEach((dato) => {
-    const cardAnime = document.createElement('div');
+console.log(data.films);
+
+
+data.films.forEach(datos);
+
+function datos(dato) {
+    const cardAnime = document.createElement('div')
     cardAnime.className = "container-card-anime";
     cardAnime.innerHTML = `
     <div>
@@ -14,6 +19,13 @@ data.films.forEach((dato) => {
     <br>
     </div>`
     containerAnimes.appendChild(cardAnime);
-});
+    
+}
+
+
+
+
+
+
 
 //console.log(example, data);
