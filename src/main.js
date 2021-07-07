@@ -126,15 +126,6 @@ function mostrarPokemones(data) {
 }
 
 // funcion para el boton ver +
-
-function showInfo(datapokemon) {
-    let ficha = document.getElementById('DatasheetPokemon');
-        ficha = document.createElement("img");
-        ficha.src = url;
-        ficha.appendChild(elementimg);
-
-
-    console.log(datapokemon);
 function verFichaTecnica(datapokemon) {
     console.log(datapokemon);
     // console.log(datapokemon.resistant);

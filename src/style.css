@@ -44,7 +44,7 @@ header {
        transition: .3s;
        width: 30px;
    }
-    }*/
+*/
 
 #button {
   width: 20px;
@@ -199,7 +199,6 @@ header {
     justify-content:space-between;
 }
 
-.photoPokemon {
 .fotoPokemon {
     float: left;
     margin: 5px;
@@ -210,7 +209,6 @@ header {
     /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
     background: linear-gradient(#7CFFA8, #05ECFB);
-
 }
 
 .fotoPokemon figcaption {
