@@ -1,4 +1,3 @@
-
 // import { setMoviesTitle } from './data.js'
 // import data from './data/ghibli/ghibli.js'
 import { setMoviesTitle } from './data.js';
@@ -7,28 +6,16 @@ import { setMoviesTitle } from './data.js';
     console.log(elem.poster)
 });*/
 
-const navMovies = document.querySelector("#movies");
-navMovies.addEventListener("click", function () {
-    const hideFirstSlide = document.querySelector("#container_to_display");
-    const logo = document.querySelector("#logo");
-    hideFirstSlide.style.display = "none";
-    logo.style.display = "none";
-    //mostrar la imagen y el titulo
-    setMoviesTitle() // Filtrado seccion Peliculas con img + titulo
-    // anotherExample()
-
+const navMovies = document.querySelector('#movies');
+navMovies.addEventListener('click', function () {
+  const hideFirstSlide = document.querySelector('#container_to_display');
+  const logo = document.querySelector('#logo');
+  hideFirstSlide.style.display = 'none';
+  logo.style.display = 'none';
+  //mostrar la imagen y el titulo
+  setMoviesTitle(); // Filtrado seccion Peliculas con img + titulo
+  // anotherExample()
 });
-
-
-
-
-const getMoviePic = () => {
-    const namePelis = document.querySelector("#name-pelis");
-    console.log(namePelis);
-    //namePelis.addEventListener("click" , function (){
-
-    }
-
 
 // function pruebaDos() {
 //     data.films.forEach(function (element) {
@@ -37,7 +24,6 @@ const getMoviePic = () => {
 //         document.querySelector("#name-pelis").innerHTML += movieCover + moviesTitle
 //     });
 // }
-
 
 // function prueba() {
 //     data.films.forEach(function (elem) {

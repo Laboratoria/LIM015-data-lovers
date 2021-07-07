@@ -1,4 +1,4 @@
-import data from './data/ghibli/ghibli.js'
+import data from './data/ghibli/ghibli.js';
 //recibe
 
 /*Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
@@ -42,14 +42,15 @@ const reviewMovieScore = filmsCopy.sort(( a , b ) => {
 });
 // console.log(reviewMovieScore)
 
-// filtrado sort para orden alfabetico 
-const alphabeticOrder = filmsCopy.sort(( a, b ) => {
-  if( a.title > b.title) {
-    return 1
+// filtrado sort para orden alfabetico
+const alphabeticOrder = filmsCopy.sort((a, b) => {
+  if (a.title > b.title) {
+    return 1;
   }
-  if (a.title< b.title){
-    return -1
-  } return 0
+  if (a.title < b.title) {
+    return -1;
+  }
+  return 0;
 });
  //console.log(alphabeticOrder);
 
@@ -72,8 +73,16 @@ const lastestRealeaseDate = filmsCopy.sort(( a , b) => {
 
 
 
+// Funcion reduce
 
+const sumRtScore = data.films.reduce((acumulator , value) => {
+ return acumulator + parseInt (value.rt_score)
+ 
+}, 0)
 
+const averageRtScore = sumRtScore /data.films.length;
+console.log(averageRtScore);
+//console.log(sumRtScore); 
 
 
 
