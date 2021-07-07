@@ -3,7 +3,7 @@ import data from './data/ghibli/ghibli.js';
 
 const containerAnimes = document.getElementById('container-animes');
 
-console.log(data.films);
+
 
 
 data.films.forEach(datos);
