@@ -30,24 +30,3 @@ export const data = () => {
 export {
     filterData
 }
-
-
-
-
-// elementA.addEventListener("click", () => {
-
-//     showInfo();
-
-//     let showpokemons = `<div class="newpokemon">
-//     <img src=""> <p class=textContent> 
-//     <ul>
-//     <li> Altura: '+ size1 +'> </li>
-//     <li> Peso: '+ size2 +'> </li>
-//     </ul
-//     </p>
-//     </div>
-//     `;
-//     const Fragment = document.createRange().createContextualFragment(showpokemons)
-//     document.newpokemon.appendChild(Fragment);
-
-// });
