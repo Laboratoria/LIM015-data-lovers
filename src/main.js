@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -32,8 +32,17 @@ dropDown.classList.toggle("show")
 
 dropDown.addEventListener("change",
     (e) => {
-        e.target.value = "NameOrderMore";
-        console.log(alphabeticOrder(filmsCopy));
-        movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("");
-}
-)
+        if(e.target.value === "NameOrderMore"){
+            movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("")
+        }
+        if (e.target.value === "NameOrderLess"){
+            movieList.innerHTML = setMoviesTitle(alphabeticOrderLess(filmsCopy)).join("")
+        }
+        if (e.target.value === "RtScoreOrderMore") {
+            movieList.innerHTML = setMoviesTitle(ratingScore(filmsCopy)).join("")
+        }
+        if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
+        if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
+        if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
+})
+

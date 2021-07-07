@@ -18,25 +18,25 @@ export const alphabeticOrderLess = (filmsCopy) => filmsCopy.sort((a, b) => {
   if (a.title > b.title) { return -1 }
   return 0;
 });
-//ordena pelis por rating score (mayor a menor)
-export const ratingScore = (filmsCopy) =>
+//ordena pelis por rating score (menor a menor)
+export const ratingScoreLess = (filmsCopy) =>
   filmsCopy.sort((a, b) => {
-    if (a.rt_score > b.rt_score) { return 1 }
-    if (a.rt_score < b.rt_score) { return -1 }
+    if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return 1 }
+    if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return -1 }
     return 0;
   });
 //ordena pelis por rating score (menor a mayor)
-export const ratingScoreLess = (filmsCopy) => filmsCopy.sort((a, b) => {
-  if (a.rt_score < b.rt_score) { return 1 }
-  if (a.rt_score > b.rt_score) { return -1 }
+export const ratingScore = (filmsCopy) => filmsCopy.sort((a, b) => {
+  if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return 1 }
+  if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return -1 }
   return 0;
 });
-//ordena pelis por release date (mayor a menor)
+//ordena pelis por release date (menor a mayor)
 export const realeaseDateOld = filmsCopy =>
   filmsCopy.sort((a, b) => {
-    return Number(a.release_date - b.release_date)
+    return parseInt(a.release_date) - parseInt(b.release_date)
   });
-//ordena pelis por release date (menor a mayor)
+//ordena pelis por release date (mayor a menor)
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
 })
