@@ -1,40 +1,48 @@
-// import { setMoviesTitle } from './data.js'
-// import data from './data/ghibli/ghibli.js'
-import { setMoviesTitle } from './data.js';
+import data from './data/ghibli/ghibli.js'
 
-/*data.films.forEach(function (elem) {
-    console.log(elem.poster)
-});*/
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate} from "./data.js";
 
-const navMovies = document.querySelector('#movies');
-navMovies.addEventListener('click', function () {
-  const hideFirstSlide = document.querySelector('#container_to_display');
-  const logo = document.querySelector('#logo');
-  hideFirstSlide.style.display = 'none';
-  logo.style.display = 'none';
-  //mostrar la imagen y el titulo
-  setMoviesTitle(); // Filtrado seccion Peliculas con img + titulo
-  // anotherExample()
-});
+const navMovies = document.querySelector("#btnPelisStart");
+const movieList = document.querySelector("#movieList");
+//agregue nuevas constantes
+const headerSection = document.querySelector("#logo");
+const bioSection = document.querySelector("#bio");
+const founderSection = document.querySelector("#founders");
+const btnDropdown = document.querySelector("#dropbtn");
+//atrapa al elemento select
+const dropDown = document.querySelector("#myDropdown");
+//const de Alisson
+const filmsCopy = [...data.films];
+const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 
-// function pruebaDos() {
-//     data.films.forEach(function (element) {
-//         const movieCover = `<img src="${element.poster}" alt = "portada de pelicula" loading="lazy"/> `,
-//             moviesTitle = `<h3> ${element.title.toUpperCase()} </h3>`
-//         document.querySelector("#name-pelis").innerHTML += movieCover + moviesTitle
-//     });
-// }
+//mostrar pelis en el orden de la data
+navMovies.addEventListener("click", () =>
+{
+    headerSection.style.display = "none";
+    bioSection.style.display = "none";
+    founderSection.style.display = "none";
+    btnDropdown.style.display = "block";
+    document.querySelector(".InputSearchMovie").style.display = "block";
+    movieList.innerHTML = setMoviesTitle(data.films).join("");
+})
+//ocultar el dopdrown y mostrar
+btnDropdown.addEventListener("click", ()=>{
+dropDown.classList.toggle("show")
+})
 
-// function prueba() {
-//     data.films.forEach(function (elem) {
-//         const titulos = `<h2> ${elem.title.toUpperCase()} </h2>`,
-//             descripciones = `<h3>Description:</h3><p>${elem.description}</p>`,
-//             directores = `<h3>Directors:</h3><p>${elem.director}</p>`,
-//             productores = `<h3>Productores:</h3><p>${elem.producer}</p>`,
-//             portada = `<img src="${elem.poster}" alt = "portada de pelicula" loading="lazy"/> `,
-//             fechaLanzamiento = `<h3> Release Date:</h3> <p>${elem.release_date}</p>`,
-//             puntajeAudiencia = `${elem.release_date} `;
-//         document.querySelector("#name-pelis").innerHTML += titulos + descripciones + directores + productores + fechaLanzamiento + portada;
+dropDown.addEventListener("change",
+    (e) => {
+        if(e.target.value === "NameOrderMore"){
+            movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("")
+        }
+        if (e.target.value === "NameOrderLess"){
+            movieList.innerHTML = setMoviesTitle(alphabeticOrderLess(filmsCopy)).join("")
+        }
+        if (e.target.value === "RtScoreOrderMore") {
+            movieList.innerHTML = setMoviesTitle(ratingScore(filmsCopy)).join("")
+        }
+        if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
+        if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
+        if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
+})
 
-//     });
-// }
