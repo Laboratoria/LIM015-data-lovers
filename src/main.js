@@ -2,11 +2,30 @@ import data from './data/pokemon/pokemon.js';
 //
 import { filterData } from './data.js';
 
+/*buscador*/
+
+const SEARCHTEXT = document.getElementById("searchtext");
+const BTNSEARCH = document.getElementById("btn");
+
+/*asignando un evento*/
+BTNSEARCH.addEventListener("click", (e) => {
+    e.preventDefault()
+ 
+
+});
+
+console.log(SEARCHTEXT);
+
+/*menu desplegable*/
+
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
 
-btnMenu.addEventListener("click", function() {
-    menu.classList.toggle("mostrar");
+/*funcionalidad de cada elelemto*///
+
+
+btnMenu.addEventListener("click", function(){
+menu.classList.toggle("mostrar");
 
 });
 
@@ -132,4 +151,10 @@ function limpiarContenido(limpiar) {
     while (limpiar.firstChild) {
         limpiar.removeChild(limpiar.firstChild);
     }
+}
+function showInfo(numPokemon) {
+    console.table(numPokemon);
+    //alert("hola " + name);
+    document.getElementById("numpokemon").style.display = "none";
+    document.getElementById("DatasheetPokemon").style.display = "block";
 }
