@@ -8,13 +8,39 @@ const SEARCHTEXT = document.getElementById("searchtext");
 const BTNSEARCH = document.getElementById("btn");
 
 /*asignando un evento*/
-BTNSEARCH.addEventListener("click", (e) => {
+
+BTNSEARCH.addEventListener("click", (e) =>{
     e.preventDefault()
- 
+
+    let datapoke = SEARCHTEXT.value;
+    console.log(datapoke);
 
 });
 
-console.log(SEARCHTEXT);
+/* manipulacion del menu */
+
+/* nueva funcion*/
+
+const filterTypes = document.querySelectorAll(".menu__link3");
+
+for (let i = 0; i < filterTypes.length; i++) {
+    
+    filterTypes[i].addEventListener("click", (e) => {
+       const elementPoke = e.target.id;
+
+        console.log(e.target.id);/*probar que funciona*/
+
+        let filterpoke = data.pokemon.type.filter(type => {
+            
+            
+
+
+        });
+        
+    });
+}
+
+
 
 /*menu desplegable*/
 
@@ -49,6 +75,7 @@ for (let i = 0; i < subMenuBtn1.length; i++) {
 const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
 const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
+
 
 //la funcion onload espera que cargue todo DOM
 window.onload = function() {
@@ -90,6 +117,7 @@ function mostrarPokemones(data) {
         elementA.classList.add("verMas");
         elementA.textContent = " Ver +";
         elementA.addEventListener("click", () => {
+            showInfo(data[i]); 
             verFichaTecnica(data[i]);
         });
         elemetfigcaption.appendChild(elementA);
@@ -98,6 +126,15 @@ function mostrarPokemones(data) {
 }
 
 // funcion para el boton ver +
+
+function showInfo(datapokemon) {
+    let ficha = document.getElementById('DatasheetPokemon');
+        ficha = document.createElement("img");
+        ficha.src = url;
+        ficha.appendChild(elementimg);
+
+
+    console.log(datapokemon);
 function verFichaTecnica(datapokemon) {
     console.log(datapokemon);
     // console.log(datapokemon.resistant);

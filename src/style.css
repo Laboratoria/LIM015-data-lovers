@@ -31,7 +31,7 @@ header {
 
 /*styles search*/
 
-.search {
+/*.search {
     height: 20px;
     padding: 0px 30px;
     display: flex;
@@ -57,7 +57,7 @@ header {
        text-decoration: none;
        color: white;
        font-size: 15px;
-    }
+    }*/
 
    .menu {
     margin-left: -100%;
@@ -200,6 +200,15 @@ header {
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
+
+#numpokemon{
+    display: flex;
+    flex-flow: row wrap;
+    height: 40rem;
+    justify-content:space-between;
+}
+
+.photoPokemon {
 .fotoPokemon {
     float: left;
     margin: 5px;
@@ -210,6 +219,7 @@ header {
     /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
     background: linear-gradient(#7CFFA8, #05ECFB);
+
 }
 
 .fotoPokemon figcaption {
