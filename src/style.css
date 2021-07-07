@@ -180,13 +180,11 @@ header {
 }
 
 .imagenPokemon {
-    display: flex;
+    /* display: flex; */
     margin: 5px;
     padding: 10px;
     width: 120px;
     border: 1px #E5E5E5 solid;
-    /* padding: 4px; */
-    /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
     background: linear-gradient(#7CFFA8, #05ECFB);
 }

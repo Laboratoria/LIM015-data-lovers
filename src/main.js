@@ -66,7 +66,7 @@ function mostrarPokemones(data) {
         elementFigure.appendChild(elemetfigcaption);
 
         let elementA = document.createElement("a");
-        //elementA.classlist.add("show"); 
+        elementA.classList.add("show");
         //elementA.href = "#";
         elementA.classList.add("verMas");
         elementA.textContent = " Ver +";
@@ -114,6 +114,8 @@ function verFichaTecnica(datapokemon) {
     let imagen = document.createElement("img");
     imagen.src = datapokemon.img;
     imagenPokemon.appendChild(imagen);
+
+
 
     let botonSalir = document.createElement("button");
     botonSalir.textContent = "Salir";
