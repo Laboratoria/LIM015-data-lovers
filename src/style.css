@@ -17,8 +17,14 @@
   font-size: 22px;
   justify-content: center;
   align-items: center;
+  line-height: 1em;
+  animation: bioSection 12s;
 }
-
+@keyframes bioSection {
+  50% {
+    line-height: 200px;
+  }
+}
 .questionbio {
   text-align: left;
   width: 320px;

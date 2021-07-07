@@ -80,14 +80,15 @@
 
         <div id="dropdown" class="dropdown">
           <button id="dropbtn" class="dropbtn">≡</button>
-          <div id="myDropdown" class="dropdown-content">
-            <a id="NameOrderMore" href="#">Order by Name (A-Z)</a>
-            <a id="NameOrderLess" href="#">Order by Name (Z-A)</a>
-            <a id="RtScoreOrderMore" href="#">Order by rating score ↑↓</a>
-            <a id="RtScoreOrderLess" href="#">Order by rating score ↓↑</a>
-            <a id="RdOrderMore" href="#">Order by release date ↑↓</a>
-            <a id="RdOrderLess" href="#">Order by release date ↓↑</a>
-          </div>
+          <select id="myDropdown" class="dropdown-content">
+            <option id="empty"></option>
+            <option id="NameOrderMore" >Order by Name (A-Z)</option>
+            <option id="NameOrderLess" >Order by Name (Z-A)</option>
+            <option id="RtScoreOrderMore" >Order by rating score ↑↓</option>
+            <option id="RtScoreOrderLess" >Order by rating score ↓↑</option>
+            <option id="RdOrderMore" >Order by release date ↑↓</option>
+            <option id="RdOrderLess" >Order by release date ↓↑</option>
+          </select>
         </div>
 
         <div id="movieList"></div>
