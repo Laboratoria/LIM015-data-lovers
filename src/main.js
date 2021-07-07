@@ -8,13 +8,39 @@ const SEARCHTEXT = document.getElementById("searchtext");
 const BTNSEARCH = document.getElementById("btn");
 
 /*asignando un evento*/
-BTNSEARCH.addEventListener("click", (e) => {
+
+BTNSEARCH.addEventListener("click", (e) =>{
     e.preventDefault()
- 
+
+    let datapoke = SEARCHTEXT.value;
+    console.log(datapoke);
 
 });
 
-console.log(SEARCHTEXT);
+/* manipulacion del menu */
+
+/* nueva funcion*/
+
+const filterTypes = document.querySelectorAll(".menu__link3");
+
+for (let i = 0; i < filterTypes.length; i++) {
+    
+    filterTypes[i].addEventListener("click", (e) => {
+       const elementPoke = e.target.id;
+
+        console.log(e.target.id);/*probar que funciona*/
+
+        let filterpoke = data.pokemon.type.filter(type => {
+            
+            
+
+
+        });
+        
+    });
+}
+
+
 
 /*menu desplegable*/
 

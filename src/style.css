@@ -31,7 +31,7 @@ header {
 
 /*styles search*/
 
-.search {
+/*.search {
     height: 20px;
     padding: 0px 30px;
     display: flex;
@@ -57,7 +57,7 @@ header {
        text-decoration: none;
        color: white;
        font-size: 15px;
-    }
+    }*/
 
    .menu {
     margin-left: -100%;
