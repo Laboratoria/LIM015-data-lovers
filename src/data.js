@@ -58,7 +58,6 @@ export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
   // return parseInt(b.realease_date - a.realease_date)
 });
-//console.log(lastestRealeaseDate);
 
 
 // Funcion para obtener la descripcion de la pelicula al hacerle click a la imagen
@@ -76,8 +75,7 @@ export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
 }, 0)
 
 export const averageRtScore = sumRtScore /data.films.length;
-console.log(averageRtScore);
-//console.log(sumRtScore); 
+
 
 
 
@@ -88,7 +86,7 @@ export const charactersName = data.films.map(film => {
      return character.name
   })
 });
-// console.log(charactersName)
+
 
 //funcion para obtener descripcion general de personajes
 
@@ -103,7 +101,7 @@ export const locationName = data.films.map(element => {
     return e.name
   })
 });
-//console.log(locationName)
+
 
 // funcion para obtener informacion general de location
 // const locationInfo = films.map(element => {
