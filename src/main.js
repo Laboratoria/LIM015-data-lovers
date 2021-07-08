@@ -49,8 +49,13 @@ dropDown.addEventListener("change",
 //registra la tecla
 console.log(getInputSearchMovie)
 
-/*getInputSearchMovie.addEventListener("keyup", function (e) { console.log(e.target.value) })*/
+getInputSearchMovie.addEventListener("keyup", function (e) {
+    e.target.value;
+    for (let i = 2; i < document.getElementsByTagName("h2").length; i++){
+        document.getElementsByTagName("h2")[i].textContent}
+})
 
 
 for (let i = 2; i < document.getElementsByTagName("h2").length; i++){console.log(document.getElementsByTagName("h2")[i].textContent)}
 
+console.log(data.films.map(e=>e.title))
