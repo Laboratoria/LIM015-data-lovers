@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -14,6 +14,7 @@ const dropDown = document.querySelector("#myDropdown");
 //const de Alisson
 const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
+const resultAverage = document.querySelector("#resultAverage");
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -45,3 +46,5 @@ dropDown.addEventListener("change",
         if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
 })
 
+
+resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`

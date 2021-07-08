@@ -1,7 +1,5 @@
 import data from './data/ghibli/ghibli.js';
 
-const films = data.films;
-
 //funcion set movie detail
 
 //filtrado sort por RT score (puntaje segun criticos)
@@ -69,14 +67,12 @@ export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
 // llamo a mi variable que contiene la suma y divido entre la cantidad de films
 
 
- const sumRtScore = data.films.reduce((acumulator , value) => {
- return acumulator + parseInt (value.rt_score)
- 
-}, 0)
-
-export const averageRtScore = sumRtScore /data.films.length;
-
-
+export const getAverage = (arr) => {
+  const sum = arr.reduce((acumulator , value) => {
+return acumulator + parseInt (value.rt_score)
+  } , 0 )
+ return sum / arr.length
+}
 
 
 // Funcion para obtener  todos los personajes y sus nombres 
