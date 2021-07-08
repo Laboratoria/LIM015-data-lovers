@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -10,12 +10,11 @@ const founderSection = document.querySelector("#founders");
 const btnDropdown = document.querySelector("#dropbtn");
 const dropDown = document.querySelector("#myDropdown");
 const filmsCopy = [...data.films];
-//const filmBox= document.querySelector(".movieItem");
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
+const resultAverage = document.querySelector("#resultAverage");
 
 //mostrar pelis en el orden de la data
-navMovies.addEventListener("click", () =>
-{
+navMovies.addEventListener("click", () => {
     headerSection.style.display = "none";
     bioSection.style.display = "none";
     founderSection.style.display = "none";
@@ -30,10 +29,10 @@ dropDown.classList.toggle("show")
 //reemplazar con los filtros el orden de las pelis
 dropDown.addEventListener("change",
     (e) => {
-        if(e.target.value === "NameOrderMore"){
+        if (e.target.value === "NameOrderMore") {
             movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("")
         }
-        if (e.target.value === "NameOrderLess"){
+        if (e.target.value === "NameOrderLess") {
             movieList.innerHTML = setMoviesTitle(alphabeticOrderLess(filmsCopy)).join("")
         }
         if (e.target.value === "RtScoreOrderMore") {
@@ -41,9 +40,10 @@ dropDown.addEventListener("change",
         }
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
-        if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
+        if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
 })
-
+//codigo de Alisson
+resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
 
 //IGNORAR LAS LINEAS SGTES, ES DE PRUEBA
 //registra la tecla
@@ -59,3 +59,7 @@ getInputSearchMovie.addEventListener("keyup", function (e) {
 for (let i = 2; i < document.getElementsByTagName("h2").length; i++){console.log(document.getElementsByTagName("h2")[i].textContent)}
 
 console.log(data.films.map(e=>e.title))
+
+console.log(filmsCopy.sort((a, b) => {
+     parseInt(a.release_date) - parseInt(b.release_date)
+  }))
