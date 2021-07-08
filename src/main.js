@@ -4,15 +4,13 @@ import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, rati
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
-//agregue nuevas constantes
 const headerSection = document.querySelector("#logo");
 const bioSection = document.querySelector("#bio");
 const founderSection = document.querySelector("#founders");
 const btnDropdown = document.querySelector("#dropbtn");
-//atrapa al elemento select
 const dropDown = document.querySelector("#myDropdown");
-//const de Alisson
 const filmsCopy = [...data.films];
+//const filmBox= document.querySelector(".movieItem");
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 
 //mostrar pelis en el orden de la data
@@ -29,7 +27,7 @@ navMovies.addEventListener("click", () =>
 btnDropdown.addEventListener("click", ()=>{
 dropDown.classList.toggle("show")
 })
-
+//reemplazar con los filtros el orden de las pelis
 dropDown.addEventListener("change",
     (e) => {
         if(e.target.value === "NameOrderMore"){
@@ -45,4 +43,14 @@ dropDown.addEventListener("change",
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
 })
+
+
+//IGNORAR LAS LINEAS SGTES, ES DE PRUEBA
+//registra la tecla
+console.log(getInputSearchMovie)
+
+/*getInputSearchMovie.addEventListener("keyup", function (e) { console.log(e.target.value) })*/
+
+
+for (let i = 2; i < document.getElementsByTagName("h2").length; i++){console.log(document.getElementsByTagName("h2")[i].textContent)}
 

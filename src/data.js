@@ -3,7 +3,7 @@ export const setMoviesTitle = element => {
   return element.map(
     (el) => {
       const movieCover = `<div class="movieItem"><img src="${el.poster}" alt = "portada de pelicula"/>`;
-      const moviesTitle = `<h2>${el.title.toUpperCase()}</h2></div>`;
+      const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
       return movieCover + moviesTitle;
     }
   )
@@ -18,14 +18,14 @@ export const alphabeticOrderLess = (filmsCopy) => filmsCopy.sort((a, b) => {
   if (a.title > b.title) { return -1 }
   return 0;
 });
-//ordena pelis por rating score (menor a menor)
+//ordena pelis por rating score (menor a mayor)
 export const ratingScoreLess = (filmsCopy) =>
   filmsCopy.sort((a, b) => {
     if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return 1 }
     if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return -1 }
     return 0;
   });
-//ordena pelis por rating score (menor a mayor)
+//ordena pelis por rating score (mayor a menor)
 export const ratingScore = (filmsCopy) => filmsCopy.sort((a, b) => {
   if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return 1 }
   if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return -1 }
@@ -40,6 +40,9 @@ export const realeaseDateOld = filmsCopy =>
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
 })
+//busqueda por input search
+
+
 //extraer la descripcion de peliculas(Alisson)
 
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
