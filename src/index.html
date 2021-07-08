@@ -1,45 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class= "header" >
-      <img class = "header__img" src="" alt="logo">
-      <div class="header-search">
-        <form action="/"></form>
-      </div>
+</head>
 
-      <!--search-->
-      <div class="search">
-        <input type="text" id="searchtext" placeholder="Name or number">
-        <a href="" id="btn">
-            <i class="icon-name-or-number"></i>
-        </a>
+<body>
+
+    <!-- mensaje de bienvenida -->
+    <div class="fondo_transparente">
+        <div class="modal">
+            <div class="modal_cerrar">
+                <span>X</span>
+            </div>
+        </div>
     </div>
-      
-      <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
-      <nav class="main-nav">
-        <ul class="menu" id="menu">
-          <li class="menu__item"><a href="#" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
-          </li>
-          <li class="menu__item container-submenu1">
-            <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
-            <ul class="submenu1">
-              <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link1">A-Z</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link1">Z-A</a>
-              </li>
-            </ul>
-          </li>
 
-          <li class="menu__item container-submenu2">
-            <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
+
+    <header class="header">
+        <img class="header__img" src="./img/Logo.png" alt="logo">
+        <div class="header-search">
+            <form action="/"></form>
+        </div>
+
+        <!--search-->
+        <div class="search">
+            <input type="text" id="searchtext" placeholder="Name or number">
+            <a href="" id="btn">
+                <i class="icon-name-or-number"></i>
+            </a>
+        </div>
+
+        <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
+        <nav class="main-nav">
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="#" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                </li>
+                <li class="menu__item container-submenu1">
+                    <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                    <ul class="submenu1">
+                        <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">A-Z</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link1">Z-A</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu__item container-submenu2">
+                    <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
                     <ul class="submenu1">
                         <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
@@ -50,67 +62,64 @@
                         </li>
                     </ul>
                 </li>
-          
-          <li class="menu__item container-submenu3">
-            <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
+
+                <li class="menu__item container-submenu3">
+                    <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
-            <ul class="submenu3">
-              <li class="menu__item"><a href="#" class="menu__link3">Agua</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Bicho</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Dragón</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Eléctrico</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Fantasma</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Fuego</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Hielo</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Lucha</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Normal</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Planta</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Psiquico</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Roca</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Tierra</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Veneno</a>
-              </li>
-              <li class="menu__item"><a href="#" class="menu__link3">Volador</a>
-              </li>
-            </ul>
-          </li>
-          </li>
-          <li class="menu__item container-submenu4">
-            <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
+                    <ul class="submenu3">
+                        <li class="menu__item"><a href="#" class="menu__link3">Agua</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Bicho</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Dragón</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Eléctrico</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Fantasma</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Fuego</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Hielo</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Lucha</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Normal</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Planta</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Psiquico</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Roca</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Tierra</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Veneno</a>
+                        </li>
+                        <li class="menu__item"><a href="#" class="menu__link3">Volador</a>
+                        </li>
+                    </ul>
+                </li>
+                </li>
+                <li class="menu__item container-submenu4">
+                    <a href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
-            <ul class="submenu4">
-              <li class="menu__item"><a href="#" class="menu__link4">Guía<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
-              </li>
+                    <ul class="submenu4">
+                        <li class="menu__item"><a href="#" class="menu__link4">Guía<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-          </a>
-        </div>
-      </nav>
+            </a>
+            </div>
+        </nav>
     </header>
     <main>
-
-
-
         <article id="listaPokemon">
             <!-- html medianete js -->
         </article>
 
         <!-- Ficha Tecnica -->
-        <article id="fichaTecnicaPokemon" class="modal">
+        <article id="fichaTecnicaPokemon">
         </article>
     </main>
     <footer></footer>
