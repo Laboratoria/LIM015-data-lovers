@@ -63,6 +63,19 @@ export const charactersName = data.films.map(film => {
   })
 });
 
+//Funcion inputSearch
+export const onSearch = (arr, search) => {
+
+  return arr.filter(el => {
+     const textLowerCase =  el.title.toLowerCase()
+     const searchLowerCase = search.toLowerCase()
+     if(textLowerCase.includes(searchLowerCase)){
+         return true
+     }
+ })                                                                                                                                                                                                                        
+
+}
+
 
 //funcion para obtener descripcion general de personajes
 

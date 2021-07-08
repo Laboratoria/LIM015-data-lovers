@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -44,4 +44,11 @@ dropDown.addEventListener("change",
 })
 
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
+
+
+getInputSearchMovie.addEventListener("keyup" , (e) => {
+    const arrayOnSearch = onSearch(filmsCopy , e.target.value)
+   movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
+
+});
 
