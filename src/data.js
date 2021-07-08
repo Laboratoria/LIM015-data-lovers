@@ -1,28 +1,18 @@
 import data from './data/ghibli/ghibli.js';
-//recibe
 
-  // variable para llamar a data films
-const films = data.films
-
+const films = data.films;
 
 //funcion set movie detail
-
-
-//Filtrado seccion Peliculas con img + titulo
-export const setMoviesTitle = () => {
-  films.map((film) => {
-    const movieCover = `<img src="${film.poster}" alt = "portada de pelicula" loading="lazy"/> `,
-      moviesTitle = `<h3 > ${film.title.toUpperCase()} </h3>`
-    document.querySelector("#name-pelis").innerHTML += movieCover + moviesTitle // cambiarlo al main 
-  });
-};
 
 //filtrado sort por RT score (puntaje segun criticos)
 const filmsCopy = [...data.films];
 
-const reviewMovieScore = filmsCopy.sort((a, b) => {
-  return parseInt(b.rt_score) - parseInt(a.rt_score); // conbierto a numero entero
-  
+export const reviewMovieScore = filmsCopy.sort((a, b) => {
+  return parseInt(b.rt_score) - parseInt(a.rt_score) // conbierto a numero entero
+})
+
+
+
 //extraer la imagen y el titulo dentro de un div
 export const setMoviesTitle = element => {
   return element.map(
@@ -57,10 +47,12 @@ export const ratingScore = (filmsCopy) => filmsCopy.sort((a, b) => {
   return 0;
 });
 //ordena pelis por release date (menor a mayor)
-export const realeaseDateOld = filmsCopy =>
+export const realeaseDateOld = filmsCopy => {
   filmsCopy.sort((a, b) => {
     return parseInt(a.release_date) - parseInt(b.release_date)
   });
+}
+
 //ordena pelis por release date (mayor a menor)
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
@@ -78,12 +70,12 @@ export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
 // llamo a mi variable que contiene la suma y divido entre la cantidad de films
 
 
-const sumRtScore = data.films.reduce((acumulator , value) => {
+ const sumRtScore = data.films.reduce((acumulator , value) => {
  return acumulator + parseInt (value.rt_score)
  
 }, 0)
 
-const averageRtScore = sumRtScore /data.films.length;
+export const averageRtScore = sumRtScore /data.films.length;
 console.log(averageRtScore);
 //console.log(sumRtScore); 
 
@@ -91,7 +83,7 @@ console.log(averageRtScore);
 
 // Funcion para obtener  todos los personajes y sus nombres 
 
-const charactersName = data.films.map(film => {
+export const charactersName = data.films.map(film => {
   return  film.people.map(character => {
      return character.name
   })
@@ -106,7 +98,7 @@ const charactersName = data.films.map(film => {
 
 // Funcion para obtener las locaciones y sus descripciones
 
-const locationName = data.films.map(element => {
+export const locationName = data.films.map(element => {
   return element.locations.map(e => {
     return e.name
   })
@@ -121,15 +113,6 @@ const locationName = data.films.map(element => {
 // })
 
 
-const sumRtScore = data.films.reduce((acumulator , value) => {
- return acumulator + parseInt (value.rt_score)
- 
-}, 0)
-
-const averageRtScore = sumRtScore /data.films.length;
-
-})
-
 //extraer la descripcion de peliculas(Alisson)
 
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
@@ -141,7 +124,7 @@ export const getPeople = element => {
   }));
 }
 //filtrar personajes por peliculas(y mostrar sus descripciones)
-export const filterPeopleByMovies = (filmsCopy, movieName) =>
+export const filterPeopleByMovies = (filmsCopy, movieName) => {
   filmsCopy.filter(e =>
     e.title === movieName).map(el => el.people.map(elem => {
       const cartoonName = `<div><h3>${elem.name}</h3>`;
@@ -154,10 +137,11 @@ export const filterPeopleByMovies = (filmsCopy, movieName) =>
       return cartoonName + cartoonImage + cartoonGender + cartoonAge + cartoonEyeColor + cartoonHairColor + cartoonSpecie + cartoonHairColor
     }
     ))
+  }
 //locaciones y descripciones (Alisson)
 
 //vehiculos y susdescripciones (yo)
-export const getVehiclesAndDescripcions = (filmsCopy, movieName) =>
+export const getVehiclesAndDescripcions = (filmsCopy, movieName) => {
   filmsCopy.filter(e =>
     e.title === movieName).map(el => el.vehicles.map(elem => {
       const vehiclesName = `<div><h3>${elem.name}</h3>`;
@@ -169,3 +153,4 @@ export const getVehiclesAndDescripcions = (filmsCopy, movieName) =>
       return vehiclesName + vehiclesImage + vehiclesDescription + vehiclesType + vehiclesLength + vehiclesPilot
     }
     ))
+}

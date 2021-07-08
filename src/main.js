@@ -16,8 +16,7 @@ const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 
 //mostrar pelis en el orden de la data
-navMovies.addEventListener("click", () =>
-{
+navMovies.addEventListener("click", () => {
     headerSection.style.display = "none";
     bioSection.style.display = "none";
     founderSection.style.display = "none";
