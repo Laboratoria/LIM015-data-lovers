@@ -1,22 +1,10 @@
 import data from './data/ghibli/ghibli.js';
-
-//funcion set movie detail
-
-//filtrado sort por RT score (puntaje segun criticos)
-const filmsCopy = [...data.films];
-
-export const reviewMovieScore = filmsCopy.sort((a, b) => {
-  return parseInt(b.rt_score) - parseInt(a.rt_score) // conbierto a numero entero
-})
-
-
-
 //extraer la imagen y el titulo dentro de un div
 export const setMoviesTitle = element => {
   return element.map(
     (el) => {
       const movieCover = `<div class="movieItem"><img src="${el.poster}" alt = "portada de pelicula"/>`;
-      const moviesTitle = `<h2>${el.title.toUpperCase()}</h2></div>`;
+      const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
       return movieCover + moviesTitle;
     }
   )
@@ -31,14 +19,14 @@ export const alphabeticOrderLess = (filmsCopy) => filmsCopy.sort((a, b) => {
   if (a.title > b.title) { return -1 }
   return 0;
 });
-//ordena pelis por rating score (menor a menor)
+//ordena pelis por rating score (menor a mayor)
 export const ratingScoreLess = (filmsCopy) =>
   filmsCopy.sort((a, b) => {
-    if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return 1 }
-    if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return -1 }
+    if (Number(a.rt_score) > Number(b.rt_score)) { return 1 }
+    if (Number(a.rt_score) < Number(b.rt_score)) { return -1 }
     return 0;
   });
-//ordena pelis por rating score (menor a mayor)
+//ordena pelis por rating score (mayor a menor)
 export const ratingScore = (filmsCopy) => filmsCopy.sort((a, b) => {
   if (parseInt(a.rt_score) < parseInt(b.rt_score)) { return 1 }
   if (parseInt(a.rt_score) > parseInt(b.rt_score)) { return -1 }
@@ -46,7 +34,7 @@ export const ratingScore = (filmsCopy) => filmsCopy.sort((a, b) => {
 });
 //ordena pelis por release date (menor a mayor)
 export const realeaseDateOld = filmsCopy => {
-  filmsCopy.sort((a, b) => {
+  return filmsCopy.sort((a, b) => {
     return parseInt(a.release_date) - parseInt(b.release_date)
   });
 }
@@ -54,19 +42,13 @@ export const realeaseDateOld = filmsCopy => {
 //ordena pelis por release date (mayor a menor)
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
-  // return parseInt(b.realease_date - a.realease_date)
-});
-
+})
+//busqueda por input search
+  // return parseInt(b.realease_date - a.realease_date)});
 
 // Funcion para obtener la descripcion de la pelicula al hacerle click a la imagen
 
-
-
-// Funcion reduce 
-// acumulador obtiene los elementos lo convierte en numero luego suma los rt score 
-// llamo a mi variable que contiene la suma y divido entre la cantidad de films
-
-
+// Funcion para sacar promedio del rt score
 export const getAverage = (arr) => {
   const sum = arr.reduce((acumulator , value) => {
 return acumulator + parseInt (value.rt_score)
@@ -74,9 +56,7 @@ return acumulator + parseInt (value.rt_score)
  return sum / arr.length
 }
 
-
 // Funcion para obtener  todos los personajes y sus nombres 
-
 export const charactersName = data.films.map(film => {
   return  film.people.map(character => {
      return character.name
@@ -97,15 +77,6 @@ export const locationName = data.films.map(element => {
     return e.name
   })
 });
-
-
-// funcion para obtener informacion general de location
-// const locationInfo = films.map(element => {
-//   return element.locations.map(e =>{
-//     return e.
-//   })
-// })
-
 
 //extraer la descripcion de peliculas(Alisson)
 

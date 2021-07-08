@@ -4,14 +4,11 @@ import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, rati
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
-//agregue nuevas constantes
 const headerSection = document.querySelector("#logo");
 const bioSection = document.querySelector("#bio");
 const founderSection = document.querySelector("#founders");
 const btnDropdown = document.querySelector("#dropbtn");
-//atrapa al elemento select
 const dropDown = document.querySelector("#myDropdown");
-//const de Alisson
 const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
@@ -29,13 +26,13 @@ navMovies.addEventListener("click", () => {
 btnDropdown.addEventListener("click", ()=>{
 dropDown.classList.toggle("show")
 })
-
+//reemplazar con los filtros el orden de las pelis
 dropDown.addEventListener("change",
     (e) => {
-        if(e.target.value === "NameOrderMore"){
+        if (e.target.value === "NameOrderMore") {
             movieList.innerHTML = setMoviesTitle(alphabeticOrder(filmsCopy)).join("")
         }
-        if (e.target.value === "NameOrderLess"){
+        if (e.target.value === "NameOrderLess") {
             movieList.innerHTML = setMoviesTitle(alphabeticOrderLess(filmsCopy)).join("")
         }
         if (e.target.value === "RtScoreOrderMore") {
@@ -43,8 +40,8 @@ dropDown.addEventListener("change",
         }
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
-        if (e.target.value === "RdOrderLess"){ movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("")}
+        if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
 })
 
-
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
+
