@@ -88,9 +88,9 @@ function mostrarPokemones(data) {
 
     for (let i = 0; i < data.length; i++) {
         //variables que almacena los datos que queremos que se muestre
-        let url = data[i].img;
-        let name = data[i].name;
-        let number = data[i].num;
+        let imgPok = data[i].img;
+        let nombre = data[i].name;
+        let numero = data[i].num;
         let types = data[i].type;
     /*let vertipo;
 
@@ -122,23 +122,19 @@ function mostrarPokemones(data) {
         elementA.classList.add("verMas");
         elementA.textContent = " Ver +";
         elementA.addEventListener("click", () => {
-            showInfo(data[i]); 
             verFichaTecnica(data[i]);
-        
         });
-        elemetfigcaption.appendChild(elementA);
+        etiquetaFigure.appendChild(elementA);
     
 
         for (let tipo of  types) {
         let textType = document.createElement("p");
         textType.classList.add("textType");
         textType.textContent = tipo;
-        elemetfigcaption.appendChild(textType);
-            
+        etiquetaFigure.appendChild(textType);
         }
 
-        
-        parent.appendChild(elementFigure); //Agregando tag al padre Article
+        listaPokemones.appendChild(etiquetaFigure); //Agregando tag al padre Article
     }
 }
 
