@@ -3,12 +3,6 @@
     padding: 0px;
 }
 
-body{
-    /* background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1));*/
-    background-repeat: no-repeat;
-    width: 0px;
-}
-
 body {
     /* background: blue; */
     background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1));
@@ -208,7 +202,7 @@ header {
     justify-content:space-between;
 }
 
-.photoPokemon {
+ 
 .fotoPokemon {
     float: left;
     margin: 5px;

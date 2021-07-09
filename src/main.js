@@ -13,34 +13,9 @@ BTNSEARCH.addEventListener("click", (e) =>{
     e.preventDefault()
 
     let datapoke = SEARCHTEXT.value;
-    console.log(datapoke);
 
 });
-
-/* manipulacion del menu */
-
-/* nueva funcion*/
-
-const filterTypes = document.querySelectorAll(".menu__link3");
-
-for (let i = 0; i < filterTypes.length; i++) {
-    
-    filterTypes[i].addEventListener("click", (e) => {
-       const elementPoke = e.target.id;
-
-        console.log(e.target.id);/*probar que funciona*/
-
-        let filterpoke = data.pokemon.type.filter(type => {
-            
-            
-
-
-        });
-        
-    });
-}
-
-
+       
 
 /*menu desplegable*/
 
@@ -119,22 +94,49 @@ function mostrarPokemones(data) {
         elementA.addEventListener("click", () => {
             showInfo(data[i]); 
             verFichaTecnica(data[i]);
+        
         });
         elemetfigcaption.appendChild(elementA);
         parent.appendChild(elementFigure); //Agregando tag al padre Article
     }
 }
 
+/* manipulacion del menu */
+
+/* nueva funcion*/
+
+const selectTypes = document.querySelectorAll(".menu__link3"); 
+
+for (let i = 0; i < selectTypes.length; i++) {
+    
+    selectTypes[i].addEventListener("click", (e) => {
+       
+       const oneType = e.target.id;
+
+       /*console.log(oneType)*/
+
+       const poke = data.pokemon.filter(elemento => {
+        return elemento.type.includes(oneType);
+       });
+
+       limpiarContenido(document.getElementById("listaPokemon"));
+
+       //console.log(poke);
+       mostrarPokemones(poke);
+      
+
+    //.forEach(type=> console.log(type));
+
+       /* if (oneType == data.pokemon.includes(elemento)) { 
+            return true;
+     } else{
+         return false;
+     }    */ 
+});
+}
+
 // funcion para el boton ver +
 
-function showInfo(datapokemon) {
-    let ficha = document.getElementById('DatasheetPokemon');
-        ficha = document.createElement("img");
-        ficha.src = url;
-        ficha.appendChild(elementimg);
-
-
-    console.log(datapokemon);
 function verFichaTecnica(datapokemon) {
     console.log(datapokemon);
     // console.log(datapokemon.resistant);
@@ -188,10 +190,4 @@ function limpiarContenido(limpiar) {
     while (limpiar.firstChild) {
         limpiar.removeChild(limpiar.firstChild);
     }
-}
-function showInfo(numPokemon) {
-    console.table(numPokemon);
-    //alert("hola " + name);
-    document.getElementById("numpokemon").style.display = "none";
-    document.getElementById("DatasheetPokemon").style.display = "block";
 }
