@@ -4,8 +4,6 @@
 }
 
 body {
-    /* background: blue; */
-    /* background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1)); */
     background-image: linear-gradient(to top, #067DA3 0%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -22,38 +20,6 @@ header {
   cursor: pointer;
   font-size: 20px;
   width: 100%;
-}
-
-
-/*styles search*/
-
-/*.search {
-    height: 20px;
-    padding: 0px 30px;
-    display: flex;
-    background: silver;
-    border-radius: 10px;
-    
-   }
-   
-   #searchtext{
-       background: none;
-       border: none;
-       outline: none;
-       font-size: 12px;
-       color: white;
-       float: left;
-       transition: .3s;
-       width: 30px;
-   }
-*/
-
-#button {
-    width: 20px;
-    height: 40px;
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
 }
 
 .menu {
@@ -190,58 +156,78 @@ header {
     background: #F904D1;
 }
 
+@media(min-width:960px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        margin-left: 0;
+    }
+    .container-submenu1,
+    .container-submenu2,
+    .container-submenu3,
+    .container-submenu4 {
+        position: relative;
+    }
+}
+
+
+/* @media(min-width:960px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        margin-left: 0;
+    }
+    .container-submenu1,
+    .container-submenu2,
+    .container-submenu3,
+    .container-submenu4 {
+        position: relative;
+    }
+    .submenu1,
+    .submenu2,
+    .submenu3,
+    .submenu4 {
+        position: absolute;
+        top: 60px;
+        padding-left: -20px;
+        overflow: visible;
+        z-index: 1000;
+        para que siempre se muestre delanto de todos*/
+
+
+/*  opacity: 0;
+        visibility: hidden;
+    }
+    .container-submenu1:hover .submenu1,
+    .container-submenu2:hover .submenu2,
+    .container-submenu3:hover .submenu3,
+    .container-submenu4:hover .submenu4 {
+        opacity: 1;
+        visibility: visible;
+    }
+    .submenu1 .menu__link1:hover {
+        background: grey;
+    }
+    .submenu2 .menu__link2:hover {
+        background: grey;
+    }
+    .submenu3 .menu__link3:hover {
+        background: grey;
+    }
+    .submenu4 .menu__link4:hover {
+        background: grey;
+    }
+} */
+
 
 /* OCULTAR FICHA TECNICA */
 
 #fichaTecnicaPokemon {
     display: none;
-}
-
-@media (min-width: 960px) {
-  .nav-bar {
-    display: none;
-  }
-    display: flex;
-  .menu {
-    margin-left: 0;
-  }
-  .container-submenu1,
-  .container-submenu2,
-  .container-submenu4 {
-  .container-submenu3,
-    position: relative;
-  }
-  .submenu1,
-  .submenu2,
-  .submenu3,
-  .submenu4 {
-    position: absolute;
-    top: 60px;
-    padding-left: -20px;
-    overflow: visible;
-    z-index: 1000; /*para que siempre se muestre delanto de todos*/
-    opacity: 0;
-    visibility: hidden;
-  }
-  .container-submenu1:hover .submenu1,
-  .container-submenu2:hover .submenu2,
-  .container-submenu3:hover .submenu3,
-  .container-submenu4:hover .submenu4 {
-    opacity: 1;
-    visibility: visible;
-  }
-  .submenu1 .menu__link1:hover {
-    background: grey;
-  }
-  .submenu2 .menu__link2:hover {
-    background: grey;
-  }
-  .submenu3 .menu__link3:hover {
-    background: grey;
-  }
-  .submenu4 .menu__link4:hover {
-    background: grey;
-  }
 }
 
 /*responsive buscador*/
@@ -348,13 +334,6 @@ header {
 .search {
     float: left;
 }
-
-
-/* 
-.letraBienvenida {
-    font-family: 'Roboto', sans-serif;
-    color: #032080;
-} */
 
 .fondo_transparente {
     top: 0;

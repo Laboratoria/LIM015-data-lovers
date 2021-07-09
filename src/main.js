@@ -1,41 +1,30 @@
 import data from './data/pokemon/pokemon.js';
-//
 import { filterData } from './data.js';
 
 /*buscador*/
-
 const SEARCHTEXT = document.getElementById("searchtext");
 const BTNSEARCH = document.getElementById("btn");
 
 /*asignando un evento*/
-
-BTNSEARCH.addEventListener("click", (e) =>{
-    e.preventDefault()
-
-
+BTNSEARCH.addEventListener("click", (e) => {
+    e.preventDefault();
     const textNumber = SEARCHTEXT.value; /*guardando mi texto o numero*/
     const buscarPoke = data.pokemon.filter((nombre, numero) => {
         return nombre.numero.map(busqueda);
+    });
 
-       });
-
-       limpiarContenido(document.getElementById("listaPokemon"));
-       mostrarPokemones(buscarPoke);
-
+    limpiarContenido(document.getElementById("listaPokemon"));
+    mostrarPokemones(buscarPoke);
 });
        
 
 /*menu desplegable*/
-
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
 
-/*funcionalidad de cada elelemto*/ //
-
-
+/*funcionalidad de cada elelemto*/
 btnMenu.addEventListener("click", function() {
     menu.classList.toggle("mostrar");
-
 });
 
 const subMenuBtn1 = document.querySelectorAll(".submenu1-btn1");
@@ -60,27 +49,11 @@ const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
 
-//la funcion onload espera que cargue todo DOM
+//la funcion onload 
 window.onload = function() {
 
     let pokemones = filterData(data.pokemon, ''); //ingresamos a la data
     mostrarPokemones(pokemones); //llamamos la funcnion mostrarPokemones
-
-    // const tiposMenu = document.querySelectorAll("menu__link3");
-
-    // for (let i = 0; i < tiposMenu.length; i++) {
-
-    //     tiposMenu[i].addEventListener("click",(e)=>{
-    //         const tipoAgua=e.target.id;
-
-    //     const filtrarDato=data.pokemon.filter(function(elemento){
-
-    //     });
-
-
-    //     });
-    // }
-
 }
 
 function mostrarPokemones(data) {
@@ -92,7 +65,6 @@ function mostrarPokemones(data) {
         let nombre = data[i].name;
         let numero = data[i].num;
         let types = data[i].type;
-    /*let vertipo;
 
         for (let index = 0; index < type.length; index++) {
              vertipo = type[index];
@@ -124,62 +96,43 @@ function mostrarPokemones(data) {
         elementA.addEventListener("click", () => {
             verFichaTecnica(data[i]);
         });
-        etiquetaFigure.appendChild(elementA);
-    
+        nombrePok.appendChild(etiquetaVermas);
 
-        for (let tipo of  types) {
-        let textType = document.createElement("p");
-        textType.classList.add("textType");
-        textType.textContent = tipo;
-        etiquetaFigure.appendChild(textType);
+        for (let tipo of types) {
+            let textType = document.createElement("p");
+            textType.classList.add("textType");
+            textType.textContent = tipo;
+            nombrePok.appendChild(textType);
+
         }
 
         listaPokemones.appendChild(etiquetaFigure); //Agregando tag al padre Article
     }
 }
 
-/* manipulacion del menu */
-
-/* nueva funcion*/
-
-const selectTypes = document.querySelectorAll(".menu__link3"); 
+// funcion para mostrar pokemones por tipo
+const selectTypes = document.querySelectorAll(".menu__link3");
 
 for (let i = 0; i < selectTypes.length; i++) {
-    
+
     selectTypes[i].addEventListener("click", (e) => {
-       
-       const oneType = e.target.id;
 
-       /*console.log(oneType)*/
+        const oneType = e.target.id;
 
-       const poke = data.pokemon.filter(elemento => {
-        return elemento.type.includes(oneType);
-       });
+        const poke = data.pokemon.filter(elemento => {
+            return elemento.type.includes(oneType);
+        });
 
-       limpiarContenido(document.getElementById("listaPokemon"));
+        limpiarContenido(document.getElementById("listaPokemon"));
+        mostrarPokemones(poke);
 
-       //console.log(poke);
-       mostrarPokemones(poke);
-      
-
-    //.forEach(type=> console.log(type));
-
-       /* if (oneType == data.pokemon.includes(elemento)) { 
-            return true;
-     } else{
-         return false;
-     }    */ 
-});
+    });
 }
 
 // funcion para el boton ver +
 
 function verFichaTecnica(datapokemon) {
     console.log(datapokemon.resistant);
-    // console.log(datapokemon.resistant);
-    // datapokemon.resistant.forEach(r => {
-    //     console.log(r);
-    // });
 
     document.getElementById("listaPokemon").style.display = "none";
     document.getElementById("fichaTecnicaPokemon").style.display = "block";
@@ -256,9 +209,6 @@ function verFichaTecnica(datapokemon) {
     });
     fichaTecnica.appendChild(botonSalir);
 }
-
-
-
 
 // limpiar contenidos
 function limpiarContenido(limpiar) {
