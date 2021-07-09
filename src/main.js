@@ -12,7 +12,15 @@ const BTNSEARCH = document.getElementById("btn");
 BTNSEARCH.addEventListener("click", (e) =>{
     e.preventDefault()
 
-    let datapoke = SEARCHTEXT.value;
+
+    const textNumber = SEARCHTEXT.value; /*guardando mi texto o numero*/
+    const buscarPoke = data.pokemon.filter((nombre, numero) => {
+        return nombre.numero.map(busqueda);
+
+       });
+
+       limpiarContenido(document.getElementById("listaPokemon"));
+       mostrarPokemones(buscarPoke);
 
 });
        
@@ -68,7 +76,14 @@ function mostrarPokemones(data) {
         let url = data[i].img;
         let name = data[i].name;
         let number = data[i].num;
+        let types = data[i].type;
+    /*let vertipo;
 
+        for (let index = 0; index < type.length; index++) {
+             vertipo = type[index];
+            
+        }
+*/
         //etiqueta padre figure
         let elementFigure = document.createElement("figure"); // Crear tag Figure
         elementFigure.classList.add("fotoPokemon"); // Agregando una clase a tag Figure
@@ -97,6 +112,17 @@ function mostrarPokemones(data) {
         
         });
         elemetfigcaption.appendChild(elementA);
+    
+
+        for (let tipo of  types) {
+        let textType = document.createElement("p");
+        textType.classList.add("textType");
+        textType.textContent = tipo;
+        elemetfigcaption.appendChild(textType);
+            
+        }
+
+        
         parent.appendChild(elementFigure); //Agregando tag al padre Article
     }
 }
