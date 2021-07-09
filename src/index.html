@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    
     <header class= "header" >
       <img class = "header__img" src="" alt="logo">
+      <div class="header-search">
+        <form action="/"></form>
+      </div>
+  </head>
+  <body>
+    <!-- mensaje de bienvenida -->
+    <section class="fondo_transparente">
+      <div class="modal">
+          <div class="modal_cerrar">
+              <span>X</span>
+          </div>
+      </div>
+    </section>
+
+    <header class= "header" >
+      <img class="header__img" src="./img/Logo.png" alt="logo">
       <div class="header-search">
         <form action="/"></form>
       </div>
@@ -99,15 +118,12 @@
       </nav>
     </header>
     <main>
-
-
-
         <article id="listaPokemon">
             <!-- html medianete js -->
         </article>
 
         <!-- Ficha Tecnica -->
-        <article id="fichaTecnicaPokemon" class="modal">
+        <article id="fichaTecnicaPokemon">
         </article>
     </main>
     <footer></footer>
