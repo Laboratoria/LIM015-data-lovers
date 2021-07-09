@@ -54,6 +54,21 @@ window.onload = function() {
     let pokemones = filterData(data.pokemon, ''); //ingresamos a la data
     mostrarPokemones(pokemones); //llamamos la funcnion mostrarPokemones
 
+    // const tiposMenu = document.querySelectorAll("menu__link3");
+
+    // for (let i = 0; i < tiposMenu.length; i++) {
+
+    //     tiposMenu[i].addEventListener("click",(e)=>{
+    //         const tipoAgua=e.target.id;
+
+    //     const filtrarDato=data.pokemon.filter(function(elemento){
+
+    //     });
+
+
+    //     });
+    // }
+
 }
 
 function mostrarPokemones(data) {
@@ -71,7 +86,7 @@ function mostrarPokemones(data) {
 
         let numeroPok = document.createElement("p"); //Crear tag P
         numeroPok.classList.add("num"); // Agregando una clase a tag P
-        numeroPok.textContent = numero; // Agregando contenido a tag P
+        numeroPok.textContent = "# " + numero; // Agregando contenido a tag P
         etiquetaFigure.appendChild(numeroPok); //Agregando tag al padre Figure
 
         let imagenPok = document.createElement("img");
@@ -97,7 +112,7 @@ function mostrarPokemones(data) {
 
 // funcion para el boton ver +
 function verFichaTecnica(datapokemon) {
-    //console.log(datapokemon);
+    console.log(datapokemon.resistant);
     // console.log(datapokemon.resistant);
     // datapokemon.resistant.forEach(r => {
     //     console.log(r);
@@ -132,6 +147,43 @@ function verFichaTecnica(datapokemon) {
     imagen.src = datapokemon.img;
     imagenPokemon.appendChild(imagen);
 
+    // caracteristicas del pokemon
+    let sectionCP = document.createElement("section");
+    sectionCP.classList.add("sectionCP");
+    fichaTecnica.appendChild(sectionCP);
+
+    let h2Altura = document.createElement("h2");
+    h2Altura.textContent = "Altura: " + datapokemon.size.height;
+    sectionCP.appendChild(h2Altura);
+
+    let h2Peso = document.createElement("h2");
+    h2Peso.textContent = "Peso: " + datapokemon.size.weight;
+    sectionCP.appendChild(h2Peso);
+
+    let h2Huevo = document.createElement("h2");
+    h2Huevo.textContent = "Huevo: " + datapokemon.egg;
+    sectionCP.appendChild(h2Huevo);
+
+    let h2Rareza = document.createElement("h2");
+    h2Rareza.textContent = "Rareza de pokemon: " + datapokemon['pokemon-rarity'];
+    sectionCP.appendChild(h2Rareza);
+
+    // Estadisticas del pokemon
+    let sectionE = document.createElement("section");
+    sectionE.classList.add("sectionE");
+    sectionE.textContent = "Estadisticas " + datapokemon.name;
+    fichaTecnica.appendChild(sectionE);
+
+    let divE = document.createElement("div");
+    divE.classList.add("divE");
+    fichaTecnica.appendChild(divE);
+
+    let progressE = document.createElement("progress");
+    progressE.classList.add("progressE");
+    progressE.textContent = "Base ataque " + datapokemon.stats['base-attack'];
+    divE.appendChild(progressE);
+
+
     let botonSalir = document.createElement("button");
     botonSalir.textContent = "Salir";
     botonSalir.classList.add("btnSalir");
@@ -141,6 +193,9 @@ function verFichaTecnica(datapokemon) {
     });
     fichaTecnica.appendChild(botonSalir);
 }
+
+
+
 
 // limpiar contenidos
 function limpiarContenido(limpiar) {

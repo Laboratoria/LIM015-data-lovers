@@ -6,7 +6,7 @@
 body {
     /* background: blue; */
     /* background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1)); */
-    background-image: linear-gradient(to top, #00cafd 0%, #000000 100%);
+    background-image: linear-gradient(to top, #067DA3 0%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -83,31 +83,57 @@ header {
     text-decoration: none;
     font-size: 15px;
     color: white;
+    width: 125px;
+    font-size: x-large;
 }
 
 .menu__link0 {
-    background: red;
-    width: 125px;
+    border-bottom: #ff0800 10px solid;
+}
+
+.menu__link0:hover {
+    background: #ff0800;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link1 {
+    /* background: #ffc80080; */
+    border-bottom: #FFC700 10px solid;
+}
+
+.menu__link1:hover {
     background: #FFC700;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link2 {
+    /* background: #63b63d8c; */
+    border-bottom: #64B63D 10px solid;
+}
+
+.menu__link2:hover {
     background: #64B63D;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link3 {
+    /* background: #0082fc7e; */
+    border-bottom: #0083FC 10px solid;
+}
+
+.menu__link3:hover {
     background: #0083FC;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link4 {
+    /* background: #f904d088; */
+    border-bottom: #F904D1 10px solid;
+}
+
+.menu__link4:hover {
     background: #F904D1;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .submenu1 .menu__link1,
@@ -122,7 +148,7 @@ header {
 .submenu3,
 .submenu4 {
     position: absolute;
-    top: 60px;
+    /* top: 60px; */
     padding-left: -20px;
     overflow: visible;
     /*para que siempre se muestre delanto de todos*/
@@ -150,7 +176,7 @@ header {
 }
 
 .submenu1 .menu__link1:hover {
-    background: grey;
+    background: #FFC700;
 }
 
 .submenu2 .menu__link2:hover {
@@ -158,11 +184,11 @@ header {
 }
 
 .submenu3 .menu__link3:hover {
-    background: grey;
+    background: #0083FC;
 }
 
 .submenu4 .menu__link4:hover {
-    background: grey;
+    background: #F904D1;
 }
 
 
@@ -196,26 +222,35 @@ header {
     margin: 5px;
     padding: 10px;
     /* width: 100px; */
-    border: 1px #E5E5E5 solid;
+    /* border: 1px #E5E5E5 solid; */
     /* padding: 4px; */
     /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
-    background: linear-gradient(#7CFFA8, #05ECFB);
+    box-shadow: 0px 0px 5px 3px #03def4;
+    background-image: linear-gradient(180deg, #28c4669d 0%, #09c9d3c5 100%);
 }
 
 .fotoPokemon figcaption {
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-    font-style: roboto;
+    background-color: rgba(255, 255, 255, 0.719);
+    font-family: 'Roboto', sans-serif;
     padding: 2px;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
     text-transform: capitalize;
 }
 
+.num {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
 .datosPokemon {
     color: rgba(255, 255, 255, 1);
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -224,7 +259,7 @@ header {
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .imagenPokemon {
@@ -232,18 +267,19 @@ header {
     margin: 5px;
     padding: 10px;
     width: 120px;
-    border: 1px #E5E5E5 solid;
+    /* border: 1px #000000 solid; */
     border-radius: 15px 15px 15px 15px;
     /* background: linear-gradient(#7CFFA8, #05ECFB); */
-    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    background-image: linear-gradient(180deg, #37d6769d 0%, #087a80c5 100%);
 }
 
 .nombrePokemon {
     text-transform: capitalize;
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btnSalir {
+    font-family: 'Roboto', sans-serif;
     font-style: roboto;
     background: rgb(3, 3, 3);
     padding: 8px 30px;
