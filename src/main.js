@@ -42,24 +42,6 @@ dropDown.addEventListener("change",
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
 })
-//codigo de Alisson
+//codigo de Alisson(estadistica)
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
 
-//IGNORAR LAS LINEAS SGTES, ES DE PRUEBA
-//registra la tecla
-console.log(getInputSearchMovie)
-
-getInputSearchMovie.addEventListener("keyup", function (e) {
-    e.target.value;
-    for (let i = 2; i < document.getElementsByTagName("h2").length; i++){
-        document.getElementsByTagName("h2")[i].textContent}
-})
-
-
-for (let i = 2; i < document.getElementsByTagName("h2").length; i++){console.log(document.getElementsByTagName("h2")[i].textContent)}
-
-console.log(data.films.map(e=>e.title))
-
-console.log(filmsCopy.sort((a, b) => {
-     parseInt(a.release_date) - parseInt(b.release_date)
-  }))
