@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -42,6 +42,11 @@ dropDown.addEventListener("change",
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
 })
-//codigo de Alisson(estadistica)
+//promedio de puntaje
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
+//funcion para input search
+getInputSearchMovie.addEventListener("keyup" , (e) => {
+    const arrayOnSearch = onSearch(filmsCopy, e.target.value);
+   movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
+});
 
