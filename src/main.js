@@ -14,13 +14,6 @@ BTNSEARCH.addEventListener("click", (e) =>{
 
 
     const textNumber = SEARCHTEXT.value; /*guardando mi texto o numero*/
-    const buscarPoke = data.pokemon.filter((nombre, numero) => {
-        return nombre.numero.map(busqueda);
-
-       });
-
-       limpiarContenido(document.getElementById("listaPokemon"));
-       mostrarPokemones(buscarPoke);
 
 });
        
@@ -127,9 +120,7 @@ function mostrarPokemones(data) {
     }
 }
 
-/* manipulacion del menu */
-
-/* nueva funcion*/
+/* manipulacion del menu filtrado por tipo*/ 
 
 const selectTypes = document.querySelectorAll(".menu__link3"); 
 
@@ -160,6 +151,75 @@ for (let i = 0; i < selectTypes.length; i++) {
      }    */ 
 });
 }
+
+
+/* manipulacion del menu funcion para seleccionar region*/
+
+const regionPoke = document.querySelectorAll(".menu__link2"); 
+
+for (let i = 0; i < regionPoke.length; i++) {
+    
+    regionPoke[i].addEventListener("click", (e) => {
+       
+       const captureRegion = e.target.id;
+
+       const mostrarRegion = data.pokemon.filter(elemento => {
+        
+       });
+
+       /*limpiarContenido(document.getElementById("listaPokemon"));
+
+       //console.log(poke);
+       mostrarPokemones(mostrarRegion);*/
+
+
+});
+}
+
+
+
+/* manipulacion del menu funcion para el ordenado de datos*/
+
+const ordenarNombres = document.querySelectorAll(".menu__link1"); 
+
+for (let i = 0; i < ordenarNombres.length; i++) {
+    
+    ordenarNombres[i].addEventListener("click", (e) => {
+       
+       const ascDesc = e.target.id;
+       
+
+      const pokeAscDesc = data.pokemon.sort((a,b) => {
+        let aNombre = a.name;
+        let bNombre = b.name;
+
+          if(ascDesc == "creciente") {
+
+            if (aNombre > bNombre) {
+                return 1;
+            }else if (aNombre < bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          } else if(ascDesc == "decreciente") { 
+            if (aNombre < bNombre) {
+                return 1;
+            } else if (aNombre > bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          }
+       });
+
+       limpiarContenido(document.getElementById("listaPokemon"));
+
+       mostrarPokemones(pokeAscDesc);
+    });
+}
+
+
 
 // funcion para el boton ver +
 

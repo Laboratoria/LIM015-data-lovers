@@ -6,7 +6,6 @@ export function kanto() {
 
 }
 
-/* ---*/
 function filterData(data, condition) {
 
     let arrayPokemon = data.filter(pokemon => {
