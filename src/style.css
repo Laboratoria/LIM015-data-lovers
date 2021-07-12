@@ -237,6 +237,10 @@ header {
     float: left;
     margin: 5px;
     padding: 10px;
+    margin-left: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     /* width: 100px; */
     /* border: 1px #E5E5E5 solid; */
     /* padding: 4px; */
@@ -251,7 +255,7 @@ header {
     font-family: 'Roboto', sans-serif;
     padding: 2px;
     text-align: center;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
     text-transform: capitalize;
 }
 
@@ -364,4 +368,36 @@ header {
     align-items: center;
     cursor: pointer;
     font-weight: bold;
+}
+
+#listaPokemon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* nuevo */
+
+.botones {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    background: #E31203;
+    color: #f2f2f2;
+    border: 0px;
+    /* quitar borde por defecto */
+}
+
+.botones:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    /* cursor manito */
+}
+
+.cajas {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px #000000 solid;
 }
