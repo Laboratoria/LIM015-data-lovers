@@ -21,6 +21,7 @@ navMovies.addEventListener("click", () => {
     btnDropdown.style.display = "block";
     document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
+    page2();
 })
 //ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", ()=>{
@@ -50,10 +51,11 @@ getInputSearchMovie.addEventListener("keyup" , (e) => {
     movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
 });
 //mostrar tercera pantalla
-const moviesListComplete = document.querySelector("#sectionMovies");
-const movieEach = document.querySelectorAll(".movieItem");
-
-movieEach.forEach(e=>e.addEventListener("click", function(){moviesListComplete.style.display="none"}))
+function page2() {
+    const moviesListComplete = document.querySelector("#sectionMovies");
+    const movieEach = document.querySelectorAll(".movieItem");
+    movieEach.forEach(e => e.addEventListener("click", function () { moviesListComplete.style.display = "none" }))
+}
 
 
 
