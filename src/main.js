@@ -49,7 +49,12 @@ function mostrarPokemones(data) {
         let nombre = data[i].name;
         let numero = data[i].num;
         let types = data[i].type;
+        let vertipo;
 
+        for (let index = 0; index < types.length; index++) {
+            vertipo = types[index];
+
+        }
         //etiqueta padre figure
         let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
         etiquetaFigure.classList.add("fotoPokemon"); // Agregando una clase a tag Figure
@@ -67,15 +72,15 @@ function mostrarPokemones(data) {
         nombrePok.textContent = nombre;
         etiquetaFigure.appendChild(nombrePok);
 
-        let etiquetaVermas = document.createElement("a");
-        //etiquetaVermas.href = "#";
-        etiquetaVermas.classList.add("verMas");
-        etiquetaVermas.textContent = " Ver +";
-        etiquetaVermas.addEventListener("click", (e) => {
-            e.preventDefault(); //dejara de mostrarse# al hacer click en la url
+        let elementA = document.createElement("a");
+        elementA.classList.add("show");
+        //elementA.href = "#";
+        elementA.classList.add("verMas");
+        elementA.textContent = " Ver +";
+        elementA.addEventListener("click", () => {
             verFichaTecnica(data[i]);
         });
-        nombrePok.appendChild(etiquetaVermas);
+        //nombrePok.appendChild(etiquetaVermas);
 
         for (let tipo of types) {
             let textType = document.createElement("p");
@@ -134,6 +139,7 @@ btnBuscar.addEventListener('click', () => {
 });
 
 // funcion para el boton ver +
+
 function verFichaTecnica(datapokemon) {
     console.log(datapokemon.resistant);
 
@@ -223,4 +229,43 @@ function limpiarContenido(limpiar) {
 // implementando modal
 document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+});
+
+function buscadorpokemon() {
+    let busqueda = document.getElementById("searchtext").value;
+    let pokemons;
+    if (isNaN(busqueda)) {
+        pokemons = data.pokemon.filter((pokemon) => pokemon.name == busqueda);
+
+    } else {
+        pokemons = data.pokemon.filter((pokemon) => pokemon.num == busqueda);
+    }
+
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
+
+
+function limpiarContenidoBuscador() {
+    document.getElementById("listaPokemon").innerHTML = "";
+}
+document.getElementById("btn").addEventListener("click", function() {
+    buscadorpokemon();
+});
+
+function buscarPorRegion(region) {
+
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
+
+document.getElementById("region_johto").addEventListener("click", function() {
+    buscarPorRegion("johto");
+});
+
+document.getElementById("region_kanto").addEventListener("click", function() {
+    buscarPorRegion("kanto");
 });

@@ -17,6 +17,7 @@ function filtrarData(data, condition) {
     }
 
     return arrayPokemon;
+
 }
 
 // funcion para ordenar de manera ascendente o descendente

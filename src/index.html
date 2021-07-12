@@ -5,17 +5,23 @@
     <meta charset="utf-8">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-
+  </head>
+  <body>
+    
+    <header class= "header" >
+      <img class = "header__img" src="" alt="logo">
+      <div class="header-search">
+        <form action="/"></form>
+      </div>
+  </head>
+  <body>
     <!-- mensaje de bienvenida -->
     <section class="fondo_transparente">
-        <div class="modal">
-            <div class="modal_cerrar">
-                <span>X</span>
-            </div>
-        </div>
+      <div class="modal">
+          <div class="modal_cerrar">
+              <span>X</span>
+          </div>
+      </div>
     </section>
 
     <header class="header">
@@ -57,9 +63,9 @@
                     <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
                     </a>
                     <ul class="submenu2">
-                        <li class="menu__item"><a href="#" class="menu__link2">Johto</a>
+                        <li class="menu__item"><a href="#" id="region_johto" class="menu__link2">Johto</a>
                         </li>
-                        <li class="menu__item"><a href="#" class="menu__link2">Kanto</a>
+                        <li class="menu__item"><a href="#"  id="region_kanto" class="menu__link2">Kanto</a>
                         </li>
                     </ul>
                 </li>
@@ -112,9 +118,11 @@
                     </ul>
                 </li>
             </ul>
-            </a>
-            </div>
-        </nav>
+          </li>
+        </ul>
+          </a>
+        </div>
+      </nav>
     </header>
     <main>
         <article id="listaPokemon">
@@ -128,5 +136,4 @@
     <footer></footer>
     <script src="main.js" type="module"></script>
 </body>
-
 </html>

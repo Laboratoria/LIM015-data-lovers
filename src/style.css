@@ -1,6 +1,6 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -10,16 +10,16 @@ body {
 }
 
 header {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .nav-bar {
-    padding: 20px;
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    width: 100%;
+  padding: 20px;
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
 }
 
 .menu {
@@ -33,9 +33,9 @@ header {
 .submenu2,
 .submenu3,
 .submenu4 {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu__link0,
@@ -105,7 +105,7 @@ header {
 .submenu2 .menu__link2,
 .submenu3 .menu__link3,
 .submenu4 .menu__link4 {
-    padding-left: 08px;
+  padding-left: 08px;
 }
 
 .submenu1,
@@ -122,7 +122,7 @@ header {
 }
 
 .mostrar {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .container-submenu1,
@@ -230,9 +230,24 @@ header {
     display: none;
 }
 
+/*responsive buscador*/
+@media screen and (min-width: 620px) {
+  .search:hover > .searchtext {
+    width: 90px;
+  }
+}
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
+
+#numpokemon{
+    display: flex;
+    flex-flow: row wrap;
+    height: 40rem;
+    justify-content:space-between;
+}
+
+ 
 .fotoPokemon {
     float: left;
     margin: 5px;
