@@ -21,6 +21,7 @@ navMovies.addEventListener("click", () => {
     btnDropdown.style.display = "block";
     document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
+    page2();
 })
 //ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", ()=>{
@@ -42,13 +43,20 @@ dropDown.addEventListener("change",
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
 })
-
+//promedio de puntaje
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
-
-
+//funcion para input search
 getInputSearchMovie.addEventListener("keyup" , (e) => {
-    const arrayOnSearch = onSearch(filmsCopy , e.target.value)
-   movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
-
+    const arrayOnSearch = onSearch(filmsCopy, e.target.value);
+    movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
 });
+//mostrar tercera pantalla
+function page2() {
+    const moviesListComplete = document.querySelector("#sectionMovies");
+    const movieEach = document.querySelectorAll(".movieItem");
+    movieEach.forEach(e => e.addEventListener("click", function () { moviesListComplete.style.display = "none" }))
+}
+
+
+
 
