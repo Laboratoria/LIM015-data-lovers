@@ -9,9 +9,3 @@ const buttonpokedex = document.getElementById("pokedex");
 buttonpokedex.addEventListener("click" , function(){
     document.getElementById("data").innerHTML=data.pokemon.map(example).join(" ")
 })
-//funcion filter
-function filtrar(tipo){
-    const look =data.pokemon.filter(poke => poke.type.includes(tipo));
-    console.log(look)
-}
-filtrar("grass");

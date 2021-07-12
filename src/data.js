@@ -14,3 +14,10 @@ export const example = (elemento) => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+//funcion filter
+/*function filtrar(tipo){
+  const look = data.pokemon.filter(poke => poke.type.includes(tipo));
+  return(look)
+}
+filtrar("grass");*/

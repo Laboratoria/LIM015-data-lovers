@@ -1,68 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Bienvenido al mundo Pokémon</h1>
-        <div class="navegador">
-          <div class="menu">
-            <label for="nav1">Inicio</label>
-            <button id="pokedex" type="button">Pokédex</button>
-            <label for="nav3">Login</label>
-          </div>
-          <div class="contenido">
-            <input type="radio" name="radio" id="nav1">
-            <div class="tab1">
-              <p>Iniciogdfhdhdhdhdhdhdh</p>
-            </div>
-            <input type="radio" name="radio" id="nav2">
-            <div class="tab2">
-              <p>Pokédexfdhhhhhhhhhhhh</p>
-            </div>
-            <input type="radio" name="radio" id="nav3">
-            <div class="tab3">
-              <p>Loginfhdddddddddddhdhdfhh5243543</p>
-            </div>
-          </div>
-        </div>
-    </header>
-    <main>
-      <section class="filtro">
-      <div class="opciones" id="elegir">
-        <select class="escoger">
-          <option value="">Tipo</option>
-          <option value="todos">Todos</option>
-          <option value="fuego">Fuego</option>
-          <option value="agua">Agua</option>
-          <option value="tierra"> Tierra</option>
-          <option value="electrico">Electrico</option>
-        </select>
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="https://pokemongolive.com/img/icons/favicon.ico"/>
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="main">
+      <div class="content-wrapper">
+        <ul>
+          <li><a href="#" >INICIO</a></li>
+          <li><a href="#" id="pokedex" type="button"><button>POKÉDEX</button></a></li>
+          <li><a href="#" >USUARIOS</a></li>
+        </ul>
       </div>
-      <div class="opciones" id="elegir1" >
-        <select class="escoger" >
-        <option value="">Orden</option>
-        <option value="option1">Todos</option>
-        <option value="option2">Dragones</option>
-        <option value="option2">Insectos</option>
-        <option value="option2">Aves</option>
-        </select>
-    </div>
+    </nav>
+  </header>
+  <main>
+    <section class="nombrepokemon">
+      <div class="nombre">
+    <label>Nombre</label>
+    <input type="text" id="buscar"/>
+    <input type="submit" class="button" value="Buscar" id="search" />
+      </div>
     </section>
-      <section>
-        Información general
-      </section>
-      <section id="data"></section>
-      <section>
-        Top 10
-      </section>
-    </main>
-    <footer>
-      By:Yuliana & Estefany<br>© 2021
-    </footer>
+    <section class="tipo-pokemon">   
+      <div class="tipospokemon">
+    <h3>Tipo</h3>
+    <div class="tipos">
+      <select id="tipo">
+        <option value="all">Todos</option>                         
+        <option value="bug">Bicho</option>                           
+        <option value="dragon">Dragón</option>                            
+        <option value="electric">Eléctrico</option>                            
+        <option value="fairy">Hada</option>                            
+        <option value="fire">Fuego</option>                           
+        <option value="flying">Volador</option>                            
+        <option value="ghost">Fantasma</option>                           
+        <option value="grass">Hierva</option>                            
+        <option value="ground">Tierra</option>
+        <option value="ice">Hielo</option>
+        <option value="normal">Normal</option>
+        <option value="poison">Veneno</option>
+        <option value="psychic">Psíquico</option>
+        <option value="rock">Roca</option>
+        <option value="steel">Acero</option>
+        <option value="struggle">Lucha</option>
+        <option value="water">Agua</option>
+      </select>
+    </div>
+      </div>
+    </section>
+    <section class="maspokemon">     
+      <div class="pokémon">
+        <a href="" id="pokémon">
+            <span>Cargar más Pokémon</span>
+        </a>
+      </div>
+    </section>
+    <section id="data"></section>
+  </main>
+  <footer>
+    <div class="footermenu">
+      <ul>
+        <li><a>INICIO</a></li>
+        <li><a>POKÉDEX</a></li>
+        <li><a>USUARIOS</a></li>
+      </ul>
+    </div>
+      <h3>By:Yuliana & Estefany<br>© 2021</h3>
+  </footer>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
