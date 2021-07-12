@@ -1,59 +1,28 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-    /* background: blue; */
-    background: linear-gradient(rgba(1, 6, 3, 1), rgba(1, 188, 248, 1));
+    background-image: linear-gradient(to top, #067DA3 0%, #000000 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 header {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .nav-bar {
-    padding: 20px;
-    display: block;
-    color: white;
-    cursor: pointer;
-    font-size: 20px;
-    width: 100%;
+  padding: 20px;
+  display: block;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  width: 100%;
 }
 
-/*styles search*/
-
-/*.search {
-    height: 20px;
-    padding: 0px 30px;
-    display: flex;
-    background: silver;
-    border-radius: 10px;
-    
-   }
-   
-   #searchtext{
-       border: none;
-       background: none;
-       outline: none;
-       color: white;
-       font-size: 12px;
-       float: left;
-       transition: .3s;
-       width: 30px;
-   }
-   
-   #button{
-       width: 20px;
-       height: 40px;
-       text-decoration: none;
-       color: white;
-       font-size: 15px;
-    }*/
-
-   .menu {
+.menu {
     margin-left: -100%;
     width: 100%;
     transition: all 0.5s;
@@ -64,9 +33,9 @@ header {
 .submenu2,
 .submenu3,
 .submenu4 {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu__link0,
@@ -79,56 +48,133 @@ header {
     text-decoration: none;
     font-size: 15px;
     color: white;
+    width: 125px;
+    font-size: x-large;
 }
 
 .menu__link0 {
-    background: red;
-    width: 125px;
+    border-bottom: #ff0800 10px solid;
 }
 
-.menu__link1{
-    background:#FFC700;
-    width: 125px;
+.menu__link0:hover {
+    background: #ff0800;
+    color: rgb(248, 252, 251);
+}
+
+.menu__link1 {
+    /* background: #ffc80080; */
+    border-bottom: #FFC700 10px solid;
+}
+
+.menu__link1:hover {
+    background: #FFC700;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link2 {
+    /* background: #63b63d8c; */
+    border-bottom: #64B63D 10px solid;
+}
+
+.menu__link2:hover {
     background: #64B63D;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link3 {
+    /* background: #0082fc7e; */
+    border-bottom: #0083FC 10px solid;
+}
+
+.menu__link3:hover {
     background: #0083FC;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .menu__link4 {
+    /* background: #f904d088; */
+    border-bottom: #F904D1 10px solid;
+}
+
+.menu__link4:hover {
     background: #F904D1;
-    width: 125px;
+    color: rgb(248, 252, 251);
 }
 
 .submenu1 .menu__link1,
 .submenu2 .menu__link2,
 .submenu3 .menu__link3,
 .submenu4 .menu__link4 {
-    padding-left: 08px;
+  padding-left: 08px;
 }
 
 .submenu1,
 .submenu2,
 .submenu3,
 .submenu4 {
-    height: 0px;
-    overflow: hidden;
-    transition: all 0.3s;
+    position: absolute;
+    /* top: 60px; */
+    padding-left: -20px;
+    overflow: visible;
+    /*para que siempre se muestre delanto de todos*/
+    opacity: 0;
+    visibility: hidden;
 }
 
 .mostrar {
-    margin-left: 0;
+  margin-left: 0;
 }
 
-@media(min-width:960px){
-    .nav-bar{
-      
+.container-submenu1,
+.container-submenu2,
+.container-submenu3,
+.container-submenu4 {
+    position: relative;
+}
+
+.container-submenu1:hover .submenu1,
+.container-submenu2:hover .submenu2,
+.container-submenu3:hover .submenu3,
+.container-submenu4:hover .submenu4 {
+    opacity: 1;
+    visibility: visible;
+}
+
+.submenu1 .menu__link1:hover {
+    background: #FFC700;
+}
+
+.submenu2 .menu__link2:hover {
+    background: grey;
+}
+
+.submenu3 .menu__link3:hover {
+    background: #0083FC;
+}
+
+.submenu4 .menu__link4:hover {
+    background: #F904D1;
+}
+
+@media(min-width:960px) {
+    .nav-bar {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        margin-left: 0;
+    }
+    .container-submenu1,
+    .container-submenu2,
+    .container-submenu3,
+    .container-submenu4 {
+        position: relative;
+    }
+}
+
+
+/* @media(min-width:960px) {
+    .nav-bar {
         display: none;
     }
     .menu {
@@ -149,8 +195,11 @@ header {
         top: 60px;
         padding-left: -20px;
         overflow: visible;
-        z-index: 1000; /*para que siempre se muestre delanto de todos*/
-        opacity: 0;
+        z-index: 1000;
+        para que siempre se muestre delanto de todos*/
+
+
+/*  opacity: 0;
         visibility: hidden;
     }
     .container-submenu1:hover .submenu1,
@@ -160,37 +209,33 @@ header {
         opacity: 1;
         visibility: visible;
     }
-
     .submenu1 .menu__link1:hover {
-        background:grey;
+        background: grey;
     }
-
     .submenu2 .menu__link2:hover {
-        background:grey;
+        background: grey;
     }
-
     .submenu3 .menu__link3:hover {
-        background:grey;
+        background: grey;
     }
     .submenu4 .menu__link4:hover {
-        background:grey;
-
+        background: grey;
     }
+} */
 
-}
 
-/*responsive buscador*/
-@media screen and (min-width:620px) {
-    .search:hover > .searchtext{
-        width: 90px;
-    }
- }
 /* OCULTAR FICHA TECNICA */
 
 #fichaTecnicaPokemon {
     display: none;
 }
 
+/*responsive buscador*/
+@media screen and (min-width: 620px) {
+  .search:hover > .searchtext {
+    width: 90px;
+  }
+}
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
@@ -208,27 +253,35 @@ header {
     margin: 5px;
     padding: 10px;
     /* width: 100px; */
-    border: 1px #E5E5E5 solid;
+    /* border: 1px #E5E5E5 solid; */
     /* padding: 4px; */
     /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
-    background: linear-gradient(#7CFFA8, #05ECFB);
-
+    box-shadow: 0px 0px 5px 3px #03def4;
+    background-image: linear-gradient(180deg, #28c4669d 0%, #09c9d3c5 100%);
 }
 
 .fotoPokemon figcaption {
-    background-color: rgba(255, 255, 255, 1);
-    color: black;
-    font-style: roboto;
+    background-color: rgba(255, 255, 255, 0.719);
+    font-family: 'Roboto', sans-serif;
     padding: 2px;
     text-align: center;
     border-radius: 15px 15px 15px 15px;
     text-transform: capitalize;
 }
 
+.num {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
 .datosPokemon {
     color: rgba(255, 255, 255, 1);
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
 }
 
@@ -237,7 +290,7 @@ header {
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .imagenPokemon {
@@ -245,21 +298,23 @@ header {
     margin: 5px;
     padding: 10px;
     width: 120px;
-    border: 1px #E5E5E5 solid;
+    /* border: 1px #000000 solid; */
     border-radius: 15px 15px 15px 15px;
-    background: linear-gradient(#7CFFA8, #05ECFB);
+    /* background: linear-gradient(#7CFFA8, #05ECFB); */
+    background-image: linear-gradient(180deg, #37d6769d 0%, #087a80c5 100%);
 }
 
 .nombrePokemon {
     text-transform: capitalize;
-    font-style: roboto;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btnSalir {
+    font-family: 'Roboto', sans-serif;
     font-style: roboto;
-    background: white;
+    background: rgb(3, 3, 3);
     padding: 8px 30px;
-    color: rgb(155, 211, 228);
+    color: rgb(255, 251, 0);
     text-decoration: none;
     border-radius: 25px;
     border: 1px solid rgb(0, 0, 0);
@@ -267,6 +322,61 @@ header {
 }
 
 .btnSalir:hover {
-    background: crimson;
-    color: white;
+    background: rgb(0, 0, 0);
+    color: rgb(0, 255, 213);
+}
+
+.header__img {
+    width: 300px;
+    float: left;
+}
+
+.search {
+    float: left;
+}
+
+.fondo_transparente {
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+.modal {
+    /* background: linear-gradient(0deg, white 70%, crimson 30%); */
+    background-image: url("./img/welcome2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 80%;
+    height: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    z-index: 1000;
+}
+
+.modal_cerrar {
+    background: white;
+    position: absolute;
+    right: -20px;
+    color: crimson;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
 }

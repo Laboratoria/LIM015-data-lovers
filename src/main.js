@@ -1,34 +1,30 @@
 import data from './data/pokemon/pokemon.js';
-//
 import { filterData } from './data.js';
 
 /*buscador*/
-
 const SEARCHTEXT = document.getElementById("searchtext");
 const BTNSEARCH = document.getElementById("btn");
 
 /*asignando un evento*/
-
-BTNSEARCH.addEventListener("click", (e) =>{
-    e.preventDefault()
-
-
+BTNSEARCH.addEventListener("click", (e) => {
+    e.preventDefault();
     const textNumber = SEARCHTEXT.value; /*guardando mi texto o numero*/
+    const buscarPoke = data.pokemon.filter((nombre, numero) => {
+        return nombre.numero.map(busqueda);
+    });
 
+    limpiarContenido(document.getElementById("listaPokemon"));
+    mostrarPokemones(buscarPoke);
 });
        
 
 /*menu desplegable*/
-
 const btnMenu = document.querySelector("#btnMenu");
 const menu = document.querySelector("#menu");
 
-/*funcionalidad de cada elelemto*///
-
-
-btnMenu.addEventListener("click", function(){
-menu.classList.toggle("mostrar");
-
+/*funcionalidad de cada elelemto*/
+btnMenu.addEventListener("click", function() {
+    menu.classList.toggle("mostrar");
 });
 
 const subMenuBtn1 = document.querySelectorAll(".submenu1-btn1");
@@ -53,46 +49,44 @@ const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
 const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
 
-//la funcion onload espera que cargue todo DOM
+//la funcion onload 
 window.onload = function() {
 
     let pokemones = filterData(data.pokemon, ''); //ingresamos a la data
     mostrarPokemones(pokemones); //llamamos la funcnion mostrarPokemones
-
 }
 
 function mostrarPokemones(data) {
-    const parent = document.getElementById('listaPokemon'); // Recuperar tag padre
+    const listaPokemones = document.getElementById('listaPokemon'); // Recuperar tag padre
 
     for (let i = 0; i < data.length; i++) {
         //variables que almacena los datos que queremos que se muestre
-        let url = data[i].img;
-        let name = data[i].name;
-        let number = data[i].num;
+        let imgPok = data[i].img;
+        let nombre = data[i].name;
+        let numero = data[i].num;
         let types = data[i].type;
-    /*let vertipo;
 
         for (let index = 0; index < type.length; index++) {
              vertipo = type[index];
             
         }
-*/
+
         //etiqueta padre figure
-        let elementFigure = document.createElement("figure"); // Crear tag Figure
-        elementFigure.classList.add("fotoPokemon"); // Agregando una clase a tag Figure
+        let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
+        etiquetaFigure.classList.add("fotoPokemon"); // Agregando una clase a tag Figure
 
-        let elementP = document.createElement("p"); //Crear tag P
-        elementP.classList.add("num"); // Agregando una clase a tag P
-        elementP.textContent = number; // Agregando contenido a tag P
-        elementFigure.appendChild(elementP); //Agregando tag al padre Figure
+        let numeroPok = document.createElement("p"); //Crear tag P
+        numeroPok.classList.add("num"); // Agregando una clase a tag P
+        numeroPok.textContent = "# " + numero; // Agregando contenido a tag P
+        etiquetaFigure.appendChild(numeroPok); //Agregando tag al padre Figure
 
-        let elementimg = document.createElement("img");
-        elementimg.src = url;
-        elementFigure.appendChild(elementimg);
+        let imagenPok = document.createElement("img");
+        imagenPok.src = imgPok;
+        etiquetaFigure.appendChild(imagenPok);
 
-        let elemetfigcaption = document.createElement("figcaption");
-        elemetfigcaption.textContent = name;
-        elementFigure.appendChild(elemetfigcaption);
+        let nombrePok = document.createElement("figcaption");
+        nombrePok.textContent = nombre;
+        etiquetaFigure.appendChild(nombrePok);
 
         let elementA = document.createElement("a");
         elementA.classList.add("show");
@@ -100,56 +94,39 @@ function mostrarPokemones(data) {
         elementA.classList.add("verMas");
         elementA.textContent = " Ver +";
         elementA.addEventListener("click", () => {
-            showInfo(data[i]); 
             verFichaTecnica(data[i]);
-        
         });
-        elemetfigcaption.appendChild(elementA);
-    
+        nombrePok.appendChild(etiquetaVermas);
 
-        for (let tipo of  types) {
-        let textType = document.createElement("p");
-        textType.classList.add("textType");
-        textType.textContent = tipo;
-        elemetfigcaption.appendChild(textType);
-            
+        for (let tipo of types) {
+            let textType = document.createElement("p");
+            textType.classList.add("textType");
+            textType.textContent = tipo;
+            nombrePok.appendChild(textType);
+
         }
 
-        
-        parent.appendChild(elementFigure); //Agregando tag al padre Article
+        listaPokemones.appendChild(etiquetaFigure); //Agregando tag al padre Article
     }
 }
 
-/* manipulacion del menu filtrado por tipo*/ 
-
-const selectTypes = document.querySelectorAll(".menu__link3"); 
+// funcion para mostrar pokemones por tipo
+const selectTypes = document.querySelectorAll(".menu__link3");
 
 for (let i = 0; i < selectTypes.length; i++) {
-    
+
     selectTypes[i].addEventListener("click", (e) => {
-       
-       const oneType = e.target.id;
 
-       /*console.log(oneType)*/
+        const oneType = e.target.id;
 
-       const poke = data.pokemon.filter(elemento => {
-        return elemento.type.includes(oneType);
-       });
+        const poke = data.pokemon.filter(elemento => {
+            return elemento.type.includes(oneType);
+        });
 
-       limpiarContenido(document.getElementById("listaPokemon"));
+        limpiarContenido(document.getElementById("listaPokemon"));
+        mostrarPokemones(poke);
 
-       //console.log(poke);
-       mostrarPokemones(poke);
-      
-
-    //.forEach(type=> console.log(type));
-
-       /* if (oneType == data.pokemon.includes(elemento)) { 
-            return true;
-     } else{
-         return false;
-     }    */ 
-});
+    });
 }
 
 
@@ -224,18 +201,14 @@ for (let i = 0; i < ordenarNombres.length; i++) {
 // funcion para el boton ver +
 
 function verFichaTecnica(datapokemon) {
-    console.log(datapokemon);
-    // console.log(datapokemon.resistant);
-    // datapokemon.resistant.forEach(r => {
-    //     console.log(r);
-    // });
+    console.log(datapokemon.resistant);
 
     document.getElementById("listaPokemon").style.display = "none";
     document.getElementById("fichaTecnicaPokemon").style.display = "block";
 
     limpiarContenido(document.getElementById("fichaTecnicaPokemon"));
 
-    const fichaTecnica = document.getElementById('fichaTecnicaPokemon');
+    const fichaTecnica = document.getElementById("fichaTecnicaPokemon");
 
     let datosPokemon = document.createElement("section");
     datosPokemon.classList.add("datosPokemon");
@@ -259,6 +232,41 @@ function verFichaTecnica(datapokemon) {
     imagen.src = datapokemon.img;
     imagenPokemon.appendChild(imagen);
 
+    // caracteristicas del pokemon
+    let sectionCP = document.createElement("section");
+    sectionCP.classList.add("sectionCP");
+    fichaTecnica.appendChild(sectionCP);
+
+    let h2Altura = document.createElement("h2");
+    h2Altura.textContent = "Altura: " + datapokemon.size.height;
+    sectionCP.appendChild(h2Altura);
+
+    let h2Peso = document.createElement("h2");
+    h2Peso.textContent = "Peso: " + datapokemon.size.weight;
+    sectionCP.appendChild(h2Peso);
+
+    let h2Huevo = document.createElement("h2");
+    h2Huevo.textContent = "Huevo: " + datapokemon.egg;
+    sectionCP.appendChild(h2Huevo);
+
+    let h2Rareza = document.createElement("h2");
+    h2Rareza.textContent = "Rareza de pokemon: " + datapokemon['pokemon-rarity'];
+    sectionCP.appendChild(h2Rareza);
+
+    // Estadisticas del pokemon
+    let sectionE = document.createElement("section");
+    sectionE.classList.add("sectionE");
+    sectionE.textContent = "Estadisticas " + datapokemon.name;
+    fichaTecnica.appendChild(sectionE);
+
+    let divE = document.createElement("div");
+    divE.classList.add("divE");
+    fichaTecnica.appendChild(divE);
+
+    let progressE = document.createElement("progress");
+    progressE.classList.add("progressE");
+    progressE.textContent = "Base ataque " + datapokemon.stats['base-attack'];
+    divE.appendChild(progressE);
 
 
     let botonSalir = document.createElement("button");
@@ -277,3 +285,8 @@ function limpiarContenido(limpiar) {
         limpiar.removeChild(limpiar.firstChild);
     }
 }
+
+// implementando modal
+document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
+    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+});
