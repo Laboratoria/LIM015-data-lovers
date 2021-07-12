@@ -47,6 +47,14 @@ resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
 //funcion para input search
 getInputSearchMovie.addEventListener("keyup" , (e) => {
     const arrayOnSearch = onSearch(filmsCopy, e.target.value);
-   movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
+    movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
 });
+//mostrar tercera pantalla
+const moviesListComplete = document.querySelector("#sectionMovies");
+const movieEach = document.querySelectorAll(".movieItem");
+
+movieEach.forEach(e=>e.addEventListener("click", function(){moviesListComplete.style.display="none"}))
+
+
+
 

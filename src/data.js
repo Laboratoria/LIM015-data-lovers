@@ -59,21 +59,18 @@ return acumulator + parseInt (value.rt_score)
 // Funcion para obtener  todos los personajes y sus nombres 
 export const charactersName = data.films.map(film => {
   return  film.people.map(character => {
-     return character.name
+    return character.name
   })
 });
-
 //Funcion inputSearch
 export const onSearch = (arr, search) => {
-
   return arr.filter(el => {
-     const textLowerCase =  el.title.toLowerCase()
-     const searchLowerCase = search.toLowerCase()
-     if(textLowerCase.includes(searchLowerCase)){
-         return true
-     }
- })                                                                                                                                                                                                                        
-
+    const textLowerCase =  el.title.toLowerCase()
+    const searchLowerCase = search.toLowerCase()
+    if(textLowerCase.includes(searchLowerCase)){
+        return true
+    }
+})
 }
 
 

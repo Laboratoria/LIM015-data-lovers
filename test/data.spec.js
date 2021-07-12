@@ -1,25 +1,23 @@
-//import validation, anotherExample  from '../src/data.js';
-//import { setMoviesTitle}  from '../src/data.js';
+import { setMoviesTitle, alphabeticOrder} from '../src/data.js';
 
 
+describe('setMoviesTitle', () => {
+  it('is a function', () => {
+    expect(typeof setMoviesTitle).toBe('function');
+  });
 
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
+  it('returns `setMoviesTitle`', () => {
+    expect(setMoviesTitle()).toBe('setMoviesTitle');
+  });
+});
 
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
+describe('alphabeticOrder', () => {
+  it('is a function', () => {
+    expect(typeof alphabeticOrder).toBe('function');
+  });
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
+  it('returns `alphabeticOrder`', () => {
+    expect(alphabeticOrder()).toBe('alphabeticOrder');
+  });
+});
