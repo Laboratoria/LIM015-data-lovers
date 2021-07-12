@@ -1,22 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filterData } from './data.js';
-
-/*buscador*/
-const SEARCHTEXT = document.getElementById("searchtext");
-const BTNSEARCH = document.getElementById("btn");
-
-/*asignando un evento*/
-// BTNSEARCH.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     const textNumber = SEARCHTEXT.value; /*guardando mi texto o numero*/
-//     const buscarPoke = data.pokemon.filter((nombre, numero) => {
-//         return nombre.numero.map(busqueda);
-//     });
-
-   // limpiarContenido(document.getElementById("listaPokemon"));
-    //mostrarPokemones(buscarPoke);
-//});
-       
+import { filtrarData, searchPokemon, ordenarPokemon } from './data.js';
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -52,8 +35,9 @@ const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 //la funcion onload 
 window.onload = function() {
 
-    let pokemones = filterData(data.pokemon, ''); //ingresamos a la data
+    let pokemones = filtrarData(data.pokemon, ''); //ingresamos a la data
     mostrarPokemones(pokemones); //llamamos la funcnion mostrarPokemones
+    document.querySelector('#txtBuscar').value = ""; // limpiar la caja de busqueda    
 }
 
 function mostrarPokemones(data) {
@@ -68,8 +52,8 @@ function mostrarPokemones(data) {
         let vertipo;
 
         for (let index = 0; index < types.length; index++) {
-             vertipo = types[index];
-            
+            vertipo = types[index];
+
         }
         //etiqueta padre figure
         let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
@@ -111,23 +95,48 @@ function mostrarPokemones(data) {
 }
 
 // funcion para mostrar pokemones por tipo
-const selectTypes = document.querySelectorAll(".menu__link3");
+const seleccionarTipo = document.querySelectorAll(".menu__link3");
 
-for (let i = 0; i < selectTypes.length; i++) {
+for (let i = 0; i < seleccionarTipo.length; i++) {
 
-    selectTypes[i].addEventListener("click", (e) => {
+    seleccionarTipo[i].addEventListener("click", (e) => {
 
-        const oneType = e.target.id;
+        const tipo = e.target.id;
 
-        const poke = data.pokemon.filter(elemento => {
-            return elemento.type.includes(oneType);
-        });
+        const filtrarPokemon = filtrarData(data.pokemon, tipo); //le pasamos el argumento
 
         limpiarContenido(document.getElementById("listaPokemon"));
-        mostrarPokemones(poke);
+        mostrarPokemones(filtrarPokemon);
 
     });
 }
+
+//funcion para pora ordednar A-Z y Z-A
+const ordenarNombres = document.querySelectorAll(".menu__link1");
+
+for (let i = 0; i < ordenarNombres.length; i++) {
+
+    ordenarNombres[i].addEventListener("click", (e) => {
+        const ordAsc = e.target.id;
+
+        const ordenarPok = ordenarPokemon(data.pokemon, 'name', ordAsc);
+
+        limpiarContenido(document.getElementById("listaPokemon"));
+        mostrarPokemones(ordenarPok);
+
+    });
+}
+
+
+/* funcnion para buscar un pokemon por nombre o numero*/
+const btnBuscar = document.querySelector('#btnBuscar');
+btnBuscar.addEventListener('click', () => {
+    const nombrePokemon = document.querySelector('#txtBuscar').value.toLowerCase();
+    const buscarPokemon = searchPokemon(data.pokemon, nombrePokemon);
+
+    limpiarContenido(document.getElementById("listaPokemon"));
+    mostrarPokemones(buscarPokemon);
+});
 
 // funcion para el boton ver +
 
@@ -223,40 +232,40 @@ document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", fun
 });
 
 function buscadorpokemon() {
-    let busqueda= document.getElementById("searchtext").value;
+    let busqueda = document.getElementById("searchtext").value;
     let pokemons;
-    if (isNaN(busqueda)){
+    if (isNaN(busqueda)) {
         pokemons = data.pokemon.filter((pokemon) => pokemon.name == busqueda);
-        
-    }else {
-        pokemons = data.pokemon.filter((pokemon) => pokemon.num == busqueda);  
+
+    } else {
+        pokemons = data.pokemon.filter((pokemon) => pokemon.num == busqueda);
     }
 
-  console.table(pokemons);
-  limpiarContenidoBuscador();
-  mostrarPokemones(pokemons);
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
 }
 
 
 function limpiarContenidoBuscador() {
-    document.getElementById("listaPokemon").innerHTML="";
+    document.getElementById("listaPokemon").innerHTML = "";
 }
-document.getElementById("btn").addEventListener("click", function () {
-  buscadorpokemon();
+document.getElementById("btn").addEventListener("click", function() {
+    buscadorpokemon();
 });
 
-function buscarPorRegion(region){
+function buscarPorRegion(region) {
 
-   let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
     console.table(pokemons);
-  limpiarContenidoBuscador();
-  mostrarPokemones(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
 }
 
-document.getElementById("region_johto").addEventListener("click", function () {
+document.getElementById("region_johto").addEventListener("click", function() {
     buscarPorRegion("johto");
 });
 
-document.getElementById("region_kanto").addEventListener("click", function () {
+document.getElementById("region_kanto").addEventListener("click", function() {
     buscarPorRegion("kanto");
 });
