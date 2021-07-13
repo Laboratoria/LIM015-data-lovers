@@ -3,7 +3,7 @@ import data from './data/ghibli/ghibli.js';
 export const setMoviesTitle = element => {
   return element.map(
     (el) => {
-      const movieCover = `<div class="movieItem"><img src="${el.poster}" alt = "portada de pelicula"/>`;
+      const movieCover = `<div data-id="${el.id}" class="movieItem"><img src="${el.poster}" alt = "portada de pelicula"/>`;
       const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
       return movieCover + moviesTitle;
     }

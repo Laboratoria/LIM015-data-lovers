@@ -42,6 +42,7 @@ dropDown.addEventListener("change",
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
+        page2();
 })
 //promedio de puntaje
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
@@ -56,7 +57,3 @@ function page2() {
     const movieEach = document.querySelectorAll(".movieItem");
     movieEach.forEach(e => e.addEventListener("click", function () { moviesListComplete.style.display = "none" }))
 }
-
-
-
-
