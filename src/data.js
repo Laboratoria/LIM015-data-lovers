@@ -3,7 +3,7 @@ import data from './data/ghibli/ghibli.js';
 export const setMoviesTitle = element => {
   return element.map(
     (el) => {
-      const movieCover = `<div class="movieItem"><img src="${el.poster}" alt = "portada de pelicula"/>`;
+      const movieCover = `<div class="movieItem" id="${el.id}"><img src="${el.poster}" alt = "portada de pelicula"/>`;
       const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
       return movieCover + moviesTitle;
     }
@@ -43,8 +43,6 @@ export const realeaseDateOld = filmsCopy => {
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
 })
-//busqueda por input search
-  // return parseInt(b.realease_date - a.realease_date)});
 
 // Funcion para obtener la descripcion de la pelicula al hacerle click a la imagen
 
@@ -88,7 +86,13 @@ export const locationName = data.films.map(element => {
   })
 });
 
-//extraer la descripcion de peliculas(Alisson)
+//extraer informacion que corresponda al id de la pelicula
+export const compareIdMovie = ( arr , idvalue) => {
+  return arr.filter(element => { 
+    return element.id === idvalue
+  })
+};
+
 
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = element => {

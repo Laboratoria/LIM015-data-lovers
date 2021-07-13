@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch , compareIdMovie} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -12,6 +12,7 @@ const dropDown = document.querySelector("#myDropdown");
 const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
+const moviesListComplete = document.querySelector("#sectionMovies");
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -21,7 +22,7 @@ navMovies.addEventListener("click", () => {
     btnDropdown.style.display = "block";
     document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
-    page2();
+    thirdSlide();
 })
 //ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", ()=>{
@@ -51,12 +52,13 @@ getInputSearchMovie.addEventListener("keyup" , (e) => {
     movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
 });
 //mostrar tercera pantalla
-function page2() {
-    const moviesListComplete = document.querySelector("#sectionMovies");
-    const movieEach = document.querySelectorAll(".movieItem");
-    movieEach.forEach(e => e.addEventListener("click", function () { moviesListComplete.style.display = "none" }))
+function thirdSlide() {
+    const eachMovie = document.querySelectorAll(".movieItem");
+    eachMovie.forEach(element => element.addEventListener("click", () => { 
+    moviesListComplete.style.display = "none" 
+    const movieId = element.getAttribute("id")
+    const movieInformation = compareIdMovie(filmsCopy,movieId)  
+}))
 }
-
-
 
 
