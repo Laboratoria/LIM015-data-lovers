@@ -58,7 +58,7 @@ function thirdSlide() {
     eachMovie.forEach(element => element.addEventListener("click", () => {
     moviesListComplete.style.display = "none";
     const movieId = element.getAttribute("id");
-    console.log(compareIdMovie(data.films, movieId)[0].title)
+    console.log(compareIdMovie(filmsCopy, movieId)[0].title)
 }))
 }
 
