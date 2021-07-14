@@ -40,6 +40,7 @@ window.onload = function() {
     document.querySelector('#txtBuscar').value = ""; // limpiar la caja de busqueda    
 }
 
+
 function mostrarPokemones(data) {
     const listaPokemones = document.getElementById('listaPokemon'); // Recuperar tag padre
 
@@ -48,7 +49,7 @@ function mostrarPokemones(data) {
         let imgPok = data[i].img;
         let nombre = data[i].name;
         let numero = data[i].num;
-        let types = data[i].type;
+        // let types = data[i].type;
 
         //etiqueta padre figure
         let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
@@ -77,13 +78,15 @@ function mostrarPokemones(data) {
         });
         nombrePok.appendChild(etiquetaVermas);
 
-        for (let tipo of types) {
-            let textType = document.createElement("p");
-            textType.classList.add("textType");
-            textType.textContent = tipo;
-            nombrePok.appendChild(textType);
+        let textType = document.createElement("p");
+        textType.classList.add("textType");
+        nombrePok.appendChild(textType);
 
-        }
+        const tipoPokemon = data[i].type.map(tipo => {
+            // console.log(tipo);
+            return `<img src="./img/pokemonType/${tipo}.png" width="30px" />`;
+        });
+        textType.innerHTML = `${tipoPokemon.join("")}`;
 
         listaPokemones.appendChild(etiquetaFigure); //Agregando tag al padre Article
     }
