@@ -88,7 +88,7 @@ export const locationName = data.films.map(element => {
 
 //extraer informacion que corresponda al id de la pelicula
 export const compareIdMovie = ( arr , idvalue) => {
-  return arr.filter(element => { 
+  return arr.filter(element => {
     return element.id === idvalue
   })
 };

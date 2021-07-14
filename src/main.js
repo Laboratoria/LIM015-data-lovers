@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch , compareIdMovie} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch, compareIdMovie} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -43,7 +43,7 @@ dropDown.addEventListener("change",
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
-        page2();
+        thirdSlide();
 })
 //promedio de puntaje
 resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
@@ -55,11 +55,14 @@ getInputSearchMovie.addEventListener("keyup" , (e) => {
 //mostrar tercera pantalla
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
-    eachMovie.forEach(element => element.addEventListener("click", () => { 
-    moviesListComplete.style.display = "none" 
-    const movieId = element.getAttribute("id")
-    const movieInformation = compareIdMovie(filmsCopy,movieId)  
+    eachMovie.forEach(element => element.addEventListener("click", () => {
+    moviesListComplete.style.display = "none";
+    const movieId = element.getAttribute("id");
+    console.log(compareIdMovie(data.films, movieId)[0].title)
 }))
 }
 
-
+const divsThirdSlice = document.querySelectorAll(".informationAboutMovie");
+console.log(divsThirdSlice.textContent);
+// divsThirdSlice[0].innerText = "hola Mundo"
+for (let i = 0; i < divsThirdSlice.length; i++){divsThirdSlice[i].innerText = "Hola"}
