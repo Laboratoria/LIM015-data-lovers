@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate , getAverage , onSearch , compareIdMovie} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie } from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -13,6 +13,7 @@ const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
 const moviesListComplete = document.querySelector("#sectionMovies");
+const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -25,8 +26,8 @@ navMovies.addEventListener("click", () => {
     thirdSlide();
 })
 //ocultar el dopdrown y mostrar
-btnDropdown.addEventListener("click", ()=>{
-dropDown.classList.toggle("show")
+btnDropdown.addEventListener("click", () => {
+    dropDown.classList.toggle("show")
 })
 //reemplazar con los filtros el orden de las pelis
 dropDown.addEventListener("change",
@@ -43,22 +44,23 @@ dropDown.addEventListener("change",
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
-})
+        thirdSlide()
+    })
 //promedio de puntaje
-resultAverage.innerHTML = `The average ${getAverage(filmsCopy)}`
+resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`
 //funcion para input search
-getInputSearchMovie.addEventListener("keyup" , (e) => {
+getInputSearchMovie.addEventListener("keyup", (e) => {
     const arrayOnSearch = onSearch(filmsCopy, e.target.value);
     movieList.innerHTML = setMoviesTitle(arrayOnSearch).join(" ");
+    thirdSlide()
 });
 //mostrar tercera pantalla
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
-    eachMovie.forEach(element => element.addEventListener("click", () => { 
-    moviesListComplete.style.display = "none" 
-    const movieId = element.getAttribute("id")
-    const movieInformation = compareIdMovie(filmsCopy,movieId)  
-}))
+    eachMovie.forEach(element => element.addEventListener("click", () => {
+        moviesListComplete.style.display = "none"
+        const movieId = element.getAttribute("id")
+        const movieInformation = compareIdMovie(filmsCopy, movieId)
+        moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
+    }))
 }
-
-

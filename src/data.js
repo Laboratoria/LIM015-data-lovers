@@ -5,10 +5,11 @@ export const setMoviesTitle = element => {
     (el) => {
       const movieCover = `<div class="movieItem" id="${el.id}"><img src="${el.poster}" alt = "portada de pelicula"/>`;
       const moviesTitle = `<h2 class="FilmsNames">${el.title.toUpperCase()}</h2></div>`;
-      return movieCover + moviesTitle;
+      return movieCover + moviesTitle
     }
   )
 }
+
 //ordena pelis alfabeticamente de A a Z
 export const alphabeticOrder = (filmsCopy) => filmsCopy.sort((a, b) => {
   return a.title > b.title ? 1 : a.title < b.title ? -1 : 0;
@@ -38,62 +39,55 @@ export const realeaseDateOld = filmsCopy => {
     return parseInt(a.release_date) - parseInt(b.release_date)
   });
 }
-
 //ordena pelis por release date (mayor a menor)
 export const lastestRealeaseDate = filmsCopy => filmsCopy.sort((a, b) => {
   return parseInt(b.release_date) - parseInt(a.release_date)
 })
-
-// Funcion para obtener la descripcion de la pelicula al hacerle click a la imagen
-
 // Funcion para sacar promedio del rt score
 export const getAverage = (arr) => {
-  const sum = arr.reduce((acumulator , value) => {
-return acumulator + parseInt (value.rt_score)
-  } , 0 )
- return sum / arr.length
+  const sum = arr.reduce((acumulator, value) => {
+    return acumulator + parseInt(value.rt_score)
+  }, 0)
+  return sum / arr.length
 }
-
 // Funcion para obtener  todos los personajes y sus nombres 
 export const charactersName = data.films.map(film => {
-  return  film.people.map(character => {
+  return film.people.map(character => {
     return character.name
   })
 });
 //Funcion inputSearch
 export const onSearch = (arr, search) => {
   return arr.filter(el => {
-    const textLowerCase =  el.title.toLowerCase()
+    const textLowerCase = el.title.toLowerCase()
     const searchLowerCase = search.toLowerCase()
-    if(textLowerCase.includes(searchLowerCase)){
-        return true
+    if (textLowerCase.includes(searchLowerCase)) {
+      return true
     }
-})
+  })
 }
-
-
 //funcion para obtener descripcion general de personajes
-
-
-
-
-
 // Funcion para obtener las locaciones y sus descripciones
-
 export const locationName = data.films.map(element => {
   return element.locations.map(e => {
     return e.name
   })
 });
-
 //extraer informacion que corresponda al id de la pelicula
-export const compareIdMovie = ( arr , idvalue) => {
-  return arr.filter(element => { 
+export const compareIdMovie = (arr, idvalue) => {
+  return arr.filter(element => {
     return element.id === idvalue
   })
 };
+//obtener descripcion segun id de pelicula
+export const descriptionMovie = (arr) => {
+  return `<div>
+  <h2>${arr[0].title}</h2>
+  <img src="${arr[0].poster}" alt="pelicula Ghibli"/>
+  <p>${arr[0].description}</p>
+  </div>`
 
-
+}
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = element => {
   return element.map(e => e.people.map(el => {
@@ -116,9 +110,8 @@ export const filterPeopleByMovies = (filmsCopy, movieName) => {
       return cartoonName + cartoonImage + cartoonGender + cartoonAge + cartoonEyeColor + cartoonHairColor + cartoonSpecie + cartoonHairColor
     }
     ))
-  }
+}
 //locaciones y descripciones (Alisson)
-
 //vehiculos y susdescripciones (yo)
 export const getVehiclesAndDescripcions = (filmsCopy, movieName) => {
   filmsCopy.filter(e =>
