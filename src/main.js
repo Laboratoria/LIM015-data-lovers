@@ -65,7 +65,16 @@ function thirdSlide() {
         const movieId = element.getAttribute("id");
         const movieInformation = compareIdMovie(filmsCopy, movieId);
         posterOfEachMovie.innerHTML = descriptionMovie(movieInformation);
-        divsAboutCartoons.innerHTML = getPeople(movieInformation);
-        divsAboutVehicles.innerHTML = getVehicles(movieInformation);
+        const getPeopleResult = getPeople(movieInformation)[0];
+        getPeopleResult.forEach(element =>
+            divsAboutCartoons.innerHTML += element
+        )
+        const getVehiclesResult = getVehicles(movieInformation)[0];
+        for (let i = 0; i < getVehiclesResult.length; i++){
+            divsAboutVehicles.innerHTML += getVehiclesResult[i]
+        }
+
     }))
 }
+
+

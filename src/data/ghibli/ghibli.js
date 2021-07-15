@@ -84,7 +84,7 @@ export default {
         {
           "id": "fcb4a2ac-5e41-4d54-9bba-33068db083ca",
           "name": "Louis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/80/Louis.jpg",
+          "img": "https://i.pinimg.com/236x/2c/ab/ae/2cabae605962ecd4d8855e6ca806dcfe.jpg",
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
