@@ -81,21 +81,34 @@ export const compareIdMovie = (arr, idvalue) => {
 };
 //obtener descripcion segun id de pelicula
 export const descriptionMovie = (arr) => {
-  return `<div>
-  <h2>${arr[0].title}</h2>
-  <img src="${arr[0].poster}" alt="pelicula Ghibli"/>
-  <p>${arr[0].description}</p>
-  </div>`
-
+  const titleOfEachMovie = `<div><h2>${arr[0].title}</h2>`;
+  const posterOfEachMovie = `<img src="${arr[0].poster}"/>`;
+  const descriptionOfEachMovie = `<p>Sinopsis:<br/>${arr[0].description}</p>`;
+  const directorOfEachMovie = `<p><strong>Director: ${arr[0].director}</strong></p>`;
+  const producerOfEachMovie = `<p><strong>Producer: ${arr[0].producer}</strong></p>`;
+  const releaseOfEachMovie = `<p>Release date: ${arr[0].release_date}</p></div>`;
+  return titleOfEachMovie + posterOfEachMovie + descriptionOfEachMovie + directorOfEachMovie + producerOfEachMovie + releaseOfEachMovie
 }
+
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
-export const getPeople = element => {
-  return element.map(e => e.people.map(el => {
-    const peopleImage = `<div><img src="${el.img}" />`;
+export const getPeople = arr => {
+  return arr.map(e => e.people.map(el => {
+    const peopleImage = `<div data-id=${el.id}><img src="${el.img}" />`;
     const peopleName = `<h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return peopleImage + peopleName;
   }));
 }
+
+
+//extraer el nombre e imagen de los vehiculos
+export const getVehicles = arr => {
+  return arr.map(e => e.vehicles.map(el => {
+    const vehicleImg = `<div id=${el.id}><img src="${el.img}" />`;
+    const vehicleName = `<h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    return vehicleImg + vehicleName
+  }));
+}
+
 //filtrar personajes por peliculas(y mostrar sus descripciones)
 export const filterPeopleByMovies = (filmsCopy, movieName) => {
   filmsCopy.filter(e =>

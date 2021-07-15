@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie } from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -13,7 +13,10 @@ const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
 const moviesListComplete = document.querySelector("#sectionMovies");
-const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
+// const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
+const posterOfEachMovie = document.querySelector("#visualInfoFilm");
+const divsAboutCartoons = document.querySelector("#cartoons");
+const divsAboutVehicles = document.querySelector("#vehiclesName");
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -59,8 +62,10 @@ function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
     eachMovie.forEach(element => element.addEventListener("click", () => {
         moviesListComplete.style.display = "none"
-        const movieId = element.getAttribute("id")
-        const movieInformation = compareIdMovie(filmsCopy, movieId)
-        moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
+        const movieId = element.getAttribute("id");
+        const movieInformation = compareIdMovie(filmsCopy, movieId);
+        posterOfEachMovie.innerHTML = descriptionMovie(movieInformation);
+        divsAboutCartoons.innerHTML = getPeople(movieInformation);
+        divsAboutVehicles.innerHTML = getVehicles(movieInformation);
     }))
 }
