@@ -267,18 +267,21 @@ estadisticas.addEventListener("click", () => {
     estPeso.textContent = "SEGUN PESO";
     contenedorEstad.appendChild(estPeso);
 
-    let valores = [];
-    data.pokemon.filter(stats => {
-        // console.log(stats.stats["max-cp"]);
-        let numero = parseInt(stats.stats["max-cp"]);
-        valores.push(numero); //agregar un elemento
-    });
-    console.log(Math.max(...valores));
+    function maximoValor() {
+        let valores = [];
+        data.pokemon.filter(stats => {
+            // console.log(stats.stats["max-cp"]);
+            let numero = parseInt(stats.stats["max-cp"]);
+            valores.push(numero); //agregar un elemento
+
+        });
+        return (Math.max(...valores));
+    }
 
     // funciones
     const estadisticaCP = document.querySelector(".estCp");
     estadisticaCP.addEventListener("click", data => {
-        console.log(data.pokemon);
+        console.log(maximoValor(data));
     });
 
 });
