@@ -13,10 +13,13 @@ const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
 const moviesListComplete = document.querySelector("#sectionMovies");
-// const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
+const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
 const posterOfEachMovie = document.querySelector("#visualInfoFilm");
 const divsAboutCartoons = document.querySelector("#cartoons");
 const divsAboutVehicles = document.querySelector("#vehiclesName");
+
+
+console.log(document.querySelectorAll(".subtitles"))
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -73,6 +76,7 @@ function thirdSlide() {
         for (let i = 0; i < getVehiclesResult.length; i++){
             divsAboutVehicles.innerHTML += getVehiclesResult[i]
         }
+        moviesInfoOnly.style.display = "block";
 
     }))
 }
