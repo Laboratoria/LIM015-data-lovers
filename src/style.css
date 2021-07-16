@@ -1,6 +1,6 @@
 * {
-  margin: 0px;
-  padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
@@ -10,21 +10,21 @@ body {
 }
 
 header {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .nav-bar {
-  padding: 20px;
-  display: block;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  width: 100%;
+    padding: 20px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    width: 100%;
 }
 
 .menu {
     margin-left: -100%;
-    width: 100%;
+    /* width: 100%; */
     transition: all 0.5s;
 }
 
@@ -33,9 +33,9 @@ header {
 .submenu2,
 .submenu3,
 .submenu4 {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .menu__link0,
@@ -112,7 +112,7 @@ header {
 .submenu2 .menu__link2,
 .submenu3 .menu__link3,
 .submenu4 .menu__link4 {
-  padding-left: 08px;
+    padding-left: 08px;
 }
 
 .submenu1,
@@ -129,7 +129,7 @@ header {
 }
 
 .mostrar {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .container-submenu1,
@@ -237,39 +237,48 @@ header {
     display: none;
 }
 
+
 /*responsive buscador*/
+
 @media screen and (min-width: 620px) {
-  .search:hover > .searchtext {
-    width: 90px;
-  }
+    .search:hover>.searchtext {
+        width: 90px;
+    }
 }
+
 
 /* ESTILOS PARA LA IMAGEN POKEMON */
 
-
-#numpokemon{
+#numpokemon {
     display: flex;
     flex-flow: row wrap;
     height: 40rem;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
- 
 .fotoPokemon {
-    float: left;
+    box-shadow: 0 0 9px 0 #c4c3c3;
+    background-image: linear-gradient(180deg, #28c4669d 0%, #09c9d3c5 100%);
+    /* background-color: #ffffff9f; */
+    padding: 1em;
+    margin: 1em;
+    border-radius: 0.4em;
+    max-width: 18em;
+    min-width: 9em;
+    /* display: grid; */
+    flex-basis: 40%;
+    text-align: center;
+    /* cursor: pointer; */
+    /* float: left;
     margin: 5px;
     padding: 10px;
     margin-left: 20px;
     padding-left: 0px;
     padding-right: 0px;
     padding-bottom: 0px;
-    /* width: 100px; */
-    /* border: 1px #E5E5E5 solid; */
-    /* padding: 4px; */
-    /* margin: auto; */
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 0px 5px 3px #03def4;
-    background-image: linear-gradient(180deg, #28c4669d 0%, #09c9d3c5 100%);
+    background-image: linear-gradient(180deg, #28c4669d 0%, #09c9d3c5 100%); */
 }
 
 .fotoPokemon figcaption {
@@ -338,13 +347,14 @@ header {
 }
 
 .header__img {
-    width: 300px;
-    float: left;
+    width: 150px;
 }
 
-.search {
+
+/* 
+.logo {
     float: left;
-}
+} */
 
 .fondo_transparente {
     top: 0;
@@ -358,7 +368,7 @@ header {
 
 .modal {
     /* background: linear-gradient(0deg, white 70%, crimson 30%); */
-    background-image: url("./img/welcome2.jpg");
+    /* background-image: url("./img/welcome2.jpg"); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -393,9 +403,14 @@ header {
 }
 
 #listaPokemon {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 1em 1em;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: space-evenly;
+    background-position: center;
 }
 
 
@@ -423,4 +438,13 @@ header {
     font-weight: 700;
     border: 1px #000000 solid;
 }
-
+.fichaT {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 1em 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-position: center;
+}
