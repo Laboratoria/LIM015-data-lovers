@@ -5,53 +5,21 @@
     <meta charset="utf-8">
     <title>Pokemon</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    
-    <header class= "header" >
-      <img class = "header__img" src="" alt="logo">
-      <div class="header-search">
-        <form action="/"></form>
-      </div>
-  </head>
-  <body>
-    <!-- mensaje de bienvenida -->
-    <section class="fondo_transparente">
-      <div class="modal">
-          <div class="modal_cerrar">
-              <span>X</span>
-          </div>
-      </div>
-    </section>
+</head>
 
+<body>
     <header class="header">
-        <img class="header__img" src="./img/Logo.png" alt="logo">
-        <div class="header-search">
-            <form action="/"></form>
-        </div>
-
-        <!--search text or number -->
-        <!-- <form action="#" method="get">
-            <input type="search" name="q" id="searchtext" placeholder="name or number">
-            <input type="button" value="Search" id="btn">
-        </form> -->
-
-        <div>
-            <!--Submenú para Búsqueda-->
-            <input type="text" id="txtBuscar" placeholder="Ingrese nombre / número" class="cajas" />
-            <button id="btnBuscar" class="botones">Buscar</button>
-        </div>
-
+        <section class="logo">
+            <img class="header__img" src="./img/Logo.png" alt="logo">
+        </section>
         <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
         <nav class="main-nav">
             <ul class="menu" id="menu">
-                <li class="menu__item"><a id="home" href="#" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                <li class="menu__item"><a id="home" href="index.html" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
                 </li>
                 <li class="menu__item container-submenu1">
-                    <a href="#" class="menu__link1 submenu1-btn1">Pokedex<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                    <a href="#" class="menu__link1 submenu1-btn1">Pokedex</a>
                     <ul class="submenu1">
-                        <li class="menu__item"><a href="#" class="menu__link1">Todos</a>
-                        </li>
                         <li class="menu__item"><a id="creciente" href="#" class="menu__link1">A-Z</a>
                         </li>
                         <li class="menu__item"><a id="decreciente" href="#" class="menu__link1">Z-A</a>
@@ -60,19 +28,17 @@
                 </li>
 
                 <li class="menu__item container-submenu2">
-                    <a href="#" class="menu__link2 submenu2-btn2">Región<img src="https://img.icons8.com/material/22/ffffff/sort-down--v1.png"/>
-                    </a>
-                    <ul class="submenu2">
-                        <li class="menu__item"><a href="#" id="region_johto" class="menu__link2">Johto</a>
+                    <a href="#" class="menu__link2 submenu2-btn2">Región</a>
+                    <ul class="submenu1">
+                        <li class="menu__item"><a id="region_johto" href="#" class="menu__link2">Johto</a>
                         </li>
-                        <li class="menu__item"><a href="#"  id="region_kanto" class="menu__link2">Kanto</a>
+                        <li class="menu__item"><a id="region_kanto" href="#" class="menu__link2">Kanto</a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="menu__item container-submenu3">
-                    <a href="#" class="menu__link3 submenu3-btn3">Tipos<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
-            </a>
+                    <a href="#" class="menu__link3 submenu3-btn3">Tipos</a>
                     <ul class="submenu3">
                         <li class="menu__item"><a id="steel" href="#" class="menu__link3">Acero</a>
                         </li>
@@ -108,7 +74,6 @@
                         </li>
                     </ul>
                 </li>
-                </li>
                 <li class="menu__item container-submenu4">
                     <a id="ayuda" href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
             </a>
@@ -118,17 +83,28 @@
                     </ul>
                 </li>
             </ul>
-          </li>
-        </ul>
-          </a>
-        </div>
-      </nav>
+        </nav>
+
     </header>
     <main>
+        <!--Submenú para Búsqueda-->
+        <section>
+            <input type="text" id="txtBuscar" placeholder="Ingrese nombre / número" class="cajas" />
+            <button id="btnBuscar" class="botones">Buscar</button>
+        </section>
+
         <article id="listaPokemon">
             <!-- html medianete js -->
         </article>
 
+        <!-- mensaje de bienvenida -->
+        <!-- <section class="fondo_transparente">
+                <div class="modal">
+                    <div class="modal_cerrar">
+                        <span>X</span>
+                    </div>
+                </div>
+            </section> -->
         <!-- Ficha Tecnica -->
         <article id="fichaTecnicaPokemon">
         </article>
@@ -136,4 +112,5 @@
     <footer></footer>
     <script src="main.js" type="module"></script>
 </body>
+
 </html>
