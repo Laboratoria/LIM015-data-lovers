@@ -63,16 +63,15 @@ export const searchPokemon = (data, buscarPokemon) => {
 };
 
 //falta que funcione
-function buscarPorRegion(region) {
+// function buscarPorRegion(region) {
 
-    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-    console.table(pokemons);
-    limpiarContenidoBuscador();
-    mostrarPokemones(pokemons);
-}
+//     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+//     console.table(pokemons);
+//     limpiarContenidoBuscador();
+//     mostrarPokemones(pokemons);
+// }
 
 
 export {
-    filtrarData,
-    buscarPorRegion
+    filtrarData
 }

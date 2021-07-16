@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, buscarPorRegion, searchPokemon, ordenarPokemon } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon } from './data.js';
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -240,6 +240,52 @@ function verFichaTecnica(datapokemon) {
 }
 
 
+// funcnion para mostrar las estadisticas
+
+const estadisticas = document.getElementById("estadisticas");
+
+estadisticas.addEventListener("click", () => {
+
+    document.getElementById("listaPokemon").style.display = "none";
+    document.getElementById("estadisticas").style.display = "block";
+    limpiarContenido(document.getElementById("fichaTecnicaPokemon"));
+
+    const contenedorEstad = document.querySelector(".estadisticas");
+
+    const estadisticaH1 = document.createElement("h1");
+    estadisticaH1.classList.add("estadisticaH1");
+    estadisticaH1.textContent = "RANKING DE LOS POKEMONES";
+    contenedorEstad.appendChild(estadisticaH1);
+
+    const estCp = document.createElement("button");
+    estCp.classList.add("estCp");
+    estCp.textContent = "SEGUN CP";
+    contenedorEstad.appendChild(estCp);
+
+    const estPeso = document.createElement("button");
+    estPeso.classList.add("estPeso");
+    estPeso.textContent = "SEGUN PESO";
+    contenedorEstad.appendChild(estPeso);
+
+    let valores = [];
+    data.pokemon.filter(stats => {
+        // console.log(stats.stats["max-cp"]);
+        let numero = parseInt(stats.stats["max-cp"]);
+        valores.push(numero); //agregar un elemento
+    });
+    console.log(Math.max(...valores));
+
+    // funciones
+    const estadisticaCP = document.querySelector(".estCp");
+    estadisticaCP.addEventListener("click", data => {
+        console.log(data.pokemon);
+    });
+
+});
+
+
+
+
 // limpiar contenidos
 function limpiarContenido(limpiar) {
     while (limpiar.firstChild) {
@@ -252,10 +298,10 @@ function limpiarContenido(limpiar) {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-document.getElementById("region_johto").addEventListener("click", function() {
-    buscarPorRegion("johto");
-});
+// document.getElementById("region_johto").addEventListener("click", function() {
+//     buscarPorRegion("johto");
+// });
 
-document.getElementById("region_kanto").addEventListener("click", function() {
-    buscarPorRegion("kanto");
-});
+// document.getElementById("region_kanto").addEventListener("click", function() {
+//     buscarPorRegion("kanto");
+// });

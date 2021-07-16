@@ -451,3 +451,11 @@ header {
     justify-content: space-evenly;
     background-position: center;
 }
+
+
+/* ESTADISTICAS */
+
+.estadisticas {
+    color: #c4c3c3;
+    background-color: #000000;
+}
