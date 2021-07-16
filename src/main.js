@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles, filterPeople} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -17,9 +17,8 @@ const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
 const posterOfEachMovie = document.querySelector("#visualInfoFilm");
 const divsAboutCartoons = document.querySelector("#cartoons");
 const divsAboutVehicles = document.querySelector("#vehiclesName");
+const personalizedInfoOnTopic = document.querySelector("#infoInModal");
 
-
-console.log(document.querySelectorAll(".subtitles"))
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -64,7 +63,7 @@ getInputSearchMovie.addEventListener("keyup", (e) => {
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
     eachMovie.forEach(element => element.addEventListener("click", () => {
-        moviesListComplete.style.display = "none"
+        moviesListComplete.style.display = "none";
         const movieId = element.getAttribute("id");
         const movieInformation = compareIdMovie(filmsCopy, movieId);
         posterOfEachMovie.innerHTML = descriptionMovie(movieInformation);
@@ -77,7 +76,22 @@ function thirdSlide() {
             divsAboutVehicles.innerHTML += getVehiclesResult[i]
         }
         moviesInfoOnly.style.display = "block";
-
+        //movieId es el Id de la peli seleccionada
+        console.log(movieId)
+        /*probando*/
+        const getElementPeople = document.querySelectorAll(".divTopicPeople");
+        getElementPeople.forEach(element => element.addEventListener("click", () => {
+            //dataId es el Id del div de personaje
+            const dataId = element.dataset.id;
+            console.log(dataId);
+            //mostrar si la funcion filterPeople funciona
+            const getTopic = filterPeople(filmsCopy, movieId, dataId);
+            console.log(getTopic);
+            console.log(personalizedInfoOnTopic);
+            getTopic.forEach(e =>
+                personalizedInfoOnTopic.innerHTML = e
+                )
+        }))
     }))
 }
 

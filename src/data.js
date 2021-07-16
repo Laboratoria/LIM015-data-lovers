@@ -93,7 +93,7 @@ export const descriptionMovie = (arr) => {
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = arr => {
   return arr.map(e => e.people.map(el => {
-    const peopleInfo = `<div data-id=${el.id}><img src="${el.img}" /><h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    const peopleInfo = `<div class="divTopicPeople" data-id="${el.id}"><img src="${el.img}" /><h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return peopleInfo;
   }));
 }
@@ -102,39 +102,21 @@ export const getPeople = arr => {
 //extraer el nombre e imagen de los vehiculos
 export const getVehicles = arr => {
   return arr.map(e => e.vehicles.map(el => {
-    const vehicleImg = `<div id=${el.id}><img src="${el.img}" />`;
+    const vehicleImg = `<div id="${el.id}"><img src="${el.img}" />`;
     const vehicleName = `<h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return vehicleImg + vehicleName
   }));
 }
-
-//filtrar personajes por peliculas(y mostrar sus descripciones)
-export const filterPeopleByMovies = (filmsCopy, movieName) => {
-  filmsCopy.filter(e =>
-    e.title === movieName).map(el => el.people.map(elem => {
-      const cartoonName = `<div><h3>${elem.name}</h3>`;
-      const cartoonImage = `<img src="${elem.img}" />`;
-      const cartoonGender = `<p>Gender: ${elem.gender}</p>`;
-      const cartoonAge = `<p>Age: ${elem.age}</p>`;
-      const cartoonEyeColor = `<p>Eye color: ${elem.eye_color}</p>`;
-      const cartoonHairColor = `<p>Hair color: ${elem.hair_color}</p>`;
-      const cartoonSpecie = `<p>Specie:${elem.specie}</p></div>`;
-      return cartoonName + cartoonImage + cartoonGender + cartoonAge + cartoonEyeColor + cartoonHairColor + cartoonSpecie + cartoonHairColor
-    }
-    ))
-}
-//locaciones y descripciones (Alisson)
-//vehiculos y susdescripciones (yo)
-export const getVehiclesAndDescripcions = (filmsCopy, movieName) => {
-  filmsCopy.filter(e =>
-    e.title === movieName).map(el => el.vehicles.map(elem => {
-      const vehiclesName = `<div><h3>${elem.name}</h3>`;
-      const vehiclesImage = `<img src="${elem.img}" />`;
-      const vehiclesDescription = `<p>Description: ${elem.description}</p>`;
-      const vehiclesType = `<p>Type: ${elem.vehicle_class}</p>`;
-      const vehiclesLength = `<p>Length: ${elem.length}</p>`;
-      const vehiclesPilot = `<p>Pilot: ${elem.pilot.name}</p></div>`;
-      return vehiclesName + vehiclesImage + vehiclesDescription + vehiclesType + vehiclesLength + vehiclesPilot
-    }
-    ))
+//obtener la info de un personaje por su id
+export const filterPeople = (filmsCopy, idMovie, idPeople) => {
+  return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.people)[0].filter(el => el.id === idPeople).map(el => {
+      return `<h3>Nombre de personaje: ${el.name}</h3>
+      <img src="${el.img}" />
+      <p>Gender: ${el.gender}</p>
+      <p>Age: ${el.age}</p>
+      <p>Eye color: ${el.eye_color}</p>
+      <p>Hair color: ${el.hair_color}</p>
+      <p>Specie:${el.specie}</p>`
+  }
+  )
 }
