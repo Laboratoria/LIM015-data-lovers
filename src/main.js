@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon } from './data.js';
+import { filtrarData, buscarPorRegion, searchPokemon, ordenarPokemon } from './data.js';
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -239,6 +239,7 @@ function verFichaTecnica(datapokemon) {
     fichaTecnica.appendChild(botonSalir);
 }
 
+
 // limpiar contenidos
 function limpiarContenido(limpiar) {
     while (limpiar.firstChild) {
@@ -250,3 +251,11 @@ function limpiarContenido(limpiar) {
 // document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
+
+document.getElementById("region_johto").addEventListener("click", function() {
+    buscarPorRegion("johto");
+});
+
+document.getElementById("region_kanto").addEventListener("click", function() {
+    buscarPorRegion("kanto");
+});

@@ -1,8 +1,3 @@
-/*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
-procesar y manipular datos (tus funciones)*/
-
-
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
     let arrayPokemon = [];
@@ -52,37 +47,6 @@ export const calculoEstadistico = (data) => {
     return data;
 };
 
-
-
-
-// function buscadorpokemon() {
-//     let busqueda = document.getElementById("searchtext").value;
-//     let pokemons;
-//     if (isNaN(busqueda)) {
-//         pokemons = data.pokemon.filter((pokemon) => pokemon.name == busqueda);
-
-//     } else {
-//         pokemons = data.pokemon.filter((pokemon) => pokemon.num == busqueda);
-//     }
-
-//     console.table(pokemons);
-//     limpiarContenidoBuscador();
-//     mostrarPokemones(pokemons);
-// }
-
-// // funcion para buscar
-// export const searchPokemon = (data, namePokemon) => {
-//     const arrayPoke = [];
-//     for (let i = 0; i < data.length; i++) {
-//         if (data[i].name.includes(namePokemon)) {
-//             arrayPoke.push(data[i]);
-//         }
-//     }
-//     return arrayPoke;
-// };
-
-
-
 // funcion para hacer la busqueda
 export const searchPokemon = (data, buscarPokemon) => {
     if (buscarPokemon.length == 0)
@@ -98,14 +62,17 @@ export const searchPokemon = (data, buscarPokemon) => {
     return arrayBuscar;
 };
 
-// function buscarPorRegion(region) {
+//falta que funcione
+function buscarPorRegion(region) {
 
-//     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-//     console.table(pokemons);
-//     limpiarContenidoBuscador();
-//     mostrarPokemones(pokemons);
-// }
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
+
 
 export {
-    filtrarData
+    filtrarData,
+    buscarPorRegion
 }
