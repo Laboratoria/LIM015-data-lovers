@@ -24,7 +24,7 @@ header {
 
 .menu {
     margin-left: -100%;
-    width: 100%;
+    /* width: 100%; */
     transition: all 0.5s;
 }
 
@@ -340,13 +340,14 @@ header {
 }
 
 .header__img {
-    width: 300px;
-    float: left;
+    width: 150px;
 }
 
-.search {
+
+/* 
+.logo {
     float: left;
-}
+} */
 
 .fondo_transparente {
     top: 0;

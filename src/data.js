@@ -6,11 +6,11 @@ procesar y manipular datos (tus funciones)*/
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
     let arrayPokemon = [];
-    if (condition.length == 0) {
+    if (condition.length == 0) { // Para mostrar todos los pokemones al inicio
         arrayPokemon = data.filter(pokemon => {
             return pokemon;
         });
-    } else {
+    } else { // Para mostrar los pokemones segun su tipo (agua, etc)
         arrayPokemon = data.filter(pokemon => {
             return pokemon.type.includes(condition);
         });

@@ -27,10 +27,6 @@ for (let i = 0; i < subMenuBtn1.length; i++) {
 
     });
 }
-const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
-const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
-const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
-
 
 //la funcion onload 
 window.onload = function() {
@@ -147,22 +143,6 @@ function verFichaTecnica(datapokemon) {
     const fichaTecnica = document.getElementById("fichaTecnicaPokemon");
 
     const resistenciaHtml = datapokemon.resistant.map(resistencia => {
-        // let liHtml = '';
-
-        // switch (resistencia) {
-        //     case 'water':
-        //         liHtml = `<li><img src="./img/pokemonType/water.png" width="30px" /></li>`;
-        //         break;
-        //     case 'electric':
-        //         liHtml = `<li><img src="./img/pokemonType/electric.png" width="30px" /></li>`;
-        //         break;
-
-        //     default:
-        //         liHtml = `<li><img src="./img/pokemonType/no-image.png" width="30px" /></li>`;
-        //         break;
-        // }
-
-        // return liHtml;
         return `<li><img src="./img/pokemonType/${resistencia}.png" width="30px" /></li>`;
     });
 
