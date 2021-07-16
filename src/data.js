@@ -1,7 +1,9 @@
 /*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
 Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
 procesar y manipular datos (tus funciones)*/
-
+import data from './data/pokemon/pokemon.js';
+import {mostrarPokemones}from './main.js';
+console.log(data);
 
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
@@ -48,7 +50,8 @@ export const ordenarPokemon = (data, sortBy, sortOrder) => {
 };
 
 //funcion para calculos estadisticos(ficha tecnica) ------>proceso de construccion
-export const calculoEstadistico = (data) => {
+
+    export const calculoEstadistico = (data) => {
     return data;
 };
 
@@ -97,8 +100,17 @@ export const searchPokemon = (data, buscarPokemon) => {
     }
     return arrayBuscar;
 };
+function limpiarContenidoBuscador() {
+    document.getElementById("listaPokemon").innerHTML = "";
+}
 
+function buscarPorRegion(region) {
 
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
 export {
-    filtrarData
+    filtrarData, buscarPorRegion
 }

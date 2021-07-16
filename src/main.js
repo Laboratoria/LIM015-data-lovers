@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, buscarPorRegion } from './data.js';
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -10,26 +10,6 @@ btnMenu.addEventListener("click", function() {
     menu.classList.toggle("mostrar");
 });
 
-const subMenuBtn1 = document.querySelectorAll(".submenu1-btn1");
-for (let i = 0; i < subMenuBtn1.length; i++) {
-    subMenuBtn1[i].addEventListener("click", function() {
-        if (window.innerWidth < 1024) {
-            const subMenu = this.nextElementSibling; /* definir constante que me permita pasar al otro item*/
-            const height = subMenu.scrollheight;
-            if (subMenu.classList.contains("desplegar")) {
-                subMenu.classList.remove("desplegar");
-                subMenu.removeAttribute("style");
-            } else {
-                subMenu.classList.add("desplegar");
-                subMenu.style.height = height + "px";
-            }
-        }
-
-    });
-}
-const subMenuBtn2 = document.querySelectorAll(".submenu1-btn2");
-const subMenuBtn3 = document.querySelectorAll(".submenu1-btn3");
-const subMenuBtn4 = document.querySelectorAll(".submenu1-btn4");
 
 
 //la funcion onload 
@@ -40,7 +20,7 @@ window.onload = function() {
     document.querySelector('#txtBuscar').value = ""; // limpiar la caja de busqueda    
 }
 
-function mostrarPokemones(data) {
+export function mostrarPokemones(data) {
     const listaPokemones = document.getElementById('listaPokemon'); // Recuperar tag padre
 
     for (let i = 0; i < data.length; i++) {
@@ -250,17 +230,18 @@ function buscadorpokemon() {
 function limpiarContenidoBuscador() {
     document.getElementById("listaPokemon").innerHTML = "";
 }
-document.getElementById("btn").addEventListener("click", function() {
-    buscadorpokemon();
+document.getElementById("btnBuscar").addEventListener("click", function() {
+    searchPokemon();
 });
 
-function buscarPorRegion(region) {
+/*function buscarPorRegion(region) {
 
     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
     console.table(pokemons);
     limpiarContenidoBuscador();
     mostrarPokemones(pokemons);
 }
+*/
 
 document.getElementById("region_johto").addEventListener("click", function() {
     buscarPorRegion("johto");
@@ -269,3 +250,4 @@ document.getElementById("region_johto").addEventListener("click", function() {
 document.getElementById("region_kanto").addEventListener("click", function() {
     buscarPorRegion("kanto");
 });
+
