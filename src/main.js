@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles, filterPeople} from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles, filterPeople, filterVehicle} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -78,19 +78,27 @@ function thirdSlide() {
         moviesInfoOnly.style.display = "block";
         //movieId es el Id de la peli seleccionada
         console.log(movieId)
-        /*probando*/
-        const getElementPeople = document.querySelectorAll(".divTopicPeople");
-        getElementPeople.forEach(element => element.addEventListener("click", () => {
+        //atrapando todos los divs de topics como personajes, vehiculos
+        const getElementTopic = document.querySelectorAll(".divTopic");
+        //al hacer click en el div con la clase divTopic
+        getElementTopic.forEach(element => element.addEventListener("click", () => {
             //dataId es el Id del div de personaje
             const dataId = element.dataset.id;
             console.log(dataId);
-            //mostrar si la funcion filterPeople funciona
-            const getTopic = filterPeople(filmsCopy, movieId, dataId);
-            console.log(getTopic);
+            /*1.mostrar la funcion filterPeople*/
+            const getTopicPeople = filterPeople(filmsCopy, movieId, dataId);
+            console.log(getTopicPeople);
             console.log(personalizedInfoOnTopic);
-            getTopic.forEach(e =>
+            getTopicPeople.forEach(e =>
                 personalizedInfoOnTopic.innerHTML = e
-                )
+            )
+            /*3.mostrar la funcion filterVehicle*/
+            const getTopicVehicle = filterVehicle(filmsCopy, movieId, dataId);
+            console.log(getTopicVehicle);
+            console.log(getTopicVehicle.length);
+            getTopicVehicle.forEach(e =>
+                    personalizedInfoOnTopic.innerHTML = e
+            )
         }))
     }))
 }

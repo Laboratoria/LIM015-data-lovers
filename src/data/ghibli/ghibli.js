@@ -564,7 +564,7 @@ export default {
         {
           "id": "3f78eba1-f9b0-489b-8686-f4508cdf049d",
           "name": "Toshio",
-          "img": "http://static.wikia.nocookie.net/studio-ghibli/images/2/23/Toshio.png",
+          "img": "http://ami.animecharactersdatabase.com/uploads/chars/5457-89320620.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -615,7 +615,7 @@ export default {
           "id": "c8f02850-0c1f-499c-8b5e-d8ad16f3ecc4",
           "name": "Yaeko Okajima",
           "gender": "Female",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/03/Yaeko.png",
+          "img": "https://i.pinimg.com/originals/da/da/1a/dada1ace97e5cb90bbccf63eec397e4a.png",
           "age": "16",
           "eye_color": "Black",
           "hair_color": "Grey",
@@ -624,7 +624,7 @@ export default {
         {
           "id": "6e960787-5a47-4178-a040-1ef5bf5e4a6c",
           "name": "Tani Tsuneko",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5a/Tani.jpg",
+          "img": "https://ami.animecharactersdatabase.com/uploads/chars/5457-601871977.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -700,7 +700,7 @@ export default {
         {
           "id": "eff43a47-e59c-41bd-bcc6-b1827d63bed5",
           "name": "Donald Curtis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3c/Curtis.jpg",
+          "img": "https://i.pinimg.com/originals/47/f2/29/47f2293c00660adf23f4fa89639bf54d.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -735,16 +735,6 @@ export default {
           "age": "Middle aged",
           "eye_color": "Brown",
           "hair_color": "Black",
-          "specie": "Human"
-        },
-        {
-          "id": "a63c25f4-41a4-4f78-933f-3c14e2903a8f",
-          "name": "Capo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
-          "gender": "Male",
-          "age": "Adult",
-          "eye_color": "Black",
-          "hair_color": "Bald",
           "specie": "Human"
         },
         {
@@ -895,7 +885,7 @@ export default {
         {
           "id": "42a69bf6-b5e8-42b1-b05a-12c3d05e7c1e",
           "name": "Shizuku Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/db/Shizuku_Tsukishima.gif",
+          "img": "https://i.pinimg.com/originals/e3/8c/53/e38c53fda46d674207685bff41d3bc23.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -905,7 +895,7 @@ export default {
         {
           "id": "fc196c4f-0201-4ed2-9add-c6403f7c4d32",
           "name": "Baron Humbert von Gikkingen",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/73/Baron.jpg",
+          "img": "https://i.pinimg.com/originals/e6/4c/40/e64c4002bcf13a6a9ae9d4feaeff8076.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Green",
@@ -915,7 +905,7 @@ export default {
         {
           "id": "079db09e-0441-442b-8c17-af5cac8321c4",
           "name": "Seiji Amasawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/ca/Seiji.png",
+          "img": "https://pm1.narvii.com/7185/625bb5941196e42677a0c314499bb03031bcb9c4r1-216-300v2_hq.jpg",
           "gender": "Male",
           "age": "15",
           "eye_color": "Black",
