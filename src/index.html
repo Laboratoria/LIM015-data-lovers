@@ -1,116 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="./imagenes/favicon.png" type="image/png" />
-    <title>Studio Ghibli World</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-      content="Studio Ghibli World proporciona información detallada de la cinematografía del estudio japonés">
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
 
-  <body>
-    <section>
-      <nav class="menu-principal">
-        <ul>
-          <li id="movies"><a href="#btnPelisStart">PELICULAS</a></li>
-          <li><a href="#">CORTOMETRAJES</a></li>
-          <li><a href="#">COMERCIALES</a></li>
-          <li><a href="#">JUEGOS</a></li>
-          <li><a href="#">CURIOSIDADES</a></li>
-          <li><a href="#">MUSEO</a></li>
-        </ul>
-      </nav>
-    </section>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./imagenes/favicon.png" type="image/png" />
+  <title>Studio Ghibli World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Studio Ghibli World proporciona información detallada de la cinematografía del estudio japonés">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
 
-    <header id="logo">
-      <img  />
-      <!-- <section>
+<body>
+  <section>
+    <nav class="menu-principal">
+      <ul>
+        <li id="movies"><a href="#btnPelisStart">FILMS</a></li>
+        <li><a href="#">CORTOMETRAJES</a></li>
+        <li><a href="#">COMMERCIAL</a></li>
+        <li><a href="#">GAMES</a></li>
+        <li><a href="#">CURIOSIDADES</a></li>
+        <li><a href="#">MUSEUM</a></li>
+      </ul>
+    </nav>
+  </section>
+
+
+  <!-- first view start-->
+  <header id="logo">
+    <img />
+    <!-- <section>
         <image class="logo-del-estudio
         " src="./imagenes/totoro.gif" alt="nada" />
         <img class="letras" src="./imagenes/letras.png" alt="letras del logo del studio" />
         <div class="bordeado"></div>
       </section> -->
-    </header>
+  </header>
 
-    <main id="container_to_display">
-      <!-- Bio  -->
-      <section id="bio" class="bio">
-        <div class="ghiblibio">
-          <h2 class="questionbio">WHERE WAS BORN THE STUDIO SHIBLI?</h2>
-          <p>
-            Studio Ghibli (スタジオジブリ Sutajio Jiburi) It`s a Japanese animation studio, considered by the specialized critics and many moviegoers as one of the best animation studios in the world in the present.
-            It was founded on June 15, 1985, the "Ghibli" name refers to the Italian word "hot wind of Sahara ”since the studio wanted to“ give a new air to the anime industry ”.
-          </p>
-        </div>
-        
-        <div>
-          <img src="./images/totoro.gif" alt="" class="totoroimage" />
-        </div>
-      </section>
-      <!-- founders -->
-      <section id="founders" class="founders">
-        <h2 class="titlefounder">FOUNDERS</h2>
-        <div class="founderscontainer">
-          <div class="imagehayao">
-            <img class="imagefounders" src="./images/Hayao Misaki.jpeg" alt="" srcset="" />
-            <p class="name"> Hayao Misaki</p>
-          </div>
-          <div class="styleimage">
-            <img class="imagefounders" src="./images/Tokuma.jpeg" alt="" srcset="" />
-            <p class="name">Yasuyoshi Tokuma</p>
-          </div>
-          <div class="styleimage">
-            <img class="imagefounders" src="./images/Toshio Suzuki.jpeg" alt="" srcset="" />
-            <p class="name">Toshio Suzuki</p>
-          </div>
-          <div class="styleimage">
-            <img class="imagefounders" src="./images/Isao Takahata.jpeg" alt="" srcset="" />
-            <p class="name">Isao Takahata</p>
-          </div>
-        </div>
-      </section>
-      <!-- segunda pagina -->
-      <section id="sectionMovies">
-        <button id="btnPelisStart">MOVIES</button>
+  <main id="container_to_display">
+    <!-- Bio  -->
+    <section id="bio" class="bio">
+      <div class="ghiblibio">
+        <h2 class="questionbio">WHERE WAS BORN THE STUDIO SHIBLI?</h2>
+        <p>
+          Studio Ghibli (スタジオジブリ Sutajio Jiburi) It`s a Japanese animation studio, considered by the specialized critics
+          and many moviegoers as one of the best animation studios in the world in the present.
+          It was founded on June 15, 1985, the "Ghibli" name refers to the Italian word "hot wind of Sahara ”since the
+          studio wanted to“ give a new air to the anime industry ”.
+        </p>
+      </div>
 
-        <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
-        <input id="InputSearchMovie" type="search" placeholder=" 🔎 here! search..." /></label>
-
-        <div id="dropdown" class="dropdown">
-          <button id="dropbtn" class="dropbtn">≡</button>
-          <select id="myDropdown" class="dropdown-content">
-            <option value="empty" selected>Choose one:</option>
-            <option value="NameOrderMore" >Order by Name (A-Z)</option>
-            <option value="NameOrderLess" >Order by Name (Z-A)</option>
-            <option value="RtScoreOrderMore" >Order by rating score ↑↓</option>
-            <option value="RtScoreOrderLess" >Order by rating score ↓↑</option>
-            <option value="RdOrderMore" >Order by release date ↑↓</option>
-            <option value="RdOrderLess" >Order by release date ↓↑</option>
-          </select>
+      <div>
+        <img src="./images/totoro.gif" alt="" class="totoroimage" />
+      </div>
+    </section>
+    <!-- founders -->
+    <section id="founders" class="founders">
+      <h2 class="titlefounder">FOUNDERS</h2>
+      <div class="founderscontainer">
+        <div class="imagehayao">
+          <img class="imagefounders" src="./images/Hayao Misaki.jpeg" alt="" srcset="" />
+          <p class="name"> Hayao Misaki</p>
         </div>
-        <p id = "resultAverage"></p>
-        <div id="movieList"></div>
-      </section>
-      <!-- tercera pagina -->
-      <section id="moviesInfoOnly">
-        <div id="visualInfoFilm"></div>
-        <h2 class="subtitles">CHARACTERS</h2>
-        <div id="cartoons"></div>
-        <h2 class="subtitles">LOCATIONS</h2>
-        <div id="locationsName"></div>
-        <h2 class="subtitles" id="vehiclesSubtitles">VEHICLES</h2>
-        <div id="vehiclesName"></div>
-      </section>
-      <section id="infoInModal"></section>
-    </main>
+        <div class="styleimage">
+          <img class="imagefounders" src="./images/Tokuma.jpeg" alt="" srcset="" />
+          <p class="name">Yasuyoshi Tokuma</p>
+        </div>
+        <div class="styleimage">
+          <img class="imagefounders" src="./images/Toshio Suzuki.jpeg" alt="" srcset="" />
+          <p class="name">Toshio Suzuki</p>
+        </div>
+        <div class="styleimage">
+          <img class="imagefounders" src="./images/Isao Takahata.jpeg" alt="" srcset="" />
+          <p class="name">Isao Takahata</p>
+        </div>
+      </div>
+    </section>
 
-    <footer>
-      <p class="pie-de-pagina">Copyright &copy;2021</p>
-      <p class="pie-de-pagina">All right reserved</p>
-      <image class="imagen-totoro" src="./imagenes/totoro2.png" alt="totoro footer" />
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+    <section class="optionsFilmsandWeb" id="optionsFilmsandWeb">
+
+      <div class="container">
+        <img class="filmsimage" id="filmsimage" src="./images/ghiblifilm.jpeg" alt=" Ghibli's films" srcset="">
+        <p class="textoptions">FILMS</p>
+      </div>
+
+      <div class="container">
+        <img class="filmsimage" id="ghibliweb" src="./images/ghiblifilmm.jpeg" alt="Ghibli's Web"
+          href="https://www.ghibli.jp/event/close/" srcset="">
+        <p class="textoptions">GHIBLI WEB</p>
+      </div>
+
+      <div class="container">
+        <img class="filmsimage" id="ghiblifanpage" src="./images/ghibbbli.jpeg" alt="Ghibli's fandom page"
+          href="https://www.ghibli.jp/" srcset="">
+        <p class="textoptions">GHIBLI WIKI</p>
+      </div>
+    </section>
+
+  </main>
+  <!-- first view end -->
+
+
+  <!-- second view start -->
+  <section id="secondView">
+    <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
+      <input id="InputSearchMovie" type="search" placeholder=" 🔎 Search " /></label>
+
+    <div id="dropdown" class="dropdown">
+      <button id="dropbtn" class="dropbtn">≡</button>
+      <select id="myDropdown" class="dropdown-content">
+        <option value="empty" selected>Choose one:</option>
+        <option value="NameOrderMore">Order by Name (A-Z)</option>
+        <option value="NameOrderLess">Order by Name (Z-A)</option>
+        <option value="RtScoreOrderMore">Order by rating score ↑↓</option>
+        <option value="RtScoreOrderLess">Order by rating score ↓↑</option>
+        <option value="RdOrderMore">Order by release date ↑↓</option>
+        <option value="RdOrderLess">Order by release date ↓↑</option>
+      </select>
+    </div>
+    <p class="resultAverage" id="resultAverage"></p>
+    <div id="movieList"></div>
+
+  </section>
+
+  <!-- second view end -->
+
+  <!-- tercera pagina -->
+  <section class="moviesInfoOnly" id="moviesInfoOnly">
+    <div class="movieInformation" id="movieInformation">
+
+      <div class="titlemovie">
+      </div>
+
+      <div class="movieimage">
+      </div>
+
+      <div class="moviedescription">
+      </div>
+
+      <div class="moviedirector">
+      </div>
+
+      <div class="movieproducer">
+      </div>
+      <!-- <p id="resultAverage"></p> -->
+      <!-- <div id="movieList"></div> -->
+    </div>
+  </section>
+
+  <!-- third view start -->
+  <section id="thirdView">
+    <div id="visualInfoFilm"></div>
+    <h2 class="subtitles">CHARACTERS</h2>
+    <div id="cartoons"></div>
+    <h2 class="subtitles">LOCATIONS</h2>
+    <div id="locationsOfEachMovie"></div>
+    <h2 class="subtitles" id="vehiclesSubtitles">VEHICLES</h2>
+    <div id="vehiclesName"></div>
+  </section>
+  <section id="infoInModal"></section>
+  <!-- third view end -->
+
+  <footer>
+    <p class="pie-de-pagina">Copyright &copy;2021</p>
+    <p class="pie-de-pagina">All right reserved</p>
+    <image class="imagen-totoro" src="./imagenes/totoro2.png" alt="totoro footer" />
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

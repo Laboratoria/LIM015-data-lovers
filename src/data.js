@@ -81,13 +81,60 @@ export const compareIdMovie = (arr, idvalue) => {
 };
 //obtener descripcion segun id de pelicula
 export const descriptionMovie = (arr) => {
-  const titleOfEachMovie = `<div><h2>${arr[0].title}</h2>`;
-  const posterOfEachMovie = `<img src="${arr[0].poster}"/>`;
-  const descriptionOfEachMovie = `<p>Sinopsis:<br/>${arr[0].description}</p>`;
-  const directorOfEachMovie = `<p><strong>Director: ${arr[0].director}</strong></p>`;
-  const producerOfEachMovie = `<p><strong>Producer: ${arr[0].producer}</strong></p>`;
-  const releaseOfEachMovie = `<p>Release date: ${arr[0].release_date}</p></div>`;
-  return titleOfEachMovie + posterOfEachMovie + descriptionOfEachMovie + directorOfEachMovie + producerOfEachMovie + releaseOfEachMovie
+  return `<section class="moviesInfoOnly" id="moviesInfoOnly">
+    <div class="movieInformation" id="movieInformation">
+    <div class="titlemovie">
+    <h2>${arr[0].title}</h2></div> 
+    </div>
+
+    <div class="movieimage">
+    <img src="${arr[0].poster}" alt="Ghibli's movie information"/>
+    </div>
+
+    <div class="moviedescription">
+    <p>Sinopsis:<br/>${arr[0].description}</p>
+    </div>
+
+    <div class="moviedirector">
+    <p><strong>Director:${arr[0].director}</strong></p>
+    </div>
+
+    <div class="movieproducer">
+    <p><strong>Producer:${arr[0].producer}</strong></p>
+    </div>
+
+  </div>
+  </section>`
+
+}
+// get img + name in a array object
+export const getLocationsFromMovie = (movies) => {
+  let locations = [];
+  movies.forEach(movie => movie.locations.forEach(location => {
+    locations.push({
+      img: location.img,
+      name: location.name
+    })
+  }))
+  return locations;
+}
+//show image+name location 
+export const showLocationsInformation = (movies) => {
+  let locationInformation = '';
+  const locations = getLocationsFromMovie(movies);
+  locations.forEach((location) => {
+    locationInformation += `<section class="movielocation" >
+    <div class="locationimage">
+    <img src="${location.img}" alt="Ghibli's locations images"/>
+    </div>
+    
+    <div class="locationName">
+    <h1>${location.name}</h1>
+    </div>
+    </section>`
+  })
+  return locationInformation;
+
 }
 
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
@@ -110,7 +157,7 @@ export const getVehicles = arr => {
 //obtener la info de un personaje por su id
 export const filterPeople = (filmsCopy, idMovie, idPeople) => {
   return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.people)[0].filter(el => el.id === idPeople).map(el => {
-      return `<h3>Character Name: ${el.name}</h3>
+    return `<h3>Character Name: ${el.name}</h3>
       <img src="${el.img}" />
       <p>Gender: ${el.gender}</p>
       <p>Age: ${el.age}</p>
@@ -123,8 +170,8 @@ export const filterPeople = (filmsCopy, idMovie, idPeople) => {
 
 //obtener la info del vehiculo por su id
 export const filterVehicle = (filmsCopy, idMovie, idPeople) => {
-return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.vehicles)[0].filter(el => el.id === idPeople).map(el => {
-      return `<h3>Vehicle Name: ${el.name}</h3>
+  return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.vehicles)[0].filter(el => el.id === idPeople).map(el => {
+    return `<h3>Vehicle Name: ${el.name}</h3>
       <img src="${el.img}" />
       <p>Description: ${el.description}</p>
       <p>Vehicle Class: ${el.vehicle_class}</p>
