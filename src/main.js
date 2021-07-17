@@ -1,5 +1,8 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico } from './data.js';
+
+// Importando Graficos a usar
+google.charts.load('current', { packages: ['corechart', 'bar'] });
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -267,26 +270,44 @@ estadisticas.addEventListener("click", () => {
     estPeso.textContent = "SEGUN PESO";
     contenedorEstad.appendChild(estPeso);
 
-    function maximoValor() {
-        let valores = [];
-        data.pokemon.filter(stats => {
-            // console.log(stats.stats["max-cp"]);
-            let numero = parseInt(stats.stats["max-cp"]);
-            valores.push(numero); //agregar un elemento
-
-        });
-        return (Math.max(...valores));
-    }
+    const estResultado = document.createElement("div");
+    estResultado.classList.add("estResultado");
+    contenedorEstad.appendChild(estResultado);
 
     // funciones
-    const estadisticaCP = document.querySelector(".estCp");
-    estadisticaCP.addEventListener("click", data => {
-        console.log(maximoValor(data));
+    estCp.addEventListener("click", () => {
+        // console.log(maximoValor(data));
+
+        const top10 = calculoEstadistico(data.pokemon);
+        console.log(top10);
+
+        drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE');
     });
 
 });
 
+function drawBarChart(pokemon10, elemento, titulo) {
 
+    var data = google.visualization.arrayToDataTable(pokemon10);
+
+    var options = {
+        title: `TOP 10 SEGUN ${titulo}`,
+        width: 600,
+        height: 400,
+        hAxis: {
+            title: titulo.toLowerCase(),
+            minValue: 0
+        },
+        vAxis: {
+            title: 'pokemon'
+        }
+    };
+
+    var chart = new google.visualization.BarChart(elemento);
+
+    chart.draw(data, options);
+
+}
 
 
 // limpiar contenidos

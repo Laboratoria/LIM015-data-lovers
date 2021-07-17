@@ -19,8 +19,8 @@ function filtrarData(data, condition) {
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
     let ordenarData = [];
     ordenarData = data.sort((asc, desc) => {
-        let nombreAsc = asc[sortBy];
-        let nombreDesc = desc[sortBy];
+        const nombreAsc = asc[sortBy];
+        const nombreDesc = desc[sortBy];
         if (sortOrder == "creciente") {
             if (nombreAsc > nombreDesc) {
                 return 1;
@@ -44,7 +44,34 @@ export const ordenarPokemon = (data, sortBy, sortOrder) => {
 
 //funcion para calculos estadisticos(ficha tecnica) ------>proceso de construccion
 export const calculoEstadistico = (data) => {
-    return data;
+
+    let top10Pokemon = [];
+    let arrayChart = [];
+
+    // data.filter(estadisticas => {
+    //     // console.log(stats.stats["max-cp"]);
+    //     let numero = parseInt(estadisticas.stats["max-cp"]);
+    //     valores.push(numero); //agregar un elemento
+
+    // });
+    // return (Math.max(...valores));
+
+    // Lista TOP 10 de Pokemones segun Punto de Combate
+    top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
+
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.stats['max-cp']));
+
+        return itemChart;
+    });
+
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'CP', ]);
+
+    return arrayChart;
 };
 
 // funcion para hacer la busqueda
