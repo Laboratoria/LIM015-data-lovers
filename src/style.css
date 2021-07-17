@@ -20,11 +20,6 @@
   line-height: 1em;
   animation: bioSection 12s;
 }
-@keyframes bioSection {
-  50% {
-    line-height: 200px;
-  }
-}
 .questionbio {
   text-align: left;
   width: 320px;
@@ -85,7 +80,34 @@
   text-align: center;
   padding-bottom: 40px;
 }
-
+.optionsFilmsandWeb{
+  display: flex;
+  padding: 50px  50px;
+  align-items: center;
+  justify-content: center;
+  background: #A9D0CC;
+  }
+.filmsimage{ 
+  width: 190px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10%;
+  margin-right: 35px;
+  margin-left: 35px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.textoptions{
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  padding-top: 30px;
+  
+}
+.resultAverage{
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+}
 header {
   background-color: rgba(53, 91, 145, 90%);
   height: 600px;
@@ -163,6 +185,7 @@ footer {
   width: 100%;
   grid-gap: 1rem;
   padding: 2rem 0;
+  display: none;
 }
 .movieItem {
   display: flex;
@@ -175,7 +198,7 @@ footer {
   width: auto;
   margin-bottom: 1rem;
 }
-#sectionMovies {
+/*#sectionMovies {
   align-items: center;
   padding: 2rem;
   display: flex;
@@ -224,6 +247,7 @@ footer {
 #sectionMovies{
   background-color: rgba(169, 208, 204, 100%)
 }
-#moviesInfoOnly{
+#thirdView {
   display: none;
 }
+
