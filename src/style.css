@@ -250,4 +250,6 @@ footer {
 #thirdView {
   display: none;
 }
-
+#resultAverage{
+  display: none;
+}

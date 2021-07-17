@@ -12,10 +12,10 @@
 </head>
 
 <body>
-  <section>
+  <section id="navigator">
     <nav class="menu-principal">
       <ul>
-        <li id="movies"><a href="#btnPelisStart">FILMS</a></li>
+        <li><a href="#">FILMS</a></li>
         <li><a href="#">CORTOMETRAJES</a></li>
         <li><a href="#">COMMERCIAL</a></li>
         <li><a href="#">GAMES</a></li>
@@ -25,10 +25,8 @@
     </nav>
   </section>
 
-
   <!-- first view start-->
   <header id="logo">
-    <img />
     <!-- <section>
         <image class="logo-del-estudio
         " src="./imagenes/totoro.gif" alt="nada" />
@@ -49,7 +47,6 @@
           studio wanted to“ give a new air to the anime industry ”.
         </p>
       </div>
-
       <div>
         <img src="./images/totoro.gif" alt="" class="totoroimage" />
       </div>
@@ -76,33 +73,27 @@
         </div>
       </div>
     </section>
-
+    <!-- section about options -->
     <section class="optionsFilmsandWeb" id="optionsFilmsandWeb">
-
       <div class="container">
         <img class="filmsimage" id="filmsimage" src="./images/ghiblifilm.jpeg" alt=" Ghibli's films" srcset="" />
         <p class="textoptions">FILMS</p>
       </div>
-
       <div class="container">
-
         <a href="https://www.ghibli.jp/"><img class="filmsimage" src="./images/ghiblifilmm.jpeg" alt="Ghibli's Web"
             srcset="" /></a>
         <p class="textoptions">GHIBLI WEB</p>
       </div>
-
       <div class="container">
         <a href="https://ghibli.fandom.com/wiki/Ghibli_Wiki"><img class="filmsimage" src="./images/ghibbbli.jpeg"
             alt="Ghibli's fandom page" srcset="" /></a>
         <p class="textoptions">GHIBLI WIKI</p>
       </div>
     </section>
-
   </main>
   <!-- first view end -->
 
-
-  <!-- second view start -->
+  <!-- second view start about div Films-->
   <section id="secondView">
     <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
       <input id="InputSearchMovie" type="search" placeholder=" 🔎 Search " /></label>
@@ -121,37 +112,13 @@
     </div>
     <p class="resultAverage" id="resultAverage"></p>
     <div id="movieList"></div>
-
   </section>
-
   <!-- second view end -->
 
-  <!-- tercera pagina -->
-  <section class="moviesInfoOnly" id="moviesInfoOnly">
-    <div class="movieInformation" id="movieInformation">
-
-      <div class="titlemovie">
-      </div>
-
-      <div class="movieimage">
-      </div>
-
-      <div class="moviedescription">
-      </div>
-
-      <div class="moviedirector">
-      </div>
-
-      <div class="movieproducer">
-      </div>
-      <!-- <p id="resultAverage"></p> -->
-      <!-- <div id="movieList"></div> -->
-    </div>
-  </section>
-
   <!-- third view start -->
+  <section class="moviesInfoOnly" id="moviesInfoOnly"></section>
+
   <section id="thirdView">
-    <div id="visualInfoFilm"></div>
     <h2 class="subtitles">CHARACTERS</h2>
     <div id="cartoons"></div>
     <h2 class="subtitles">LOCATIONS</h2>
@@ -159,8 +126,11 @@
     <h2 class="subtitles" id="vehiclesSubtitles">VEHICLES</h2>
     <div id="vehiclesName"></div>
   </section>
-  <section id="infoInModal"></section>
   <!-- third view end -->
+
+  <!-- modal viewstart -->
+  <section id="infoInModal"></section>
+  <!-- modal view end -->
 
   <footer>
     <p class="pie-de-pagina">Copyright &copy;2021</p>

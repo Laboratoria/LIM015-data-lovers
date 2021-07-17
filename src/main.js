@@ -6,7 +6,8 @@ const movieList = document.querySelector("#movieList");
 const headerSection = document.querySelector("#logo");
 const bioSection = document.querySelector("#bio");
 const founderSection = document.querySelector("#founders");
-const optionsFilmsandWeb = document.querySelector("#optionsFilmsandWeb")
+const optionsFilmsandWeb = document.querySelector("#optionsFilmsandWeb");
+const sectionNav = document.querySelector("#navigator");
 const btnDropdown = document.querySelector("#dropbtn");
 const dropDown = document.querySelector("#myDropdown");
 const filmsCopy = [...data.films];
@@ -28,12 +29,14 @@ navMovies.addEventListener("click", () => {
     bioSection.style.display = "none";
     founderSection.style.display = "none";
     optionsFilmsandWeb.style.display = "none";
+    sectionNav.style.display = "none";
     //show second view
     btnDropdown.style.display = "block";
-    movieList.style.display = "grid"
+    movieList.style.display = "grid";
     document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
-    resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`
+    resultAverage.style.display = "block";
+    resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`;
     thirdSlide()
 })
 //ocultar el dopdrown y mostrar
