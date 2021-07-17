@@ -1,6 +1,6 @@
 import data from './data/ghibli/ghibli.js'
 
-import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie } from "./data.js";
+import { setMoviesTitle, alphabeticOrder, alphabeticOrderLess, ratingScore, ratingScoreLess, realeaseDateOld, lastestRealeaseDate, getAverage, onSearch, compareIdMovie, descriptionMovie, getPeople, getVehicles, filterPeople, filterVehicle} from "./data.js";
 
 const navMovies = document.querySelector("#btnPelisStart");
 const movieList = document.querySelector("#movieList");
@@ -14,6 +14,11 @@ const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
 const moviesListComplete = document.querySelector("#sectionMovies");
 const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
+const posterOfEachMovie = document.querySelector("#visualInfoFilm");
+const divsAboutCartoons = document.querySelector("#cartoons");
+const divsAboutVehicles = document.querySelector("#vehiclesName");
+const personalizedInfoOnTopic = document.querySelector("#infoInModal");
+
 
 //mostrar pelis en el orden de la data
 navMovies.addEventListener("click", () => {
@@ -44,8 +49,8 @@ dropDown.addEventListener("change",
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
-        thirdSlide()
-    })
+        thirdSlide();
+})
 //promedio de puntaje
 resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`
 //funcion para input search
@@ -58,9 +63,44 @@ getInputSearchMovie.addEventListener("keyup", (e) => {
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
     eachMovie.forEach(element => element.addEventListener("click", () => {
-        moviesListComplete.style.display = "none"
-        const movieId = element.getAttribute("id")
-        const movieInformation = compareIdMovie(filmsCopy, movieId)
-        moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
+        moviesListComplete.style.display = "none";
+        const movieId = element.getAttribute("id");
+        const movieInformation = compareIdMovie(filmsCopy, movieId);
+        posterOfEachMovie.innerHTML = descriptionMovie(movieInformation);
+        const getPeopleResult = getPeople(movieInformation)[0];
+        getPeopleResult.forEach(element =>
+            divsAboutCartoons.innerHTML += element
+        )
+        const getVehiclesResult = getVehicles(movieInformation)[0];
+        for (let i = 0; i < getVehiclesResult.length; i++){
+            divsAboutVehicles.innerHTML += getVehiclesResult[i]
+        }
+        moviesInfoOnly.style.display = "block";
+        //movieId es el Id de la peli seleccionada
+        console.log(movieId)
+        //atrapando todos los divs de topics como personajes, vehiculos
+        const getElementTopic = document.querySelectorAll(".divTopic");
+        //al hacer click en el div con la clase divTopic
+        getElementTopic.forEach(element => element.addEventListener("click", () => {
+            //dataId es el Id del div de personaje
+            const dataId = element.dataset.id;
+            console.log(dataId);
+            /*1.mostrar la funcion filterPeople*/
+            const getTopicPeople = filterPeople(filmsCopy, movieId, dataId);
+            console.log(getTopicPeople);
+            console.log(personalizedInfoOnTopic);
+            getTopicPeople.forEach(e =>
+                personalizedInfoOnTopic.innerHTML = e
+            )
+            /*3.mostrar la funcion filterVehicle*/
+            const getTopicVehicle = filterVehicle(filmsCopy, movieId, dataId);
+            console.log(getTopicVehicle);
+            console.log(getTopicVehicle.length);
+            getTopicVehicle.forEach(e =>
+                    personalizedInfoOnTopic.innerHTML = e
+            )
+        }))
     }))
 }
+
+

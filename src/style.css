@@ -221,3 +221,9 @@ footer {
 .InputSearchMovie {
   display: none;
 }
+#sectionMovies{
+  background-color: rgba(169, 208, 204, 100%)
+}
+#moviesInfoOnly{
+  display: none;
+}
