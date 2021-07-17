@@ -1121,7 +1121,7 @@ export default {
         {
           "id": "615aa48d-8673-4117-b35a-79cb67af1897",
           "name": "Forest",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/3a/Forest.jpg",
+          "img": "https://i.pinimg.com/originals/f1/ea/21/f1ea21953289d7a4371a04f3e7fe1cc0.jpg",
           "climate": "Tropical",
           "terrain": "Forest",
           "surface_water": "60",
