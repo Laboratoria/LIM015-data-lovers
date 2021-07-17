@@ -448,7 +448,7 @@ export default {
         {
           "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
           "name": "Karikiya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/51/Kiki%27s_House.jpg",
+          "img": "https://i.pinimg.com/originals/0d/e8/4b/0de84b74e5a412559383ceb08583017b.jpg",
           "climate": "Mild",
           "terrain": "City",
           "surface_water": "30",
@@ -666,7 +666,7 @@ export default {
         {
           "id": "dbeeaecb-7817-4b8b-90ca-edc432d3033e",
           "name": "Taeko's House",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/cf/Only_Yesterday_artwork_%2813%29.jpg", 
+          "img": "https://lh3.googleusercontent.com/proxy/TzFttYLl5wvwK4s4_bGaHmf5y1Y7PZOcRDFVFkO5lWB2CqzLweaWEyBD7JLItgWzk168eKPevRL54joaZYIyfWMYtosSgA", 
           "climate": "Continental",
           "terrain": "River",
           "surface_water": "40",
@@ -915,7 +915,7 @@ export default {
         {
           "id": "494bba43-9f61-4383-a597-5bae6ab26222",
           "name": "Yuko Harada",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/Yuko.png",
+          "img": "https://pm1.narvii.com/6525/e19c931838ab970f103d0555bec0d954674c9ae3_hq.jpg",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -935,7 +935,7 @@ export default {
         {
           "id": "182c1f2a-e1e0-4035-b87a-754d58ed6e2d",
           "name": "Seiya Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/fb/Seiya_%281%29.jpg",
+          "img": "https://i.pinimg.com/originals/8c/04/ce/8c04ce6e6d0fea88aa2fb41d388cd180.jpg",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -945,7 +945,7 @@ export default {
         {
           "id": "d92e61f3-f525-4740-9f06-c9e7b19c3d11",
           "name": "Asako Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/14/Asako_Tsukishima.png",
+          "img": "http://ami.animecharactersdatabase.com/uploads/chars/5688-1742232570.jpg",
           "gender": "Female",
           "age": "39",
           "eye_color": "Black",
@@ -965,7 +965,7 @@ export default {
         {
           "id": "e40b4241-612b-402f-8e6c-067c44e9c618",
           "name": "Shiho Tsukishima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8c/Shiho.jpg",
+          "img": "https://www.onlineghibli.com/whisper_heart/ShihoTsukishima.jpg",
           "gender": "Female",
           "age": "18",
           "eye_color": "Black",
@@ -1277,16 +1277,6 @@ export default {
           "specie": "unknown"
         },
         {
-          "id": "d9aceca5-beb9-4b2a-85ba-fc17d33750f8",
-          "name": "Zeniba",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d8/Zeniba.png",
-          "gender": "Female",
-          "age": "Elder",
-          "eye_color": "Dark brown",
-          "hair_color": "White",
-          "specie": "Witch"
-        },
-        {
           "id": "68c4b603-0b31-43dc-b869-a1aa00528b7e",
           "name": "Zeniba",
           "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d8/Zeniba.png",
@@ -1366,7 +1356,7 @@ export default {
         {
           "id": "3042818d-a8bb-4cba-8180-c19249822d57",
           "name": "Cat King",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/37/Cat_King.jpg",
+          "img": "https://i.pinimg.com/originals/3b/e1/c3/3be1c3b936c8a6236767e9c59960e168.gif",
           "gender": "Male",
           "age": "87",
           "eye_color": "Emerald",
@@ -1386,7 +1376,7 @@ export default {
         {
           "id": "a3d8e70f-46a0-4e5a-b850-db01620d6b92",
           "name": "Haru Yoshioka",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5c/Haru_Yoshioka_human.jpg",
+          "img": "https://i.pinimg.com/736x/de/8e/fe/de8efe7c8d48c3b9470f8a3432a77618.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -1416,7 +1406,7 @@ export default {
         {
           "id": "5b2a28f6-91d4-4382-aedc-b27094e763b0",
           "name": "Prince Lune",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d4/Prince_lune.jpg",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoTInuxlPjxaa5Z2ndBm7PvbTD-veEVt9E1F_koTKMvUwEgkjUqhd89QkzEkK1rNxCX28&usqp=CAU",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Dark brown",
@@ -1487,7 +1477,7 @@ export default {
         {
           "id": "fa9b410f-cad4-457d-ac71-86b0afa6cf0a",
           "name": "Howl Jenkins Pendragon",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/fe/Howl_Jenkins_Pendragon.jpg",
+          "img": "https://i.pinimg.com/originals/7b/ed/a1/7beda1824f64c307f19d07f09445da15.jpg",
           "gender": "Male",
           "age": "27",
           "eye_color": "Bright blue",
@@ -1602,7 +1592,7 @@ export default {
         {
           "id": "2354305f-dccd-4c44-a79e-cc60ba7376e6",
           "name": "Howl's castle",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/HowlCastle.png",
+          "img": "https://www.channelnewsasia.com/image/14160464/1x1/600/600/92825f95c38fcc31d28167d7b1e447c3/YY/howl-s-moving-castle.jpg",
           "description": "Wizard Howl's home. It's scale changes from scene to scene.",
           "vehicle_class": "Moving castle",
           "length": "unknown",
@@ -1626,7 +1616,7 @@ export default {
         {
           "id": "68df798d-f73d-4c70-b4ad-05dd84910436",
           "name": "Ged",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/33/Ged.jpg",
+          "img": "https://i.pinimg.com/474x/62/ed/e9/62ede910b44200fe2d519d863426044b.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Brown",
@@ -1656,7 +1646,7 @@ export default {
         {
           "id": "60469915-e18e-4cf3-b43d-95ea56cc300c",
           "name": "Tenar",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Tenar.jpg",
+          "img": "https://www.onlineghibli.com/earthsea/newimages/Tenar.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Grey",
@@ -1882,7 +1872,7 @@ export default {
         {
           "id": "89026b3a-abc4-4053-ab1a-c6d2eea68faa",
           "name": "Karigurashi/Arrietty",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6f/Arrietty.png",
+          "img": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2012/12/199621-critica-arrietty-mundo-diminutos.jpg?itok=PqtC71zo",
           "gender": "Female",
           "age": "14",
           "eye_color": "Black",
@@ -2081,7 +2071,7 @@ export default {
         {
           "id": "be837047-cd6f-477f-a83d-5aec9ed1dda7",
           "name": "Coquelicot Manor",
-          "img": "",
+          "img": "https://images6.alphacoders.com/520/thumb-350-520189.jpg",
           "climate": "Warm",
           "terrain": "Hill",
           "surface_water": "30",

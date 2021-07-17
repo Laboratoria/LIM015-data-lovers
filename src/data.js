@@ -50,7 +50,7 @@ export const getAverage = (arr) => {
   }, 0)
   return sum / arr.length
 }
-// Funcion para obtener  todos los personajes y sus nombres 
+// Funcion para obtener  todos los personajes y sus nombres - observado
 export const charactersName = data.films.map(film => {
   return film.people.map(character => {
     return character.name
@@ -66,8 +66,7 @@ export const onSearch = (arr, search) => {
     }
   })
 }
-//funcion para obtener descripcion general de personajes
-// Funcion para obtener las locaciones y sus descripciones
+// Funcion para obtener las locaciones y sus descripciones - observado
 export const locationName = data.films.map(element => {
   return element.locations.map(e => {
     return e.name
