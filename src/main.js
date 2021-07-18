@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida } from './data.js';
 
 // Importando Graficos a usar
 google.charts.load('current', { packages: ['corechart', 'bar'] });
@@ -98,6 +98,8 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
     seleccionarTipo[i].addEventListener("click", (e) => {
 
+        document.getElementById("listaPokemon").style.display = "block";
+        document.querySelector(".estadisticas").style.display = "none";
         const tipo = e.target.id;
 
         const filtrarPokemon = filtrarData(data.pokemon, tipo); //le pasamos el argumento
@@ -114,6 +116,10 @@ const ordenarNombres = document.querySelectorAll(".menu__link1");
 for (let i = 0; i < ordenarNombres.length; i++) {
 
     ordenarNombres[i].addEventListener("click", (e) => {
+
+        document.getElementById("listaPokemon").style.display = "block";
+        document.querySelector(".estadisticas").style.display = "none";
+
         const ordAsc = e.target.id;
 
         const ordenarPok = ordenarPokemon(data.pokemon, 'name', ordAsc);
@@ -245,52 +251,78 @@ function verFichaTecnica(datapokemon) {
 
 // funcnion para mostrar las estadisticas
 
-const estadisticas = document.getElementById("estadisticas");
+const estadisticas = document.querySelector(".menu__link4");
 
-estadisticas.addEventListener("click", () => {
+estadisticas.addEventListener("click", (e) => {
+    e.preventDefault();
 
     document.getElementById("listaPokemon").style.display = "none";
-    document.getElementById("estadisticas").style.display = "block";
-    limpiarContenido(document.getElementById("fichaTecnicaPokemon"));
+    document.querySelector(".estadisticas").style.display = "block";
+    limpiarContenido(document.querySelector(".estadisticas"));
 
     const contenedorEstad = document.querySelector(".estadisticas");
 
     const estadisticaH1 = document.createElement("h1");
     estadisticaH1.classList.add("estadisticaH1");
-    estadisticaH1.textContent = "RANKING DE LOS POKEMONES";
+    estadisticaH1.textContent = "RANKING DE LOS POKEMONES ";
     contenedorEstad.appendChild(estadisticaH1);
+
+
+    const section = document.createElement("section");
+    section.classList.add("section");
+    contenedorEstad.appendChild(section);
 
     const estCp = document.createElement("button");
     estCp.classList.add("estCp");
-    estCp.textContent = "SEGUN CP";
-    contenedorEstad.appendChild(estCp);
+    estCp.textContent = "PUNTO DE COMBATE";
+    section.appendChild(estCp);
 
     const estPeso = document.createElement("button");
     estPeso.classList.add("estPeso");
-    estPeso.textContent = "SEGUN PESO";
-    contenedorEstad.appendChild(estPeso);
+    estPeso.textContent = "PESO";
+    section.appendChild(estPeso);
+
+    const estHp = document.createElement("button");
+    estHp.classList.add("estHp");
+    estHp.textContent = "NIVEL DE VIDA";
+    section.appendChild(estHp);
 
     const estResultado = document.createElement("div");
     estResultado.classList.add("estResultado");
     contenedorEstad.appendChild(estResultado);
 
-    // funciones
+    // funcion para top 10 segun puntos de combate
     estCp.addEventListener("click", () => {
         // console.log(maximoValor(data));
-
         const top10 = calculoEstadistico(data.pokemon);
-        console.log(top10);
+        // console.log(top10);
 
-        drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE');
+        drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE'); //argumentos
     });
 
+    // funcion para top 10 segun el peso
+    estPeso.addEventListener("click", () => {
+        // console.log(maximoValor(data));
+        const top10 = calculoEstadPeso(data.pokemon);
+        // console.log(top10);
+
+        drawBarChart(top10, estResultado, 'MAS PESADOS'); //argumentos
+    });
+    // funcion de los top de con mayor nivel  de Vida
+    estHp.addEventListener("click", () => {
+        console.log(calcularEstadVida(data.pokemon));
+        const top10 = calcularEstadVida(data.pokemon);
+
+        drawBarChart(top10, estResultado, 'NIVEL DE VIDA');
+    })
 });
 
+// implementacion de la funcion chart
 function drawBarChart(pokemon10, elemento, titulo) {
 
-    var data = google.visualization.arrayToDataTable(pokemon10);
+    let data = google.visualization.arrayToDataTable(pokemon10);
 
-    var options = {
+    let options = {
         title: `TOP 10 SEGUN ${titulo}`,
         width: 600,
         height: 400,
@@ -303,7 +335,7 @@ function drawBarChart(pokemon10, elemento, titulo) {
         }
     };
 
-    var chart = new google.visualization.BarChart(elemento);
+    let chart = new google.visualization.BarChart(elemento);
 
     chart.draw(data, options);
 

@@ -48,15 +48,6 @@ export const calculoEstadistico = (data) => {
     let top10Pokemon = [];
     let arrayChart = [];
 
-    // data.filter(estadisticas => {
-    //     // console.log(stats.stats["max-cp"]);
-    //     let numero = parseInt(estadisticas.stats["max-cp"]);
-    //     valores.push(numero); //agregar un elemento
-
-    // });
-    // return (Math.max(...valores));
-
-    // Lista TOP 10 de Pokemones segun Punto de Combate
     top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
 
     // Crear estructura para el grafico
@@ -70,6 +61,52 @@ export const calculoEstadistico = (data) => {
 
     // Agregar cabecera al inicio del arreglo
     arrayChart.unshift(['Pokemon', 'CP', ]);
+
+    return arrayChart;
+};
+
+export const calculoEstadPeso = (data) => {
+
+    let top10Pokemon = [];
+    let arrayChart = [];
+
+    // Lista TOP 10 de Pokemones segun Punto de Combate
+    top10Pokemon = data.sort((a, b) => (parseInt(b.size.weight) - parseInt(a.size.weight))).slice(0, 10);
+
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.size.weight));
+
+        return itemChart;
+    });
+
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'peso', ]);
+
+    return arrayChart;
+};
+
+export const calcularEstadVida = (data) => {
+
+    let top10Pokemon = [];
+    let arrayChart = [];
+
+    // Lista TOP 10 de Pokemones segun Punto de Combate
+    top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-hp']) - parseInt(a.stats['max-hp']))).slice(0, 10);
+
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.stats['max-hp']));
+
+        return itemChart;
+    });
+
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'vida', ]);
 
     return arrayChart;
 };

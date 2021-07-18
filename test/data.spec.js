@@ -50,13 +50,13 @@ describe('ordenarPokemon', () => {
             }
         ];
 
-        const sortOrder = "Ascendent";
+        const sortOrder = "Ascendente";
 
         expect(funciones.sortData(data, sortOrder)).toStrictEqual(result);
     })
 
     it('deberia ordenar de A-Z ', () => {
-        expect(ordenarPokemon(data.pokemon, "name", "creciente")).toEqual(ordenarAZ);
+        expect(ordenarPokemon(data.pokemon, "name", "decreciente")).toEqual(ordenarAZ);
     });
 });
 
