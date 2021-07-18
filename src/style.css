@@ -3,12 +3,91 @@
   margin: 0;
   padding: 0;
 }
+/*header start*/
 #logo {
-  background-image: url("./imagenes/background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: rgba(53, 91, 145, 90%);
+  height: 36%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+#containerHeader{
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  height: 77%;
+  width: 100%;
+  background-image: url("./imagenes/backgroundHeader.jpeg");
+  background-position: center;
+  background-size: 100px;
+  opacity: 15%;
+}
+.logoImage img{
+  height: 530px;
+  width: 100%;
+}
+.logoImage{
+  display: flex;
+  height: 32%;
+  align-items: center;
+  display: inline-flex;
+  width: 35%;
+  margin: 0 20px;
+  z-index: 2;
+}
+.letterLogo{
+  background-color: tomato;
+  border-radius: 20px;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 45%;
+  margin: 0 10px;
+  z-index: 2;
+}
+.letterLogo p:first-child{
+  color: white;
+  font-family: 'RocknRoll One', sans-serif;
+  font-size: 3.5rem;
+  display: flex;
+  align-self: center;
+}
+.letterLogo hr{
+  align-self: center;
+  display: flex;
+  background-color: white;
+  width: 96%;
+  height: 7px;
+}
+.letterLogo p:last-child{
+  color: white;
+  align-self: center;
+  font-size: 3rem;
+  font-family: 'RocknRoll One', sans-serif;
+}
+@media only screen and (max-width: 875px) {
+  .letterLogo p:first-child {
+    font-size: 2rem;
+  }
+  .letterLogo p:last-child{
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 555px) {
+  .letterLogo p:first-child {
+    font-size: 1.5rem;
+    padding: 5%;
+  }
+  .letterLogo p:last-child{
+    font-size: 1.5rem;
+    padding: 5%;
+  }
+}
+/*header end*/
 .bio {
   display: flex;
   background: #6686ac;
@@ -108,33 +187,7 @@
   justify-content: center;
   font-size: 22px;
 }
-header {
-  background-color: rgba(53, 91, 145, 90%);
-  height: 600px;
-  width: 100%;
-}
-.logo-del-estudio {
-  top: 30%;
-  height: 400px;
-  left: 70%;
-  position: relative;
-  width: 30%;
-}
-.letras {
-  left: -20%;
-  position: relative;
-  top: 15%;
-  width: 60%;
-}
-.bordeado {
-  border: white 5px solid;
-  border-radius: 80px;
-  height: 50%;
-  left: 10%;
-  position: relative;
-  top: -35%;
-  width: 60%;
-}
+
 .menu-principal {
   width: 100%;
 }
@@ -187,23 +240,7 @@ footer {
   padding: 2rem 0;
   display: none;
 }
-.movieItem {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-.movieItem img {
-  height: 300px;
-  width: auto;
-  margin-bottom: 1rem;
-}
-/*#sectionMovies {
-  align-items: center;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-}
+
 /* Dropdown Button */
 .dropbtn {
   display: none;
