@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
-
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
@@ -23,12 +23,13 @@
   <section id="navigator">
     <nav class="menu-principal">
       <ul>
-        <li><a href="#">FILMS</a></li>
-        <li><a href="#">CORTOMETRAJES</a></li>
-        <li><a href="#">COMMERCIAL</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">CURIOSIDADES</a></li>
-        <li><a href="#">MUSEUM</a></li>
+        <li class="menuItems"><a href="#filmsimage">FILMS</a></li>
+        <li class="menuItems"><a href="https://www.ghibli.jp/">GHIBLI WEB</a></li>
+        <li class="menuItems"><a href="https://ghibli.fandom.com/wiki/Ghibli_Wiki">GHIBLI WIKI</a></li>
+        <li class="menuItems"><a href="https://www.netflix.com/pe-en/browse/genre/81227213">NETFLIX</a></li>
+        <li class="menuItems"><a href="https://www.youtube.com/watch?v=eY1XtWyKlJA&list=PLkcKD78lpwsHg0p_8JzfIcqha2kDYEjS_&index=1&t=668s">MUSIC</a></li>
+        <li class="menuItems"><a href="#">CURIOSIDADES</a></li>
+        <li class="menuItems"><a href="#">MUSEUM</a></li>
       </ul>
     </nav>
   </section>
@@ -105,20 +106,21 @@
   <!-- first view end -->
 
   <!-- second view start about div Films-->
+  <!-- ESTE ID secondView NO SE ESTA USANDO-->
   <section id="secondView">
     <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
-      <input id="InputSearchMovie" type="search" placeholder=" 🔎 Search " /></label>
+      <input id="InputSearchMovie" type="search" placeholder="  🔎 search " /></label>
 
     <div id="dropdown" class="dropdown">
       <button id="dropbtn" class="dropbtn">≡</button>
       <select id="myDropdown" class="dropdown-content">
         <option value="empty" selected>Choose one:</option>
-        <option value="NameOrderMore">Order by Name (A-Z)</option>
+        <option value="NameOrderMore" class="filters">Order by Name (A-Z)</option>
         <option value="NameOrderLess">Order by Name (Z-A)</option>
-        <option value="RtScoreOrderMore">Order by rating score ↑↓</option>
-        <option value="RtScoreOrderLess">Order by rating score ↓↑</option>
-        <option value="RdOrderMore">Order by release date ↑↓</option>
-        <option value="RdOrderLess">Order by release date ↓↑</option>
+        <option value="RtScoreOrderMore">Order by higher rating</option>
+        <option value="RtScoreOrderLess">Order by lower rating</option>
+        <option value="RdOrderMore">Order by latest movie</option>
+        <option value="RdOrderLess">Order by oldest movie</option>
       </select>
     </div>
     <p class="resultAverage" id="resultAverage"></p>
@@ -149,6 +151,6 @@
     <image class="imagen-totoro" src="./imagenes/totoro2.png" alt="totoro footer" />
   </footer>
   <script src="main.js" type="module"></script>
-</body>
+  </body>
 
-</html>
+  </html>
