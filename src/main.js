@@ -18,9 +18,9 @@ const divsAboutCartoons = document.querySelector("#cartoons");
 const divsAboutVehicles = document.querySelector("#vehiclesName");
 const personalizedInfoOnTopic = document.querySelector("#infoInModal");
 const locationsOfEachMovie = document.querySelector("#locationsOfEachMovie")
-const secondView = document.querySelector("#secondView")
-const moviesInfoOnly = document.querySelector("#moviesInfoOnly")
-const thirdView = document.querySelector("#thirdView")
+const secondView = document.querySelector("#secondView");
+const moviesInfoOnly = document.querySelector("#moviesInfoOnly");
+const thirdView = document.querySelector("#thirdView");
 
 //mostrar pelis en el orden de la data (second view)
 navMovies.addEventListener("click", () => {
@@ -32,7 +32,7 @@ navMovies.addEventListener("click", () => {
     sectionNav.style.display = "none";
     //show second view
     btnDropdown.style.display = "block";
-    movieList.style.display = "grid";
+    movieList.style.display = "flex";
     document.querySelector(".InputSearchMovie").style.display = "block";
     movieList.innerHTML = setMoviesTitle(data.films).join("");
     resultAverage.style.display = "block";
@@ -79,7 +79,7 @@ function thirdSlide() {
         moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
         const getPeopleResult = getPeople(movieInformation)[0];
         locationsOfEachMovie.innerHTML = showLocationsInformation(movieInformation)
-        secondView.style.display = "none"
+        secondView.style.display = "none";
 
         getPeopleResult.forEach(element =>
             divsAboutCartoons.innerHTML += element
