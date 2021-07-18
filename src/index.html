@@ -12,10 +12,10 @@
         <section class="logo">
             <img class="header__img" src="./img/Logo.png" alt="logo">
         </section>
-        <span class="nav-bar" id="btnMenu"><img src="https://img.icons8.com/material-outlined/20/ffffff/menu--v1.png"/>Menú</span>
+        <span class="nav-bar" id="btnMenu">Menú</span>
         <nav class="main-nav">
             <ul class="menu" id="menu">
-                <li class="menu__item"><a id="home" href="index.html" class="menu__link0">Home<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
+                <li class="menu__item"><a id="home" href="index.html" class="menu__link0">Home</a>
                 </li>
                 <li class="menu__item container-submenu1">
                     <a href="#" class="menu__link1 submenu1-btn1">Pokedex</a>
@@ -28,14 +28,16 @@
                 </li>
 
                 <li class="menu__item container-submenu2">
-                    <a href="#" class="menu__link2 submenu2-btn2">Región</a>
-                    <ul class="submenu1">
-                        <li class="menu__item"><a id="region_johto" href="#" class="menu__link2">Johto</a>
+                    <a href="#" class="menu__link2 submenu2-btn2">Región
+                    </a>
+                    <ul class="submenu2">
+                        <li class="menu__item"><a href="#" id="region_johto" class="menu__link2">Johto</a>
                         </li>
-                        <li class="menu__item"><a id="region_kanto" href="#" class="menu__link2">Kanto</a>
+                        <li class="menu__item"><a href="#" id="region_kanto" class="menu__link2">Kanto</a>
                         </li>
                     </ul>
                 </li>
+
 
                 <li class="menu__item container-submenu3">
                     <a href="#" class="menu__link3 submenu3-btn3">Tipos</a>
@@ -75,23 +77,20 @@
                     </ul>
                 </li>
                 <li class="menu__item container-submenu4">
-                    <a id="ayuda" href="#" class="menu__link4 submenu4-btn4">Ayuda<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/>
-            </a>
-                    <ul class="submenu4">
-                        <li class="menu__item"><a id="guia" href="#" class="menu__link4">Guía<img src="https://img.icons8.com/material-rounded/24/ffffff/chevron-down.png"/></a>
-                        </li>
-                    </ul>
+                    <a id="estadisticas" href="#" class="menu__link4 submenu4-btn4">Estadisticas</a>
                 </li>
             </ul>
+            <!--  Búsqueda-->
+            <section class="buscador">
+                <input type="text" id="txtBuscar" placeholder="Ingrese nombre / número" class="cajas" />
+                <button id="btnBuscar" class="botones">Buscar</button>
+            </section>
         </nav>
 
     </header>
     <main>
-        <!--Submenú para Búsqueda-->
-        <section>
-            <input type="text" id="txtBuscar" placeholder="Ingrese nombre / número" class="cajas" />
-            <button id="btnBuscar" class="botones">Buscar</button>
-        </section>
+
+        <section class="estadisticas"></section>
 
         <article id="listaPokemon">
             <!-- html medianete js -->
@@ -109,8 +108,33 @@
         <article id="fichaTecnicaPokemon">
         </article>
     </main>
-    <footer></footer>
+    <footer class="footer-container">
+
+        <div class="footer_social">
+            <div class="GithubButton_container">
+                <a href="https://github.com/Laboratoria/LIM015-data-lovers" rel="noopernoreferrer" target="_grey" title="htpp.cat github repository">
+                    <img height="50px" src="https://img.icons8.com/fluent/48/000000/github.png" width="50px" />
+                </a>
+            </div>
+        </div>
+        <p class="p">"Developed By"
+            <a class="a" href="https://github.com/Elipinto23/LIM015-data-lovers">@Elipinto23 </a>
+            <a class="a" href="https://github.com/yandali-damian/LIM015-data-lovers"> @yandali-damian </a> &
+            <a class="a" href="https://github.com/makemile/LIM015-data-lovers"> @makemile</a>
+        </p>
+        <p class="p">
+            "Images by"
+            <a class="a" href="https://serebii.net/">serebii.net</a>
+        </p>
+        <div class="text-center">
+            © 2020 Copyright:
+            <a class="a" href="http://localhost:59886/#">Guía Pokedex</a>
+        </div>
+        <p class="p">Hecho con ♥</p>
+    </footer>
     <script src="main.js" type="module"></script>
+    <!-- importando libreria charts.js -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 
 </html>
