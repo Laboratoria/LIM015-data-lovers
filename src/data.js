@@ -1,3 +1,4 @@
+
 /*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
 Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
 procesar y manipular datos (tus funciones)*/
@@ -26,8 +27,8 @@ function filtrarData(data, condition) {
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
     let ordenarData = [];
     ordenarData = data.sort((asc, desc) => {
-        let nombreAsc = asc[sortBy];
-        let nombreDesc = desc[sortBy];
+        const nombreAsc = asc[sortBy];
+        const nombreDesc = desc[sortBy];
         if (sortOrder == "creciente") {
             if (nombreAsc > nombreDesc) {
                 return 1;
@@ -50,41 +51,73 @@ export const ordenarPokemon = (data, sortBy, sortOrder) => {
 };
 
 //funcion para calculos estadisticos(ficha tecnica) ------>proceso de construccion
+export const calculoEstadistico = (data) => {
 
-    export const calculoEstadistico = (data) => {
-    return data;
+    let top10Pokemon = [];
+    let arrayChart = [];
+
+    top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
+
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.stats['max-cp']));
+
+        return itemChart;
+    });
+
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'CP', ]);
+
+    return arrayChart;
 };
 
+export const calculoEstadPeso = (data) => {
 
+    let top10Pokemon = [];
+    let arrayChart = [];
 
+    // Lista TOP 10 de Pokemones segun Punto de Combate
+    top10Pokemon = data.sort((a, b) => (parseInt(b.size.weight) - parseInt(a.size.weight))).slice(0, 10);
 
-// function buscadorpokemon() {
-//     let busqueda = document.getElementById("searchtext").value;
-//     let pokemons;
-//     if (isNaN(busqueda)) {
-//         pokemons = data.pokemon.filter((pokemon) => pokemon.name == busqueda);
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.size.weight));
 
-//     } else {
-//         pokemons = data.pokemon.filter((pokemon) => pokemon.num == busqueda);
-//     }
+        return itemChart;
+    });
 
-//     console.table(pokemons);
-//     limpiarContenidoBuscador();
-//     mostrarPokemones(pokemons);
-// }
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'peso', ]);
 
-// // funcion para buscar
-// export const searchPokemon = (data, namePokemon) => {
-//     const arrayPoke = [];
-//     for (let i = 0; i < data.length; i++) {
-//         if (data[i].name.includes(namePokemon)) {
-//             arrayPoke.push(data[i]);
-//         }
-//     }
-//     return arrayPoke;
-// };
+    return arrayChart;
+};
 
+export const calcularEstadVida = (data) => {
 
+    let top10Pokemon = [];
+    let arrayChart = [];
+
+    // Lista TOP 10 de Pokemones segun Punto de Combate
+    top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-hp']) - parseInt(a.stats['max-hp']))).slice(0, 10);
+
+    // Crear estructura para el grafico
+    arrayChart = top10Pokemon.map(pokemon => {
+        const itemChart = [];
+        itemChart.push(pokemon.name);
+        itemChart.push(parseInt(pokemon.stats['max-hp']));
+
+        return itemChart;
+    });
+
+    // Agregar cabecera al inicio del arreglo
+    arrayChart.unshift(['Pokemon', 'vida', ]);
+
+    return arrayChart;
+};
 
 // funcion para hacer la busqueda
 export const searchPokemon = (data, buscarPokemon) => {

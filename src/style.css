@@ -5,8 +5,10 @@
 
 body {
     background-image: linear-gradient(to top, #067DA3 0%, #000000 100%);
+    background-image: url("./img/bg.JPG");
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
 header {
@@ -233,7 +235,8 @@ header {
 
 /* OCULTAR FICHA TECNICA */
 
-#fichaTecnicaPokemon {
+#fichaTecnicaPokemon,
+.estadisticas {
     display: none;
 }
 
@@ -350,12 +353,6 @@ header {
     width: 150px;
 }
 
-
-/* 
-.logo {
-    float: left;
-} */
-
 .fondo_transparente {
     top: 0;
     left: 0;
@@ -364,6 +361,15 @@ header {
     height: 100vh;
     width: 100%;
     display: block;
+}
+
+.logo {
+    float: left;
+    margin-left: 18px;
+    margin-top: 8px;
+    position: absolute;
+    z-index: 1000;
+    display: flex;
 }
 
 .modal {
@@ -411,16 +417,26 @@ header {
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-position: center;
+    background-color: #fafafa6e;
+    border-radius: 1em;
 }
 
 
-/* nuevo */
+/* estilos de buscador */
+
+.buscador {
+    text-align: right;
+    margin-left: auto;
+    /* margin-right: 115px; */
+    max-width: 1100px;
+    margin-top: 18px;
+}
 
 .botones {
     padding: 8px 15px;
     border-radius: 5px;
     font-weight: 700;
-    background: #E31203;
+    background: #0501ff;
     color: #f2f2f2;
     border: 0px;
     /* quitar borde por defecto */
@@ -438,13 +454,111 @@ header {
     font-weight: 700;
     border: 1px #000000 solid;
 }
-.fichaT {
+
+.fichaT,
+.main-nav {
     margin-left: auto;
     margin-right: auto;
     max-width: 1100px;
-    padding: 1em 1em;
+    padding: 4em 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-position: center;
+}
+
+/* ESTADISTICAS */
+
+.estadisticas {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    padding: 1em 1em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-position: center;
+    background-color: #fafafa6e;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 1em;
+    /* padding-bottom: 350px; */
+}
+
+.estResultado {
+    margin-top: 40px;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.estCp,
+.estPeso,
+.estHp {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    background: #0501ff;
+    color: #f2f2f2;
+    border: 0px;
+    margin-left: 10px;
+    /* quitar borde por defecto */
+}
+
+.estCp:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    /* cursor manito */
+}
+
+.estPeso:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    /* cursor manito */
+}
+
+
+/* 
+.estadisticas {
+    color: #c4c3c3;
+    background-color: #000000;
+} */
+
+
+/* **********************ESTILOS PARA EL PIE DE PAGINA ****************************/
+
+footer {
+    display: fixed;
+    background: #0583f8a6;
+}
+
+.footer_container {
+    margin-top: 5em;
+    text-align: center;
+    width: 50%;
+    height: 20%;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    margin-top: 5em;
+}
+
+.p {
+    display: block;
+    justify-content: center;
+    padding: 0.5em;
+    display: flex;
+    color: black;
+}
+
+.text-center {
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+
+.a {
+    color: ghostwhite;
 }
