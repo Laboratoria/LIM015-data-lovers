@@ -160,22 +160,19 @@ function verFichaTecnica(datapokemon) {
     });
 
     const movimientoRapidoHtml = datapokemon['quick-move'].map(movimiento => {
-
-        return `<table class="tablaFichaT" width="100%"><tr><td colspan="4">${movimiento.name}</td>
+        return `<tr><td>${movimiento.name}</td>
         <td>${movimiento.type}</td>
         <td>${movimiento["base-damage"]}</td>
         <td>${movimiento["energy"]}</td>
-        <td>${movimiento["move-duration-seg"]}</td></tr></table>`;
+        <td>${movimiento["move-duration-seg"]}</td></tr>`;
     });
 
     const ataqueEspecialHtml = datapokemon['special-attack'].map(ataque => {
-
-        return `<li>${ataque.name}</li>
-        <li>${ataque.type}</li>
-        <li>${ataque["base-damage"]}</li>
-        <li>${ataque.energy}</li>
-        <li>${ataque["move-duration-seg"]}</li><br>`;
-
+        return `<tr><td>${ataque.name}</td>
+        <td>${ataque.type}</td>
+        <td>${ataque["base-damage"]}</td>
+        <td>${ataque["energy"]}</td>
+        <td>${ataque["move-duration-seg"]}</td></tr>`;
     });
 
     fichaTecnica.innerHTML =
@@ -212,20 +209,33 @@ function verFichaTecnica(datapokemon) {
                 </tr>
             </table>
 
-            <spam>${movimientoRapidoHtml.join("")}</spam>
+            <table class="tablaFichaT" width="100%">
+                <tr>
+                    <td colspan="5">MOVIMIENTO RAPIDO</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Base Daño</td>
+                    <td>Energia</td>
+                    <td>Duracion Movimiento Segundo</td>
+                </tr>
+                ${movimientoRapidoHtml.join("")}
+            </table>
                     
             <table class="tablaFichaT" width="100%">
-            <tr>
-            <td> <span>Ataque Especial</span></td>
-            <td> <ul> ${ataqueEspecialHtml.join("")}</ul></td> 
-
-
-
-            </tr>
-
+                <tr>
+                    <td colspan="5">ATAQUE ESPECIAL</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Base Daño</td>
+                    <td>Energia</td>
+                    <td>Duracion Movimiento Segundo</td>
+                </tr>
+                ${ataqueEspecialHtml.join("")}
              </table>
-
-
         </section>`;
 
 
