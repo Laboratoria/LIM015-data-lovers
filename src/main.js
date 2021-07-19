@@ -30,6 +30,7 @@ export function mostrarPokemones(data) {
         let numero = data[i].num;
         // let types = data[i].type;
 
+
         //etiqueta padre figure
         let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
         etiquetaFigure.classList.add("fotoPokemon"); // Agregando una clase a tag Figure
@@ -89,6 +90,74 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
     });
 }
+
+
+/* manipulacion del menu funcion para seleccionar region*/
+
+const regionPoke = document.querySelectorAll(".menu__link2"); 
+
+for (let i = 0; i < regionPoke.length; i++) {
+    
+    regionPoke[i].addEventListener("click", (e) => {
+       
+       const captureRegion = e.target.id;
+
+       const mostrarRegion = data.pokemon.filter(elemento => {
+        
+       });
+
+       /*limpiarContenido(document.getElementById("listaPokemon"));
+
+       //console.log(poke);
+       mostrarPokemones(mostrarRegion);*/
+
+
+});
+}
+
+
+
+/* manipulacion del menu funcion para el ordenado de datos*/
+
+const ordenarNombres = document.querySelectorAll(".menu__link1"); 
+
+for (let i = 0; i < ordenarNombres.length; i++) {
+    
+    ordenarNombres[i].addEventListener("click", (e) => {
+       
+       const ascDesc = e.target.id;
+       
+
+      const pokeAscDesc = data.pokemon.sort((a,b) => {
+        let aNombre = a.name;
+        let bNombre = b.name;
+
+          if(ascDesc == "creciente") {
+
+            if (aNombre > bNombre) {
+                return 1;
+            }else if (aNombre < bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          } else if(ascDesc == "decreciente") { 
+            if (aNombre < bNombre) {
+                return 1;
+            } else if (aNombre > bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          }
+       });
+
+       limpiarContenido(document.getElementById("listaPokemon"));
+
+       mostrarPokemones(pokeAscDesc);
+    });
+}
+
 
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
@@ -328,7 +397,10 @@ function limpiarContenido(limpiar) {
     }
 }
 
-// implementando modal
+// implementando moda
+document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
+    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+});
 // document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
@@ -354,6 +426,3 @@ document.getElementById("region_kanto").addEventListener("click", function() {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-
-
-//

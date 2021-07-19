@@ -22,6 +22,7 @@ function filtrarData(data, condition) {
 
 }
 
+
 // funcion para ordenar de manera ascendente o descendente
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
     let ordenarData = [];
@@ -56,6 +57,7 @@ export const calculoEstadistico = (data) => {
     let arrayChart = [];
 
     top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
+
 
     // Crear estructura para el grafico
     arrayChart = top10Pokemon.map(pokemon => {
