@@ -379,4 +379,5 @@ header {
     align-items: center;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: solid;
 }
