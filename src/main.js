@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
 
 // Importando Graficos a usar
 google.charts.load('current', { packages: ['corechart', 'bar'] });
@@ -290,7 +290,6 @@ estadisticas.addEventListener("click", (e) => {
     });
     // funcion de los top de con mayor nivel  de Vida
     estHp.addEventListener("click", () => {
-        console.log(calcularEstadVida(data.pokemon));
         const top10 = calcularEstadVida(data.pokemon);
 
         drawBarChart(top10, estResultado, 'NIVEL DE VIDA');

@@ -1,5 +1,5 @@
 
-import { filtrarData, ordenarPokemon } from '../src/data.js';
+import { filtrarData, ordenarPokemon,searchPokemon } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
 describe('filtrarData', () => {
@@ -17,48 +17,68 @@ describe('filtrarData', () => {
     it('Filtra todos los pokemone de tipo agua', () => {
         expect(filtrarData(data.pokemon, 'water')).toEqual(tipoPokemon);
     });
+
 });
 
-describe('ordenarPokemon', () => {
-    // Prueba 1 : ¿Es función?
-    it('Es una funcnion', () => {
-        expect(typeof ordenarPokemon).toBe('function');
+describe('searchPokemon', () => {
+
+    const buscarNombre = data.pokemon.filter(pokemon => pokemon.name.includes('pikachu'));
+
+    it('Es una función', () => {
+        expect(typeof searchPokemon).toBe('function');
     });
 
-    // Prueba 2 : Ordenar Data
-    it('deberia retornar "Charmander,Ivysaur,Pikachu"', () => {
-
-
-        const data = [{
-                name: 'Ivysaur',
-            },
-            {
-                name: 'Charmander',
-            },
-            {
-                name: 'Pikachu',
-            }
-        ];
-        const result = [{
-                name: 'Charmander',
-            },
-            {
-                name: 'Ivysaur',
-            },
-            {
-                name: 'Pikachu',
-            }
-        ];
-
-        const sortOrder = "Ascendente";
-
-        expect(funciones.sortData(data, sortOrder)).toStrictEqual(result);
-    })
-
-    it('deberia ordenar de A-Z ', () => {
-        expect(ordenarPokemon(data.pokemon, "name", "decreciente")).toEqual(ordenarAZ);
+    it('Busca un pokemon', () => {
+        expect(searchPokemon(data.pokemon, '')).toEqual(data.pokemon);
     });
+
+    it('Buscar los pokemones por nombre', () => {
+        expect(searchPokemon(data.pokemon, 'pikachu')).toEqual(buscarNombre);
+    });
+
+
 });
+
+// describe('ordenarPokemon', () => {
+//     // Prueba 1 : ¿Es función?
+//     it('Es una funcnion', () => {
+//         expect(typeof ordenarPokemon).toBe('function');
+//     });
+
+//     // Prueba 2 : Ordenar Data
+//     it('deberia retornar "Charmander,Ivysaur,Pikachu"', () => {
+
+
+//         const data = [{
+//                 name: 'Ivysaur',
+//             },
+//             {
+//                 name: 'Charmander',
+//             },
+//             {
+//                 name: 'Pikachu',
+//             }
+//         ];
+//         const result = [{
+//                 name: 'Charmander',
+//             },
+//             {
+//                 name: 'Ivysaur',
+//             },
+//             {
+//                 name: 'Pikachu',
+//             }
+//         ];
+
+//         const sortOrder = "Ascendente";
+
+//         expect(funciones.sortData(data, sortOrder)).toStrictEqual(result);
+//     })
+
+//     it('deberia ordenar de A-Z ', () => {
+//         expect(ordenarPokemon(data.pokemon, "name", "decreciente")).toEqual(ordenarAZ);
+//     });
+// });
 
 
 // describe('anotherExample', () => {
@@ -127,4 +147,4 @@ describe('ordenarPokemon', () => {
 //     it('Debería retornar "MasterCard" para "5556364607935616"', () => {
 //         expect(validator.getIssuer("5556364607935616")).toBe("MasterCard"); // escribe aquí tu test
 //     });
-// });
+//});

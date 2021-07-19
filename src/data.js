@@ -4,7 +4,6 @@ Te recomendamos que este archivo contenga toda la funcionalidad que corresponda 
 procesar y manipular datos (tus funciones)*/
 import data from './data/pokemon/pokemon.js';
 import {mostrarPokemones}from './main.js';
-console.log(data);
 
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
@@ -140,7 +139,6 @@ function limpiarContenidoBuscador() {
 function buscarPorRegion(region) {
 
     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-    console.table(pokemons);
     limpiarContenidoBuscador();
     mostrarPokemones(pokemons);
 }
