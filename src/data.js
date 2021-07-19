@@ -60,7 +60,7 @@ export const calculoEstadistico = (data) => {
     });
 
     // Agregar cabecera al inicio del arreglo
-    arrayChart.unshift(['Pokemon', 'CP', ]);
+    arrayChart.unshift(['Pokemon', 'CP']);
 
     return arrayChart;
 };
@@ -106,7 +106,7 @@ export const calcularEstadVida = (data) => {
     });
 
     // Agregar cabecera al inicio del arreglo
-    arrayChart.unshift(['Pokemon', 'vida', ]);
+    //arrayChart.unshift(['Pokemon', 'vida', ]);
 
     return arrayChart;
 };

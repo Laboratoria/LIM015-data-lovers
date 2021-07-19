@@ -2,7 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida } from './data.js';
 
 // Importando Graficos a usar
-google.charts.load('current', { packages: ['corechart', 'bar'] });
+// google.charts.load('current', { packages: ['corechart', 'bar'] });
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -161,11 +161,11 @@ function verFichaTecnica(datapokemon) {
 
     const movimientoRapidoHtml = datapokemon['quick-move'].map(movimiento => {
 
-        return `<li>${movimiento.name}</li>
-        <li>${movimiento.type}</li>
-        <li>${movimiento["base-damage"]}</li>
-        <li>${movimiento["energy"]}</li>
-        <li>${movimiento["move-duration-seg"]}</li><br>`;
+        return `<table class="tablaFichaT" width="100%"><tr><td colspan="4">${movimiento.name}</td>
+        <td>${movimiento.type}</td>
+        <td>${movimiento["base-damage"]}</td>
+        <td>${movimiento["energy"]}</td>
+        <td>${movimiento["move-duration-seg"]}</td></tr></table>`;
     });
 
     const ataqueEspecialHtml = datapokemon['special-attack'].map(ataque => {
@@ -197,10 +197,10 @@ function verFichaTecnica(datapokemon) {
             <table class="tablaFichaT" width="100%">
                 <tr>
                     <td width="50%">
-                        <span>Resistente</span>
-                        <ul>
-                            ${resistenciaHtml.join("")}
-                        </ul>
+                    <table>
+                        <tr><td coslpam=”5”> Resistencia</td> </tr>
+                            <tr><td>${resistenciaHtml.join("")}</td></tr>
+                        </table>
                     </td>
 
                     <td width="50%">
@@ -212,17 +212,8 @@ function verFichaTecnica(datapokemon) {
                 </tr>
             </table>
 
-            <table class="tablaFichaT" width="100%">
-            <tr>
-            
-            <td> <span>Movimiento Rapido</span> </td>
-            <td> 
-            <ul> ${movimientoRapidoHtml.join("")} </ul>
-        
-            </td>
-            </tr>
-            </table>
-        
+            <spam>${movimientoRapidoHtml.join("")}</spam>
+                    
             <table class="tablaFichaT" width="100%">
             <tr>
             <td> <span>Ataque Especial</span></td>
@@ -249,7 +240,7 @@ function verFichaTecnica(datapokemon) {
 }
 
 
-// funcnion para mostrar las estadisticas
+//-------------------------funcnion para mostrar las estadisticas ---------------------------
 
 const estadisticas = document.querySelector(".menu__link4");
 
@@ -296,8 +287,9 @@ estadisticas.addEventListener("click", (e) => {
         // console.log(maximoValor(data));
         const top10 = calculoEstadistico(data.pokemon);
         // console.log(top10);
-
-        drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE'); //argumentos
+        estResultado.innerHTML =
+            `<p>${top10}</p>`;
+        // drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE'); //argumentos
     });
 
     // funcion para top 10 segun el peso
@@ -305,41 +297,48 @@ estadisticas.addEventListener("click", (e) => {
         // console.log(maximoValor(data));
         const top10 = calculoEstadPeso(data.pokemon);
         // console.log(top10);
+        estResultado.innerHTML =
+            `<p>${top10}</p>`;
 
-        drawBarChart(top10, estResultado, 'MAS PESADOS'); //argumentos
+        // drawBarChart(top10, estResultado, 'MAS PESADOS'); //argumentos
     });
     // funcion de los top de con mayor nivel  de Vida
     estHp.addEventListener("click", () => {
-        console.log(calcularEstadVida(data.pokemon));
+        // console.log(calcularEstadVida(data.pokemon));
         const top10 = calcularEstadVida(data.pokemon);
 
-        drawBarChart(top10, estResultado, 'NIVEL DE VIDA');
+        estResultado.innerHTML =
+            `<p>${top10}</p>`;
+
+        // const top10 = calcularEstadVida(data.pokemon);
+
+        // drawBarChart(top10, estResultado, 'NIVEL DE VIDA');
     })
 });
 
 // implementacion de la funcion chart
-function drawBarChart(pokemon10, elemento, titulo) {
+// function drawBarChart(pokemon10, elemento, titulo) {
 
-    let data = google.visualization.arrayToDataTable(pokemon10);
+//     let data = google.visualization.arrayToDataTable(pokemon10);
 
-    let options = {
-        title: `TOP 10 SEGUN ${titulo}`,
-        width: 600,
-        height: 400,
-        hAxis: {
-            title: titulo.toLowerCase(),
-            minValue: 0
-        },
-        vAxis: {
-            title: 'pokemon'
-        }
-    };
+//     let options = {
+//         title: `TOP 10 SEGUN ${titulo}`,
+//         width: 600,
+//         height: 400,
+//         hAxis: {
+//             title: titulo.toLowerCase(),
+//             minValue: 0
+//         },
+//         vAxis: {
+//             title: 'pokemon'
+//         }
+//     };
 
-    let chart = new google.visualization.BarChart(elemento);
+//     let chart = new google.visualization.BarChart(elemento);
 
-    chart.draw(data, options);
+//     chart.draw(data, options);
 
-}
+// }
 
 
 // limpiar contenidos
