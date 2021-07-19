@@ -212,7 +212,7 @@
   justify-content: space-around;
 }
 .container:hover{
-  transform: scale(1.5);
+  transform: scale(1.1);
   transition: transform .2s;
   cursor: pointer;
 }
@@ -265,18 +265,22 @@
 }
 
 .home{
-  position: relative;
   background-color:rgb(235, 187, 17);
-  width: 5%;
-  text-align: center;
+  width: 8%;
+  height: 12%;
+  align-items: center;
   border-radius: 0 0 0 20px;
   display: none;
-  justify-content: right;
+  justify-content: center;
   border: 1px black solid;
-  font-size: 20px;
+  font-size: 300%;
   padding: 14px;
   position: absolute;
   right: 0%;
+}
+.home img:focus{
+  background-color:rgb(17, 77, 69);
+  cursor: pointer;
 }
 
 .dropbtn{
@@ -286,15 +290,17 @@
   font-size: 40px;
   padding: 14px;
   display: none;
-  width: 80px;
+  width: 100%;
   border-radius: 0 0 20px 0;
 }
-.dropbtn:hover, .dropbtn:focus {
+.dropbtn:hover{
   background-color:rgb(17, 77, 69);
   cursor: pointer;
 }
+.dropdown{
+  width: 8%;
+}
 .dropdown-content {
-  position: fixed;
   background-color: transparent;
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -470,24 +476,52 @@
 /* thirdView end */
 
 /*fourthView start*/
-#infoInModal{
-  background-color: #fec89a;
-  width: 50%;
-  height: 50%;
-  display: flex;
-}
 .myModal{
-  margin: auto;
+  background-color: rgba(235,196,230);
+  width: 50%;
+  height: 60%;
+  position: fixed;
+  z-index: 2;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  left: 25%;
+  border-radius: 15px 50px;
 }
 .close{
   display: flex;
-  justify-content: right;
+  width: 4%;
+  font-size: 150%;
+  position: absolute;
+  top: 4%;
+  right: 4%;
 }
 .close:hover,
 .close:focus {
   cursor: pointer;
-  background-color: tomato;
-  border-radius: 3px solid black;
+  border-radius: 7px solid black;
+  transform: scale(1.5);
+  transition: transform .2s;
+}
+.myModal h3{
+  text-transform: uppercase;
+  font-family: 'RocknRoll One', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2% 0;
+}
+.myModal img{
+  border:rgba(0, 0, 0, 0.8) dotted 1px;
+  border-radius: 10% 30% 50% 70%;
+  width: 30%;
+  height: 30%
+}
+.myModal p{
+  padding: 2% 0;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 80%;
 }
 /*fourthView end*/
 
