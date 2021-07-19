@@ -211,7 +211,13 @@
   flex-direction: column;
   justify-content: space-around;
 }
+.container:hover{
+  transform: scale(1.5);
+  transition: transform .2s;
+  cursor: pointer;
+}
 .filmsimage{
+  padding: 5%;
   background-color: aliceblue;
   display: flex;
   align-self: center;
