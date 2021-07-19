@@ -37,6 +37,7 @@ navMovies.addEventListener("click", () => {
     movieList.innerHTML = setMoviesTitle(data.films).join("");
     resultAverage.style.display = "block";
     resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`;
+    document.querySelector(".home").style.display = "flex";
     thirdSlide()
 })
 //ocultar el dopdrown y mostrar
@@ -115,5 +116,6 @@ function thirdSlide() {
         }))
     }))
 }
-
+//boton de inicio (home)
+document.querySelector(".home").addEventListener("click", () =>location.reload());
 

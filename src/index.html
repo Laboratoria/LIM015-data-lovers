@@ -110,12 +110,14 @@
 
   <!-- second view start about div Films-->
   <!-- ESTE ID secondView NO SE ESTA USANDO-->
+  
   <section id="secondView">
     <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
       <input id="InputSearchMovie" type="search" placeholder="  🔎 search " /></label>
-
+    <p class="resultAverage" id="resultAverage"></p>
+    <div class="home">&#127969;</div>
     <div id="dropdown" class="dropdown">
-      <button id="dropbtn" class="dropbtn">≡</button>
+      <button id="dropbtn" class="dropbtn">&#9776;</button>
       <select id="myDropdown" class="dropdown-content">
         <option value="empty" selected>Choose one:</option>
         <option value="NameOrderMore" class="filters">Order by Name (A-Z)</option>
@@ -126,7 +128,6 @@
         <option value="RdOrderLess">Order by oldest movie</option>
       </select>
     </div>
-    <p class="resultAverage" id="resultAverage"></p>
     <div id="movieList"></div>
   </section>
   <!-- second view end -->

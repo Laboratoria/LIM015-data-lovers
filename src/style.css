@@ -45,7 +45,7 @@
   position: absolute;
   z-index: 1;
   height: 77%;
-  width: 100%;
+  width: inherit;
   background-image: url("./imagenes/backgroundHeader.jpeg");
   background-position: center;
   background-size: 100px;
@@ -211,7 +211,7 @@
 }
 /* options section end*/
 
-/* /second view about Films start/ */
+/* second view about Films start */
 #secondView{
   background-image: url("./imagenes/bgScreen2.jpeg");
   background-size: cover;
@@ -239,13 +239,30 @@
   align-self: center;
 }
 
+.home{
+  position: relative;
+  background-color:rgb(235, 187, 17);
+  width: 5%;
+  text-align: center;
+  border-radius: 0 0 0 20px;
+  display: none;
+  justify-content: right;
+  border: 1px black solid;
+  font-size: 20px;
+  padding: 14px;
+  position: absolute;
+  right: 0%;
+}
+
 .dropbtn{
   background-color:rgb(235, 187, 17);
   color: white;
-  border: none;
+  border: 1px black solid;
   font-size: 40px;
   padding: 14px;
   display: none;
+  width: 80px;
+  border-radius: 0 0 20px 0;
 }
 .dropbtn:hover, .dropbtn:focus {
   background-color:rgb(17, 77, 69);
@@ -272,122 +289,57 @@
   color:rgba(255,255,255);
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgba(0, 0, 0, 0.8);
-  width: 70%;
+  width: 100%;
   display: flex;
   align-content: space-around;
-}
-
-
-
-
-
-
-
-/* /footer start/ */
-footer {
-  background-color: rgba(0, 0, 0, 90%);
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100px;
-  justify-content: space-around;
-  width: 100%;
-}
-.pie-de-pagina {
-  align-self: center;
-  bottom: -200px;
-  color: rgba(239, 197, 46, 100%);
-  display: flex;
-  font-size: 25px;
-  font-weight: bold;
   text-align: center;
 }
-.imagen-totoro {
-  position: relative;
-  z-index: 3;
-}
-/* /footer end/ */
 
-
-#movieList {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+#movieList{
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  grid-gap: 1rem;
-  padding: 2rem 0;
-  display: none;
+  align-items: center;
+  justify-content: center;
 }
-.movieItem {
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
+.movieItem{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 20%;
+  padding: 10px;
+  background-color: #bd9d88;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin: 20px;
+  height: 40%;
+  filter: blur(0.4px);
 }
-.movieItem img {
-height: 300px;
-width: auto;
-margin-bottom: 1rem;
+.movieItem img{
+  display: flex;
+  width: 80%;
+  align-self: center;
 }
-#sectionMovies {
-align-items: center;
-padding: 2rem;
-display: flex;
-flex-direction: column;
+.movieItem h2{
+  font-size: 100%;
+  width: 98%;
+  text-align: center;
+  margin: 5px 0;
 }
-/*
-Dropdown Button 
-.dropbtn {
-  display: none;
-  background-color: rgba(169, 208, 204, 76%);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+.movieItem:hover{
+  transform: scale(1.2);
+  transition: transform .2s;
+  filter: blur(0px);
 }
-Dropdown button on hover & focus 
-.dropbtn:hover,
-.dropbtn:focus {
-  background-color: #2980b9;
-}
-Dropdown Content (Hidden by Default) 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-Links inside the dropdown 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-Change color of dropdown links on hover 
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.show {
-  display: block;
-}
-.InputSearchMovie {
-  display: none;
-}
-*/
-#sectionMovies{
-  background-color: rgba(169, 208, 204, 100%)
-}
- #thirdView {
+/* second view about Films end */
+
+/* thirdView start */
+#thirdView {
   display: none;
   flex-direction: column;
 
-} 
-#resultAverage{
-  display: none;
 }
-
  /* Third view title and description  */
  .containermovies{
   background-image: url("./imagenes/bgScreen2.jpeg");
@@ -488,5 +440,28 @@ Change color of dropdown links on hover
   width: 150px;
   height: 150px;
 }
+/* thirdView end */
 
-
+/* footer start */
+footer {
+  background-color: rgba(0, 0, 0, 90%);
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100px;
+  justify-content: space-around;
+  width: 100%;
+}
+.pie-de-pagina {
+  align-self: center;
+  bottom: -200px;
+  color: rgba(239, 197, 46, 100%);
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.imagen-totoro {
+  position: relative;
+  z-index: 3;
+}
+/* footer end */
