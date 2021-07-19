@@ -87,7 +87,7 @@ export const descriptionMovie = (arr) => {
     </div>
 
     <div class="movieimage">
-    <img src="${arr[0].poster}" alt="Ghibli's movie information"/>
+    <img class="poster"src="${arr[0].poster}" alt="Ghibli's movie information"/>
     </div>
 
     <div class="moviedescription">
@@ -125,11 +125,11 @@ export const showLocationsInformation = (movies) => {
   locations.forEach((location) => {
     locationInformation += `<section class="movielocation" >
     <div class="locationimage">
-    <img src="${location.img}" alt="Ghibli's locations images"/>
+    <img class="character" src="${location.img}" alt="Ghibli's locations images"/>
     </div>
     
     <div class="locationName">
-    <h1>${location.name}</h1>
+    <h1 class="locationname">${location.name}</h1>
     </div>
     </section>`
   })
@@ -140,7 +140,7 @@ export const showLocationsInformation = (movies) => {
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = arr => {
   return arr.map(e => e.people.map(el => {
-    const peopleInfo = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="character" /><h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    const peopleInfo = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="character" /><h3 class ="namecharacter">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return peopleInfo;
   }));
 }
@@ -149,8 +149,8 @@ export const getPeople = arr => {
 //extraer el nombre e imagen de los vehiculos
 export const getVehicles = arr => {
   return arr.map(e => e.vehicles.map(el => {
-    const vehicleImg = `<div class="divTopic" data-id="${el.id}"><img class="vehicleimage" src="${el.img}" alt="vehicle"/>`;
-    const vehicleName = `<h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    const vehicleImg = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="vehicle"/>`;
+    const vehicleName = `<h3 class="namevehicle">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return vehicleImg + vehicleName
   }));
 }

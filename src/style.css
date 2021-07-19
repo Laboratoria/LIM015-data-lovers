@@ -389,11 +389,14 @@ Change color of dropdown links on hover
 }
 
  /* Third view title and description  */
+ .containermovies{
+  background-image: url("./imagenes/bgScreen2.jpeg");
+ }
 .moviesInfoOnly{
   display: none;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 250px 250px 250px;
+  padding: 80px 320px 100px 320px;
   font-size: 22px;
 }
 .sipnosistitle{
@@ -409,31 +412,72 @@ Change color of dropdown links on hover
    display: flex;
     justify-content: center;
     height: 350px;
-    margin: 45px;
+    margin: 85px;
+    
+}
+.poster{
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 15px;
+  width: 280px;
+  height: 380px;
 }
 .cartoons{
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content:center;
-  row-gap: 20px;
-  column-gap: 5px;
+  row-gap: 35px;
+  column-gap: 80px;
+  padding: 45px 45px 45px 45px;
+  background-color: #ddb08b; */
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 35px;
+    column-gap: 80px;
+    padding: 85px 105px 45px 105px;
+    align-items: center;
+    margin: 100px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    background-color: #ddb08b
+    
 }
 .subtitles{
-  display: flex;
-  justify-content: center;
+  text-align: center;
 
 }
 #locationsOfEachMovie{
   display: flex;
   justify-content: center;
+  text-align: center;
+  padding: 45px 45px 45px 45px;
+  row-gap: 35px;
+  column-gap: 80px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background-color: #C5C6C7;
+  margin: 100px;
+  border-radius: 50px;
 }
 #vehiclesName{
+  row-gap: 35px;
+  column-gap: 80px;
+  display: contents;
   display: flex;
   justify-content: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  background-color: #d3c6f3 ;
+  margin: 100px;
+  border-radius: 50px;
+  padding: 45px 45px 45px 45px;
 }
 .character {
   width: 150px;
   height: 150px;
+  border-radius: 50%;
+}
+.namecharacter{
+  text-align: center;
 }
 
 .locationimage{
