@@ -72,11 +72,12 @@ getInputSearchMovie.addEventListener("keyup", (e) => {
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
     eachMovie.forEach(element => element.addEventListener("click", () => {
-        thirdView.style.display = "block"
+        thirdView.style.display = "flex"
         //moviesListComplete.style.display = "none"
         const movieId = element.getAttribute("id")
         const movieInformation = compareIdMovie(filmsCopy, movieId)
         moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
+        moviesInfoOnly.style.display = "flex"
         const getPeopleResult = getPeople(movieInformation)[0];
         locationsOfEachMovie.innerHTML = showLocationsInformation(movieInformation)
         secondView.style.display = "none";
@@ -88,7 +89,6 @@ function thirdSlide() {
         for (let i = 0; i < getVehiclesResult.length; i++) {
             divsAboutVehicles.innerHTML += getVehiclesResult[i]
         }
-        moviesInfoOnly.style.display = "block";
         //movieId es el Id de la peli seleccionada
         console.log(movieId)
         //atrapando todos los divs de topics como personajes, vehiculos

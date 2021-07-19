@@ -319,17 +319,67 @@
 }
 /* second view about Films end */
 
-
-
-
-
-
-
-
-
 /* thirdView start */
 #thirdView {
   display: none;
+  flex-direction: column;
+
+}
+/* Third view title and description  */
+.moviesInfoOnly{
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 250px 250px 250px;
+  font-size: 22px;
+}
+.sipnosistitle{
+  display: flex;
+  justify-content: center;
+}
+.titlemovie {
+  display: flex;
+  justify-content: center; 
+  font-size: 22px;
+}
+.movieimage{
+   display: flex;
+    justify-content: center;
+    height: 350px;
+    margin: 45px;
+}
+.cartoons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  row-gap: 20px;
+  column-gap: 5px;
+}
+.subtitles{
+  display: flex;
+  justify-content: center;
+
+}
+#locationsOfEachMovie{
+  display: flex;
+  justify-content: center;
+}
+#vehiclesName{
+  display: flex;
+  justify-content: center;
+}
+.character {
+  width: 150px;
+  height: 150px;
+}
+
+.locationimage{
+  width: 150px;
+  height: 150px;
+}
+.vehicleimage{
+  width: 150px;
+  height: 150px;
 }
 /* thirdView end */
 

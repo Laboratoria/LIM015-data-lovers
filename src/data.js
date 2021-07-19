@@ -80,7 +80,7 @@ export const compareIdMovie = (arr, idvalue) => {
 };
 //obtener descripcion segun id de pelicula
 export const descriptionMovie = (arr) => {
-  return `<section class="moviesInfoOnly" id="moviesInfoOnly">
+  return `<section class="moviesInfo" id="moviesInfo">
     <div class="movieInformation" id="movieInformation">
     <div class="titlemovie">
     <h2>${arr[0].title}</h2></div> 
@@ -91,11 +91,12 @@ export const descriptionMovie = (arr) => {
     </div>
 
     <div class="moviedescription">
-    <p>Sinopsis:<br/>${arr[0].description}</p>
+    <h1 class="sipnosistitle">Sipnosis</h1>
+    <p class="descriptionmovie"><br/>${arr[0].description}</p>
     </div>
 
     <div class="moviedirector">
-    <p><strong>Director:${arr[0].director}</strong></p>
+    <p><br><strong>Director:${arr[0].director}</strong></p>
     </div>
 
     <div class="movieproducer">
@@ -139,7 +140,7 @@ export const showLocationsInformation = (movies) => {
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = arr => {
   return arr.map(e => e.people.map(el => {
-    const peopleInfo = `<div class="divTopic" data-id="${el.id}"><img src="${el.img}" /><h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    const peopleInfo = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="character" /><h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return peopleInfo;
   }));
 }
@@ -148,7 +149,7 @@ export const getPeople = arr => {
 //extraer el nombre e imagen de los vehiculos
 export const getVehicles = arr => {
   return arr.map(e => e.vehicles.map(el => {
-    const vehicleImg = `<div class="divTopic" data-id="${el.id}"><img src="${el.img}" />`;
+    const vehicleImg = `<div class="divTopic" data-id="${el.id}"><img class="vehicleimage" src="${el.img}" alt="vehicle"/>`;
     const vehicleName = `<h3>${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
     return vehicleImg + vehicleName
   }));
