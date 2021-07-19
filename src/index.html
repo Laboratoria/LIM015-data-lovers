@@ -107,12 +107,14 @@
 
   <!-- second view start about div Films-->
   <!-- ESTE ID secondView NO SE ESTA USANDO-->
+  
   <section id="secondView">
     <label for="InputSearchMovie" class="InputSearchMovie">Search the movie:
       <input id="InputSearchMovie" type="search" placeholder="  🔎 search " /></label>
-
+    <p class="resultAverage" id="resultAverage"></p>
     <div id="dropdown" class="dropdown">
-      <button id="dropbtn" class="dropbtn">≡</button>
+      <button id="dropbtn" class="dropbtn"><img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAtklEQVRoQ+2VMQ6AMAzE0p/Dy2FhBU5YUYVq5l5I7FQd9fNv/Lz/coDZBjWgAUjAFYIAcVwDGCEssISBA0Ki8UfIiQEHgAo0AAH2xpM70NsBrO4AECCOawAjhAUSA90PWdLD7ZhJ2AFetiSBuLYBeM1640hfb2tZdQfIOPWd0kAf26xyYuDrQ7ZX1Za18f2UAzyw00CyWMkKJXWmnXGAaeivH2tAA5CAKwQB4rgGMEJYQAMQII6f3e8QMe1aHNkAAAAASUVORK5CYII=" /></button>
       <select id="myDropdown" class="dropdown-content">
         <option value="empty" selected>Choose one:</option>
         <option value="NameOrderMore" class="filters">Order by Name (A-Z)</option>
@@ -123,7 +125,6 @@
         <option value="RdOrderLess">Order by oldest movie</option>
       </select>
     </div>
-    <p class="resultAverage" id="resultAverage"></p>
     <div id="movieList"></div>
   </section>
   <!-- second view end -->
