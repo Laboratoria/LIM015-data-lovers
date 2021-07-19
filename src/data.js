@@ -14,7 +14,6 @@ function filterData(data, condition) {
    
 });
     return arrayPokemon;
-
 }
 
 
