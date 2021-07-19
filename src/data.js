@@ -157,13 +157,13 @@ export const getVehicles = arr => {
 //obtener la info de un personaje por su id
 export const filterPeople = (filmsCopy, idMovie, idPeople) => {
   return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.people)[0].filter(el => el.id === idPeople).map(el => {
-    return `<h3>Character Name: ${el.name}</h3>
+    return `<div class="myModal"><span class="close">&times;</span><h3>Character Name: ${el.name}</h3>
       <img src="${el.img}" />
       <p>Gender: ${el.gender}</p>
       <p>Age: ${el.age}</p>
       <p>Eye color: ${el.eye_color}</p>
       <p>Hair color: ${el.hair_color}</p>
-      <p>Specie: ${el.specie}</p>`
+      <p>Specie: ${el.specie}</p></div>`
   }
   )
 }
@@ -171,12 +171,12 @@ export const filterPeople = (filmsCopy, idMovie, idPeople) => {
 //obtener la info del vehiculo por su id
 export const filterVehicle = (filmsCopy, idMovie, idPeople) => {
   return filmsCopy.filter(element => element.id === idMovie).map(elem => elem.vehicles)[0].filter(el => el.id === idPeople).map(el => {
-    return `<h3>Vehicle Name: ${el.name}</h3>
+    return `<div class="myModal"><span class="close">&times;</span><h3>Vehicle Name: ${el.name}</h3>
       <img src="${el.img}" />
       <p>Description: ${el.description}</p>
       <p>Vehicle Class: ${el.vehicle_class}</p>
       <p>Vehicle Length: ${el.length}</p>
-      <p>Pilot: ${el.pilot.name}</p>`
+      <p>Pilot: ${el.pilot.name}</p></div>`
   }
   )
 }

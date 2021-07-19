@@ -38,7 +38,9 @@ navMovies.addEventListener("click", () => {
     resultAverage.style.display = "block";
     resultAverage.innerHTML = `The average score according to films critics is ${getAverage(filmsCopy)} of 100`;
     document.querySelector(".home").style.display = "flex";
-    thirdSlide()
+    thirdSlide();
+    //agregado para que comience desde el inicio de la sgte pantalla
+    startFromBeginning();
 })
 //ocultar el dopdrown y mostrar
 btnDropdown.addEventListener("click", () => {
@@ -59,7 +61,7 @@ dropDown.addEventListener("change",
         if (e.target.value === "RtScoreOrderLess") { movieList.innerHTML = setMoviesTitle(ratingScoreLess(filmsCopy)).join("") }
         if (e.target.value === "RdOrderMore") { movieList.innerHTML = setMoviesTitle(lastestRealeaseDate(filmsCopy)).join("") }
         if (e.target.value === "RdOrderLess") { movieList.innerHTML = setMoviesTitle(realeaseDateOld(filmsCopy)).join("") }
-        thirdSlide()
+        thirdSlide();
     })
 //funcion para input search
 getInputSearchMovie.addEventListener("keyup", (e) => {
@@ -73,6 +75,8 @@ getInputSearchMovie.addEventListener("keyup", (e) => {
 function thirdSlide() {
     const eachMovie = document.querySelectorAll(".movieItem");
     eachMovie.forEach(element => element.addEventListener("click", () => {
+        //agregado para que comience desde el inicio de la sgte pantalla
+        startFromBeginning();
         thirdView.style.display = "flex"
         //moviesListComplete.style.display = "none"
         const movieId = element.getAttribute("id")
@@ -115,6 +119,14 @@ function thirdSlide() {
             )
         }))
     }))
+}
+//que comience desde arriba
+function startFromBeginning() {
+    window.scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+});
 }
 //boton de inicio (home)
 document.querySelector(".home").addEventListener("click", () =>location.reload());

@@ -266,6 +266,7 @@
 }
 .dropbtn:hover, .dropbtn:focus {
   background-color:rgb(17, 77, 69);
+  cursor: pointer;
 }
 .dropdown-content {
   position: fixed;
@@ -331,6 +332,7 @@
   transform: scale(1.2);
   transition: transform .2s;
   filter: blur(0px);
+  cursor: pointer;
 }
 /* second view about Films end */
 
@@ -441,6 +443,28 @@
   height: 150px;
 }
 /* thirdView end */
+
+/*fourthView start*/
+#infoInModal{
+  background-color: #fec89a;
+  width: 50%;
+  height: 50%;
+  display: flex;
+}
+.myModal{
+  margin: auto;
+}
+.close{
+  display: flex;
+  justify-content: right;
+}
+.close:hover,
+.close:focus {
+  cursor: pointer;
+  background-color: tomato;
+  border-radius: 3px solid black;
+}
+/*fourthView end*/
 
 /* footer start */
 footer {

@@ -157,7 +157,7 @@ export default {
         {
           "id": "26361a2c-32c6-4bd5-ae9c-8e40e17ae28d",
           "name": "Pazu's Mines",
-          "img": "",
+          "img": "https://i.pinimg.com/originals/bc/4e/35/bc4e35ecf44cba51ea3f64d873e21085.jpg",
           "climate": "Dry",
           "terrain": "Hill",
           "surface_water": "0",
@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b905ee1c-fa12-4df3-83d9-a2290104d84e/d83stbx-d6b12b51-2b59-4279-8973-f6956681bb12.jpg/v1/fill/w_1024,h_1024,q_75,strp/chibi_totoro_and_his_friend__the_yellow_butterfly_by_pocketsizedobserver_d83stbx-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcL2I5MDVlZTFjLWZhMTItNGRmMy04M2Q5LWEyMjkwMTA0ZDg0ZVwvZDgzc3RieC1kNmIxMmI1MS0yYjU5LTQyNzktODk3My1mNjk1NjY4MWJiMTIuanBnIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3Gns2dQAu3ZEOizDuJ0vh5goVdZKKi_mrR6scpSsfe8",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -666,7 +666,7 @@ export default {
         {
           "id": "dbeeaecb-7817-4b8b-90ca-edc432d3033e",
           "name": "Taeko's House",
-          "img": "https://lh3.googleusercontent.com/proxy/TzFttYLl5wvwK4s4_bGaHmf5y1Y7PZOcRDFVFkO5lWB2CqzLweaWEyBD7JLItgWzk168eKPevRL54joaZYIyfWMYtosSgA", 
+          "img": "https://wallpaperaccess.com/full/3701618.jpg", 
           "climate": "Continental",
           "terrain": "River",
           "surface_water": "40",
@@ -1356,7 +1356,7 @@ export default {
         {
           "id": "3042818d-a8bb-4cba-8180-c19249822d57",
           "name": "Cat King",
-          "img": "https://i.pinimg.com/originals/3b/e1/c3/3be1c3b936c8a6236767e9c59960e168.gif",
+          "img": "https://pbs.twimg.com/media/EcBLt75UYAAl8gO.jpg",
           "gender": "Male",
           "age": "87",
           "eye_color": "Emerald",
