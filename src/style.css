@@ -239,6 +239,21 @@
   align-self: center;
 }
 
+.home{
+  position: relative;
+  background-color:rgb(235, 187, 17);
+  width: 5%;
+  text-align: center;
+  border-radius: 0 0 0 20px;
+  display: none;
+  justify-content: right;
+  border: 1px black solid;
+  font-size: 20px;
+  padding: 14px;
+  position: absolute;
+  right: 0%;
+}
+
 .dropbtn{
   background-color:rgb(235, 187, 17);
   color: white;
@@ -299,7 +314,7 @@
   border: 2px solid black;
   margin: 20px;
   height: 40%;
-  filter: blur(0.5px);
+  filter: blur(0.4px);
 }
 .movieItem img{
   display: flex;
