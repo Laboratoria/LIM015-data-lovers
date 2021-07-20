@@ -56,7 +56,14 @@ header {
 
 .menu__link0 {
     border-bottom: #ff0800 10px solid;
+
 }
+
+.menu__link0 img{
+    width: 30px;
+    height: 30px;
+}
+
 
 .menu__link0:hover {
     background: #ff0800;
@@ -399,6 +406,8 @@ header {
     align-items: center;
     cursor: pointer;
     font-weight: bold;
+
+
 }
 
 #listaPokemon {
@@ -459,7 +468,6 @@ header {
     justify-content: space-evenly;
     background-position: center;
 }
-
 
 /* ESTADISTICAS */
 

@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
 
 // Importando Graficos a usar
 google.charts.load('current', { packages: ['corechart', 'bar'] }); //eslint-disable-line
@@ -13,25 +13,6 @@ btnMenu.addEventListener("click", function() {
     menu.classList.toggle("mostrar");
 });
 
-const subMenuBtn1 = document.querySelectorAll(".submenu1-btn1");
-for (let i = 0; i < subMenuBtn1.length; i++) {
-    subMenuBtn1[i].addEventListener("click", function() {
-        if (window.innerWidth < 1024) {
-            const subMenu = this.nextElementSibling; /* definir constante que me permita pasar al otro item*/
-            const height = subMenu.scrollheight;
-            if (subMenu.classList.contains("desplegar")) {
-                subMenu.classList.remove("desplegar");
-                subMenu.removeAttribute("style");
-            } else {
-                subMenu.classList.add("desplegar");
-                subMenu.style.height = height + "px";
-            }
-        }
-
-    });
-}
-
-//la funcion onload 
 window.onload = function() {
 
     let pokemones = filtrarData(data.pokemon, ''); //ingresamos a la data
@@ -39,8 +20,7 @@ window.onload = function() {
     document.querySelector('#txtBuscar').value = ""; // limpiar la caja de busqueda    
 }
 
-
-function mostrarPokemones(data) {
+export function mostrarPokemones(data) {
     const listaPokemones = document.getElementById('listaPokemon'); // Recuperar tag padre
 
     for (let i = 0; i < data.length; i++) {
@@ -49,6 +29,7 @@ function mostrarPokemones(data) {
         let nombre = data[i].name;
         let numero = data[i].num;
         // let types = data[i].type;
+
 
         //etiqueta padre figure
         let etiquetaFigure = document.createElement("figure"); // Crear tag Figure
@@ -109,6 +90,74 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
     });
 }
+
+
+/* manipulacion del menu funcion para seleccionar region*/
+
+const regionPoke = document.querySelectorAll(".menu__link2"); 
+
+for (let i = 0; i < regionPoke.length; i++) {
+    
+    regionPoke[i].addEventListener("click", (e) => {
+       
+       const captureRegion = e.target.id;
+
+       const mostrarRegion = data.pokemon.filter(elemento => {
+        
+       });
+
+       /*limpiarContenido(document.getElementById("listaPokemon"));
+
+       //console.log(poke);
+       mostrarPokemones(mostrarRegion);*/
+
+
+});
+}
+
+
+
+/* manipulacion del menu funcion para el ordenado de datos*/
+
+const ordenarNombres = document.querySelectorAll(".menu__link1"); 
+
+for (let i = 0; i < ordenarNombres.length; i++) {
+    
+    ordenarNombres[i].addEventListener("click", (e) => {
+       
+       const ascDesc = e.target.id;
+       
+
+      const pokeAscDesc = data.pokemon.sort((a,b) => {
+        let aNombre = a.name;
+        let bNombre = b.name;
+
+          if(ascDesc == "creciente") {
+
+            if (aNombre > bNombre) {
+                return 1;
+            }else if (aNombre < bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          } else if(ascDesc == "decreciente") { 
+            if (aNombre < bNombre) {
+                return 1;
+            } else if (aNombre > bNombre) {
+                return -1;
+            } else{
+                return 0;
+            }
+          }
+       });
+
+       limpiarContenido(document.getElementById("listaPokemon"));
+
+       mostrarPokemones(pokeAscDesc);
+    });
+}
+
 
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
@@ -313,12 +362,6 @@ estadisticas.addEventListener("click", (e) => {
     });
     // funcion de los top de con mayor nivel  de Vida
     estHp.addEventListener("click", () => {
-        // console.log(calcularEstadVida(data.pokemon));
-        // const top10 = calcularEstadVida(data.pokemon);
-
-        // estResultado.innerHTML =
-        //     `<p>${top10}</p>`;
-
         const top10 = calcularEstadVida(data.pokemon);
 
         drawBarChart(top10, estResultado, 'NIVEL DE VIDA');
@@ -358,15 +401,32 @@ function limpiarContenido(limpiar) {
     }
 }
 
-// implementando modal
+// implementando moda
+document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
+    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+});
 // document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-// document.getElementById("region_johto").addEventListener("click", function() {
-//     buscarPorRegion("johto");
+/*function buscarPorRegion(region) {
+
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    console.table(pokemons);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
+*/
+
+document.getElementById("region_johto").addEventListener("click", function() {
+    buscarPorRegion("johto");
+});
+
+document.getElementById("region_kanto").addEventListener("click", function() {
+    buscarPorRegion("kanto");
+});
+
+// document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
+//     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-// document.getElementById("region_kanto").addEventListener("click", function() {
-//     buscarPorRegion("kanto");
-// });

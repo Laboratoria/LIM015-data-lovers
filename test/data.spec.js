@@ -1,9 +1,9 @@
-import { filtrarData, searchPokemon } from '../src/data.js';
+
+import { filtrarData, ordenarPokemon,searchPokemon } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
 
 describe('filtrarData', () => {
-
     // Resultados
     const tipoPokemon = data.pokemon.filter(pokemon => pokemon.type.includes('water'));
 
@@ -18,9 +18,11 @@ describe('filtrarData', () => {
     it('Filtra todos los pokemone de tipo agua', () => {
         expect(filtrarData(data.pokemon, 'water')).toEqual(tipoPokemon);
     });
+
 });
 
 describe('searchPokemon', () => {
+
 
     // Resultados
     const buscarNombre = data.pokemon.filter(pokemon => pokemon.name.includes('pikachu'));
@@ -42,44 +44,10 @@ describe('searchPokemon', () => {
     it('Buscar por el numero pikachu 25', () => {
         expect(searchPokemon(data.pokemon, 25)).toEqual(buscarNumero);
     });
+
+
 });
 
-// describe('ordenarPokemon', () => {
-//     // Prueba 1 : ¿Es función?
-//     it('Es una funcion', () => {
-//         expect(typeof ordenarPokemon).toBe('function');
-//     });
-
-//     // Prueba 2 : Ordenar Data
-//     it('Debe retornar "Charmander,Ivysaur,Pikachu"', () => {
-
-
-//         const data = [{
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
-//         const sortBy = [{
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
-
-//         const sortOrder = "Ascendent";
-
-//         expect(ordenarPokemon(data.name, sortOrder)).toEqual(sortBy);
-//     })
-// });
 
 
 // describe('anotherExample', () => {
@@ -148,4 +116,4 @@ describe('searchPokemon', () => {
 //     it('Debería retornar "MasterCard" para "5556364607935616"', () => {
 //         expect(validator.getIssuer("5556364607935616")).toBe("MasterCard"); // escribe aquí tu test
 //     });
-// });
+//});

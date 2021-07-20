@@ -1,3 +1,10 @@
+
+/*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
+Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
+procesar y manipular datos (tus funciones)*/
+import data from './data/pokemon/pokemon.js';
+import {mostrarPokemones}from './main.js';
+
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
     let arrayPokemon = [];
@@ -14,6 +21,7 @@ function filtrarData(data, condition) {
     return arrayPokemon;
 
 }
+
 
 // funcion para ordenar de manera ascendente o descendente
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
@@ -50,6 +58,7 @@ export const calculoEstadistico = (data) => {
     let arrayChart = [];
 
     top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
+
 
     // Crear estructura para el grafico
     arrayChart = top10Pokemon.map(pokemon => {
@@ -126,17 +135,16 @@ export const searchPokemon = (data, buscarPokemon) => {
     }
     return arrayBuscar;
 };
+function limpiarContenidoBuscador() {
+    document.getElementById("listaPokemon").innerHTML = "";
+}
 
-//falta que funcione
-// function buscarPorRegion(region) {
+function buscarPorRegion(region) {
 
-//     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-//     console.table(pokemons);
-//     limpiarContenidoBuscador();
-//     mostrarPokemones(pokemons);
-// }
-
-
+    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemons);
+}
 export {
-    filtrarData
+    filtrarData, buscarPorRegion
 }
