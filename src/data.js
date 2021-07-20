@@ -17,6 +17,7 @@ function filtrarData(data, condition) {
 
 // funcion para ordenar de manera ascendente o descendente
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
+
     let ordenarData = [];
     ordenarData = data.sort((asc, desc) => {
         const nombreAsc = asc[sortBy];
@@ -106,7 +107,7 @@ export const calcularEstadVida = (data) => {
     });
 
     // Agregar cabecera al inicio del arreglo
-    //arrayChart.unshift(['Pokemon', 'vida', ]);
+    arrayChart.unshift(['Pokemon', 'vida', ]);
 
     return arrayChart;
 };

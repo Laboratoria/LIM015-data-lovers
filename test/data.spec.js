@@ -46,12 +46,12 @@ describe('searchPokemon', () => {
 
 // describe('ordenarPokemon', () => {
 //     // Prueba 1 : ¿Es función?
-//     it('Es una funcnion', () => {
+//     it('Es una funcion', () => {
 //         expect(typeof ordenarPokemon).toBe('function');
 //     });
 
 //     // Prueba 2 : Ordenar Data
-//     it('deberia retornar "Charmander,Ivysaur,Pikachu"', () => {
+//     it('Debe retornar "Charmander,Ivysaur,Pikachu"', () => {
 
 
 //         const data = [{
@@ -64,7 +64,7 @@ describe('searchPokemon', () => {
 //                 name: 'Pikachu',
 //             }
 //         ];
-//         const result = [{
+//         const sortBy = [{
 //                 name: 'Charmander',
 //             },
 //             {
@@ -75,14 +75,10 @@ describe('searchPokemon', () => {
 //             }
 //         ];
 
-//         const sortOrder = "Ascendente";
+//         const sortOrder = "Ascendent";
 
-//         expect(funciones.sortData(data, sortOrder)).toStrictEqual(result);
+//         expect(ordenarPokemon(data.name, sortOrder)).toEqual(sortBy);
 //     })
-
-//     it('deberia ordenar de A-Z ', () => {
-//         expect(ordenarPokemon(data.pokemon, "name", "decreciente")).toEqual(ordenarAZ);
-//     });
 // });
 
 
