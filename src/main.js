@@ -118,45 +118,44 @@ for (let i = 0; i < regionPoke.length; i++) {
 
 
 /* manipulacion del menu funcion para el ordenado de datos*/
+// const ordenarNombres = document.querySelectorAll(".menu__link1"); 
 
-const ordenarNombres = document.querySelectorAll(".menu__link1"); 
-
-for (let i = 0; i < ordenarNombres.length; i++) {
+// for (let i = 0; i < ordenarNombres.length; i++) {
     
-    ordenarNombres[i].addEventListener("click", (e) => {
+//     ordenarNombres[i].addEventListener("click", (e) => {
        
-       const ascDesc = e.target.id;
+//        const ascDesc = e.target.id;
        
 
-      const pokeAscDesc = data.pokemon.sort((a,b) => {
-        let aNombre = a.name;
-        let bNombre = b.name;
+//       const pokeAscDesc = data.pokemon.sort((a,b) => {
+//         let aNombre = a.name;
+//         let bNombre = b.name;
 
-          if(ascDesc == "creciente") {
+//           if(ascDesc == "creciente") {
 
-            if (aNombre > bNombre) {
-                return 1;
-            }else if (aNombre < bNombre) {
-                return -1;
-            } else{
-                return 0;
-            }
-          } else if(ascDesc == "decreciente") { 
-            if (aNombre < bNombre) {
-                return 1;
-            } else if (aNombre > bNombre) {
-                return -1;
-            } else{
-                return 0;
-            }
-          }
-       });
+//             if (aNombre > bNombre) {
+//                 return 1;
+//             }else if (aNombre < bNombre) {
+//                 return -1;
+//             } else{
+//                 return 0;
+//             }
+//           } else if(ascDesc == "decreciente") { 
+//             if (aNombre < bNombre) {
+//                 return 1;
+//             } else if (aNombre > bNombre) {
+//                 return -1;
+//             } else{
+//                 return 0;
+//             }
+//           }
+//        });
 
-       limpiarContenido(document.getElementById("listaPokemon"));
+//        limpiarContenido(document.getElementById("listaPokemon"));
 
-       mostrarPokemones(pokeAscDesc);
-    });
-}
+//        mostrarPokemones(pokeAscDesc);
+//     });
+// }
 
 
 //funcion para pora ordednar A-Z y Z-A
@@ -398,9 +397,9 @@ function limpiarContenido(limpiar) {
 }
 
 // implementando moda
-document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
-    document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
-});
+// document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
+//     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
+// });
 // document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
