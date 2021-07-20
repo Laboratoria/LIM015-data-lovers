@@ -2,6 +2,7 @@
 import { filtrarData, ordenarPokemon,searchPokemon } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
+
 describe('filtrarData', () => {
     // Resultados
     const tipoPokemon = data.pokemon.filter(pokemon => pokemon.type.includes('water'));
@@ -22,63 +23,31 @@ describe('filtrarData', () => {
 
 describe('searchPokemon', () => {
 
+
+    // Resultados
     const buscarNombre = data.pokemon.filter(pokemon => pokemon.name.includes('pikachu'));
+
+    const buscarNumero = data.pokemon.filter(pokemon => parseInt(pokemon.num) == parseInt('025'));
 
     it('Es una función', () => {
         expect(typeof searchPokemon).toBe('function');
     });
 
-    it('Busca un pokemon', () => {
-        expect(searchPokemon(data.pokemon, '')).toEqual(data.pokemon);
+    it('Filtra todos los pokemones', () => {
+        expect(filtrarData(data.pokemon, '')).toEqual(data.pokemon);
     });
 
-    it('Buscar los pokemones por nombre', () => {
-        expect(searchPokemon(data.pokemon, 'pikachu')).toEqual(buscarNombre);
+    it('Buscar por el nombre pikachu ', () => {
+        expect(searchPokemon(data.pokemon, 'pika')).toEqual(buscarNombre);
+    });
+
+    it('Buscar por el numero pikachu 25', () => {
+        expect(searchPokemon(data.pokemon, 25)).toEqual(buscarNumero);
     });
 
 
 });
 
-// describe('ordenarPokemon', () => {
-//     // Prueba 1 : ¿Es función?
-//     it('Es una funcnion', () => {
-//         expect(typeof ordenarPokemon).toBe('function');
-//     });
-
-//     // Prueba 2 : Ordenar Data
-//     it('deberia retornar "Charmander,Ivysaur,Pikachu"', () => {
-
-
-//         const data = [{
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
-//         const result = [{
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
-
-//         const sortOrder = "Ascendente";
-
-//         expect(funciones.sortData(data, sortOrder)).toStrictEqual(result);
-//     })
-
-//     it('deberia ordenar de A-Z ', () => {
-//         expect(ordenarPokemon(data.pokemon, "name", "decreciente")).toEqual(ordenarAZ);
-//     });
-// });
 
 
 // describe('anotherExample', () => {
