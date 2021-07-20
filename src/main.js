@@ -2,7 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
 
 // Importando Graficos a usar
-google.charts.load('current', { packages: ['corechart', 'bar'] });
+google.charts.load('current', { packages: ['corechart', 'bar'] }); //eslint-disable-line
 
 /*menu desplegable*/
 const btnMenu = document.querySelector("#btnMenu");
@@ -209,22 +209,19 @@ function verFichaTecnica(datapokemon) {
     });
 
     const movimientoRapidoHtml = datapokemon['quick-move'].map(movimiento => {
-
-        return `<li>${movimiento.name}</li>
-        <li>${movimiento.type}</li>
-        <li>${movimiento["base-damage"]}</li>
-        <li>${movimiento["energy"]}</li>
-        <li>${movimiento["move-duration-seg"]}</li><br>`;
+        return `<tr><td>${movimiento.name}</td>
+        <td>${movimiento.type}</td>
+        <td>${movimiento["base-damage"]}</td>
+        <td>${movimiento["energy"]}</td>
+        <td>${movimiento["move-duration-seg"]}</td></tr>`;
     });
 
     const ataqueEspecialHtml = datapokemon['special-attack'].map(ataque => {
-
-        return `<li>${ataque.name}</li>
-        <li>${ataque.type}</li>
-        <li>${ataque["base-damage"]}</li>
-        <li>${ataque.energy}</li>
-        <li>${ataque["move-duration-seg"]}</li><br>`;
-
+        return `<tr><td>${ataque.name}</td>
+        <td>${ataque.type}</td>
+        <td>${ataque["base-damage"]}</td>
+        <td>${ataque["energy"]}</td>
+        <td>${ataque["move-duration-seg"]}</td></tr>`;
     });
 
     fichaTecnica.innerHTML =
@@ -246,10 +243,10 @@ function verFichaTecnica(datapokemon) {
             <table class="tablaFichaT" width="100%">
                 <tr>
                     <td width="50%">
-                        <span>Resistente</span>
-                        <ul>
-                            ${resistenciaHtml.join("")}
-                        </ul>
+                    <table>
+                        <tr><td coslpam=”5”> Resistencia</td> </tr>
+                            <tr><td>${resistenciaHtml.join("")}</td></tr>
+                        </table>
                     </td>
 
                     <td width="50%">
@@ -262,27 +259,32 @@ function verFichaTecnica(datapokemon) {
             </table>
 
             <table class="tablaFichaT" width="100%">
-            <tr>
-            
-            <td> <span>Movimiento Rapido</span> </td>
-            <td> 
-            <ul> ${movimientoRapidoHtml.join("")} </ul>
-        
-            </td>
-            </tr>
+                <tr>
+                    <td colspan="5">MOVIMIENTO RAPIDO</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Base Daño</td>
+                    <td>Energia</td>
+                    <td>Duracion Movimiento Segundo</td>
+                </tr>
+                ${movimientoRapidoHtml.join("")}
             </table>
-        
+                    
             <table class="tablaFichaT" width="100%">
-            <tr>
-            <td> <span>Ataque Especial</span></td>
-            <td> <ul> ${ataqueEspecialHtml.join("")}</ul></td> 
-
-
-
-            </tr>
-
+                <tr>
+                    <td colspan="5">ATAQUE ESPECIAL</td>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Tipo</td>
+                    <td>Base Daño</td>
+                    <td>Energia</td>
+                    <td>Duracion Movimiento Segundo</td>
+                </tr>
+                ${ataqueEspecialHtml.join("")}
              </table>
-
 
         </section>`;
 
@@ -298,7 +300,7 @@ function verFichaTecnica(datapokemon) {
 }
 
 
-// funcnion para mostrar las estadisticas
+//-------------------------funcnion para mostrar las estadisticas ---------------------------
 
 const estadisticas = document.querySelector(".menu__link4");
 
@@ -345,7 +347,7 @@ estadisticas.addEventListener("click", (e) => {
         // console.log(maximoValor(data));
         const top10 = calculoEstadistico(data.pokemon);
         // console.log(top10);
-
+        // estResultado.innerHTML =`<p>${top10}</p>`;
         drawBarChart(top10, estResultado, 'PUNTOS DE COMBATE'); //argumentos
     });
 
@@ -354,8 +356,9 @@ estadisticas.addEventListener("click", (e) => {
         // console.log(maximoValor(data));
         const top10 = calculoEstadPeso(data.pokemon);
         // console.log(top10);
+        // estResultado.innerHTML =`<p>${top10}</p>`;
 
-        drawBarChart(top10, estResultado, 'MAS PESADOS'); //argumentos
+        drawBarChart(top10, estResultado, 'PESO'); //argumentos
     });
     // funcion de los top de con mayor nivel  de Vida
     estHp.addEventListener("click", () => {
@@ -368,7 +371,7 @@ estadisticas.addEventListener("click", (e) => {
 // implementacion de la funcion chart
 function drawBarChart(pokemon10, elemento, titulo) {
 
-    let data = google.visualization.arrayToDataTable(pokemon10);
+    let data = google.visualization.arrayToDataTable(pokemon10); //eslint-disable-line
 
     let options = {
         title: `TOP 10 SEGUN ${titulo}`,
@@ -382,7 +385,8 @@ function drawBarChart(pokemon10, elemento, titulo) {
             title: 'pokemon'
         }
     };
-
+    //omite la linea debajo
+    //eslint-disable-next-line
     let chart = new google.visualization.BarChart(elemento);
 
     chart.draw(data, options);
