@@ -140,7 +140,10 @@ export const showLocationsInformation = (movies) => {
 //extraer el nombre e imagen de los personajes (todos, sin excepcion)
 export const getPeople = arr => {
   return arr.map(e => e.people.map(el => {
-    const peopleInfo = `<div class="divTopic" data-id="${el.id}"><img class="character" src="${el.img}" alt="character" /><h3 class ="namecharacter">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3></div>`;
+    const peopleInfo = `<div class="divTopic" data-id="${el.id}">
+    <img class="character" src="${el.img}" alt="character"/>
+    <h3 class ="namecharacter">${el.name.charAt(0).toUpperCase() + el.name.slice(1)}</h3>
+    </div>`;
     return peopleInfo;
   }));
 }

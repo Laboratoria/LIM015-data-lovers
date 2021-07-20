@@ -14,10 +14,10 @@ const filmsCopy = [...data.films];
 const getInputSearchMovie = document.querySelector("#InputSearchMovie");
 const resultAverage = document.querySelector("#resultAverage");
 //const moviesListComplete = document.querySelector("#sectionMovies");
-const divsAboutCartoons = document.querySelector("#cartoons");
-const divsAboutVehicles = document.querySelector("#vehiclesName");
+const divsAboutCartoons = document.querySelector("#cartoons-container");
+const divsAboutVehicles = document.querySelector("#vehicle-container");
 const personalizedInfoOnTopic = document.querySelector("#infoInModal");
-const locationsOfEachMovie = document.querySelector("#locationsOfEachMovie")
+const locationsOfEachMovie = document.querySelector("#location-container")
 const secondView = document.querySelector("#secondView");
 const moviesInfoOnly = document.querySelector("#moviesInfoOnly");
 const thirdView = document.querySelector("#thirdView");
@@ -84,7 +84,7 @@ function thirdSlide() {
         moviesInfoOnly.innerHTML = descriptionMovie(movieInformation)
         moviesInfoOnly.style.display = "flex"
         const getPeopleResult = getPeople(movieInformation)[0];
-        locationsOfEachMovie.innerHTML = showLocationsInformation(movieInformation)
+        locationsOfEachMovie.innerHTML += showLocationsInformation(movieInformation)
         secondView.style.display = "none";
 
         getPeopleResult.forEach(element =>
@@ -123,11 +123,11 @@ function thirdSlide() {
 //que comience desde arriba
 function startFromBeginning() {
     window.scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-});
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
 }
 //boton de inicio (home)
-document.querySelector(".home").addEventListener("click", () =>location.reload());
+document.querySelector(".home").addEventListener("click", () => location.reload());
 

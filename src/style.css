@@ -375,29 +375,45 @@
 }
  /* Third view title and description  */
  .containermovies{
-  background-image: url("./imagenes/bgScreen2.jpeg");
+  background-image: url("./images/one.jpeg");
+ }
+ .moviesInfo{
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  border-radius: 50px;
+  padding: 20px 100px 60px 100px;
+  background-color: #496c97
  }
 .moviesInfoOnly{
   display: none;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 320px 100px 320px;
   font-size: 22px;
+  padding: 80px 150px 50px 150px;
+  
 }
 .sipnosistitle{
   display: flex;
   justify-content: center;
+  font-size: 25px;
+}
+.moviedirector{
+  font-size: 18px;
+}
+.movieproducer{
+  font-size: 18px;
 }
 .titlemovie {
   display: flex;
   justify-content: center; 
-  font-size: 22px;
+  font-size: 23px;
+  padding-top: 50px;
 }
 .movieimage{
    display: flex;
     justify-content: center;
     height: 350px;
-    margin: 85px;
+    margin: 45px;
+    object-fit: cover;
     
 }
 .poster{
@@ -405,73 +421,93 @@
   border-radius: 15px;
   width: 280px;
   height: 380px;
+  object-fit: cover;
 }
-.cartoons{
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  row-gap: 35px;
-  column-gap: 80px;
-  padding: 45px 45px 45px 45px;
-  background-color: #ddb08b; */
-  display: flex;
+
+.cartoons {
+  padding: 85px 62px 45px;
+  align-items: center;
+  margin: 150px;
+  border-radius: 50px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+  background-color: #95adb6;
+}
+#cartoons-container{
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     row-gap: 35px;
-    column-gap: 80px;
-    padding: 85px 105px 45px 105px;
-    align-items: center;
-    margin: 100px;
-    border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    background-color: #ddb08b
-    
+    column-gap: 28px;  
 }
 .subtitles{
+  padding-bottom: 48px;
   text-align: center;
 
 }
-#locationsOfEachMovie{
+.divTopic {
+  width: 22%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
-  padding: 45px 45px 45px 45px;
-  row-gap: 35px;
-  column-gap: 80px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  background-color: #C5C6C7;
-  margin: 100px;
-  border-radius: 50px;
+  align-items: center;
 }
-#vehiclesName{
-  row-gap: 35px;
-  column-gap: 80px;
-  display: contents;
+#locationsOfEachMovie{
+  padding: 85px 62px 45px;
+    align-items: center;
+    margin: 150px;
+    border-radius: 50px;
+    box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+    background-color: #7e7f83;
+}
+.location-container{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-  background-color: #d3c6f3 ;
-  margin: 100px;
+  row-gap: 35px;
+  column-gap: 28px;
+}
+
+#vehiclesName{
+  padding: 85px 62px 45px;
+  align-items: center;
+  margin: 150px;
   border-radius: 50px;
-  padding: 45px 45px 45px 45px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 5px 15px 0px;
+  background-color: #8da1b9 ;
+}
+.vehicle-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 35px;
+  column-gap: 28px;
 }
 .character {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  margin-bottom: 16px;
 }
 .namecharacter{
   text-align: center;
 }
 
+.movielocation{
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .locationimage{
   width: 150px;
   height: 150px;
+  object-fit: cover;
 }
 .vehicleimage{
   width: 150px;
   height: 150px;
+  object-fit: cover;
 }
 /* thirdView end */
 
