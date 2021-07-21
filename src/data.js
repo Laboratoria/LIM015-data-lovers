@@ -83,7 +83,7 @@ export const descriptionMovie = (arr) => {
   return `<section class="moviesInfo" id="moviesInfo">
     <div class="movieInformation" id="movieInformation">
     <div class="titlemovie">
-    <h2>${arr[0].title}</h2></div> 
+    <h2 class="titles">${arr[0].title}</h2></div> 
     </div>
 
     <div class="movieimage">
