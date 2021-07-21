@@ -2,6 +2,7 @@ import data from './data/pokemon/pokemon.js';
 import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
 
 // Importando Graficos a usar
+ //eslint-disable-next-line
 google.charts.load('current', { packages: ['corechart', 'bar'] }); //eslint-disable-line
 
 /*menu desplegable*/
@@ -94,17 +95,17 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
 /* manipulacion del menu funcion para seleccionar region*/
 
-const regionPoke = document.querySelectorAll(".menu__link2"); 
+// const regionPoke = document.querySelectorAll(".menu__link2"); 
 
-for (let i = 0; i < regionPoke.length; i++) {
+// for (let i = 0; i < regionPoke.length; i++) {
     
-    regionPoke[i].addEventListener("click", (e) => {
+//     regionPoke[i].addEventListener("click", (e) => {
        
-       const captureRegion = e.target.id;
+//        const captureRegion = e.target.id;
 
-       const mostrarRegion = data.pokemon.filter(elemento => {
+//        const mostrarRegion = data.pokemon.filter(elemento => {
         
-       });
+//        });
 
        /*limpiarContenido(document.getElementById("listaPokemon"));
 
@@ -112,8 +113,8 @@ for (let i = 0; i < regionPoke.length; i++) {
        mostrarPokemones(mostrarRegion);*/
 
 
-});
-}
+//});
+//}
 
 
 
@@ -416,13 +417,22 @@ function limpiarContenido(limpiar) {
     mostrarPokemones(pokemons);
 }
 */
+function limpiarContenidoBuscador() {
+    document.getElementById("listaPokemon").innerHTML = "";
+}
 
 document.getElementById("region_johto").addEventListener("click", function() {
-    buscarPorRegion("johto");
+     let pokemonsFiltrados=buscarPorRegion("johto");
+     limpiarContenidoBuscador();
+     mostrarPokemones(pokemonsFiltrados);
+
+
 });
 
 document.getElementById("region_kanto").addEventListener("click", function() {
-    buscarPorRegion("kanto");
+    let pokemonsFiltrados=buscarPorRegion("kanto");
+    limpiarContenidoBuscador();
+    mostrarPokemones(pokemonsFiltrados);
 });
 
 // document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {

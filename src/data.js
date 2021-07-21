@@ -135,15 +135,13 @@ export const searchPokemon = (data, buscarPokemon) => {
     }
     return arrayBuscar;
 };
-function limpiarContenidoBuscador() {
-    document.getElementById("listaPokemon").innerHTML = "";
-}
+
 
 function buscarPorRegion(region) {
 
     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-    limpiarContenidoBuscador();
-    mostrarPokemones(pokemons);
+    console.log(pokemons);
+    return pokemons;
 }
 export {
     filtrarData, buscarPorRegion
