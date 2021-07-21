@@ -362,8 +362,6 @@ function limpiarContenido(limpiar) {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-const region = document.querySelectorAll(".menu__link2");
-
 function limpiarContenidoBuscador() {
     document.getElementById("listaPokemon").innerHTML = "";
 }
