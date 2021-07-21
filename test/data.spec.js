@@ -1,4 +1,4 @@
-import { filtrarData, searchPokemon } from '../src/data.js';
+import { filtrarData, searchPokemon, calculoEstadistico, ordenarPokemon, calculoEstadPeso, calcularEstadVida } from '../src/data.js';
 import data from '../src/data/pokemon/pokemon.js';
 
 
@@ -44,108 +44,67 @@ describe('searchPokemon', () => {
     });
 });
 
-// describe('ordenarPokemon', () => {
-//     // Prueba 1 : ¿Es función?
-//     it('Es una funcion', () => {
-//         expect(typeof ordenarPokemon).toBe('function');
-//     });
+describe('ordenarPokemon', () => {
 
-//     // Prueba 2 : Ordenar Data
-//     it('Debe retornar "Charmander,Ivysaur,Pikachu"', () => {
+    it('Es una funcion', () => {
+        expect(typeof ordenarPokemon).toBe('function');
+    });
 
+    it('Muestra todos los pokemones', () => {
+        expect(ordenarPokemon(data.pokemon, '')).toEqual(data.pokemon);
+    });
 
-//         const data = [{
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
-//         const sortBy = [{
-//                 name: 'Charmander',
-//             },
-//             {
-//                 name: 'Ivysaur',
-//             },
-//             {
-//                 name: 'Pikachu',
-//             }
-//         ];
+    it('Ordenar de A-Z', () => {
+        const ordenarAZ = ordenarPokemon(data.pokemon, 'name', 'creciente');
+        expect(ordenarAZ[0].name).toBe('abra');
+    });
 
-//         const sortOrder = "Ascendent";
+    it('Ordenar de Z-A', () => {
+        const ordenarZA = ordenarPokemon(data.pokemon, 'name', 'decreciente');
+        expect(ordenarZA[0].name).toBe('zubat');
+    });
 
-//         expect(ordenarPokemon(data.name, sortOrder)).toEqual(sortBy);
-//     })
-// });
+});
+
+describe('calculoEstadistico', () => {
 
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
+    it('Es una función', () => {
+        expect(typeof calculoEstadistico).toBe('function');
+    });
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
+    it('los top 10 segun CP', () => {
 
+        const top10CP = calculoEstadistico(data.pokemon.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10));
 
-// it('debería ser un objeto', () => {
-//     expect(typeof validator).toBe('object');
-// });
+        expect(top10CP[1]).toEqual(["mewtwo", 4178]);
+    });
 
-// describe('filtrarData.isValid', () => {
-//     it('debería ser una función', () => {
-//         expect(typeof validator.arrayPokemon).toBe('function');
-//     });
+});
 
-//     it('debería retornar true para "4083952015263"', () => {
-//         expect(validator.isValid("4083952015263")).toBe(true); //creando una prueba unitaria
-//     });
+describe('calculoEstadPeso', () => {
+    it('Es una función', () => {
+        expect(typeof calculoEstadPeso).toBe('function');
+    });
 
-//     it('debería retornar true para "79927398713"', () => {
-//         expect(validator.isValid("79927398713")).toBe(true); // escribe aquí tu test
-//     });
+    it('los top 10 segun Peso', () => {
 
-//     it('debería retornar false para "1234567890"', () => {
-//         expect(validator.isValid("1234567890")).toBe(false); // escribe aquí tu test
-//     });
-// });
+        const top10Peso = calculoEstadPeso(data.pokemon.sort((a, b) => (parseInt(b.size.weight) - parseInt(a.size.weight))).slice(0, 10));
 
-// describe('validator.maskify', () => {
-//     it('debería ser una función', () => {
-//         expect(typeof validator.maskify).toBe('function');
-//     });
+        expect(top10Peso[1]).toEqual(["snorlax", 460]);
+    });
+});
 
-//     it('Debería retornar "############5616" para "4556364607935616"', () => {
-//         expect(validator.maskify("4556364607935616")).toBe("############5616"); // escribe aquí tu test
-//     });
+describe('calcularEstadVida', () => {
+    it('Es una función', () => {
+        expect(typeof calcularEstadVida).toBe('function');
+    });
 
-//     it('Debería retornar "1" para "1"', () => {
-//         expect(validator.maskify("1")).toBe("1"); // escribe aquí tu test
-//     });
+    it('top 10 segun nivel de vida', () => {
 
-//     it('Debería retornar "######orld" para "helloworld"', () => {
-//         expect(validator.maskify("helloworld")).toBe("######orld"); // escribe aquí tu test
-//     });
-// });
-// describe('validator.getIssuer', () => {
-//     it('debería ser una función', () => {
-//         expect(typeof validator.getIssuer).toBe('function');
-//     });
+        const top10Vida = calcularEstadVida(data.pokemon.sort((a, b) =>
 
-//     it('Debería retornar "Visa" para "4556364607935616"', () => {
-//         expect(validator.getIssuer("4556364607935616")).toBe("Visa"); // escribe aquí tu test
-//     });
-
-//     it('Debería retornar "" para "1"', () => {
-//         expect(validator.getIssuer("1")).toBe(""); // escribe aquí tu test
-//     });
-
-//     it('Debería retornar "MasterCard" para "5556364607935616"', () => {
-//         expect(validator.getIssuer("5556364607935616")).toBe("MasterCard"); // escribe aquí tu test
-//     });
-// });
+            (parseInt(b.stats['max-hp'])) - parseInt(a.stats['max-hp'])).slice(0, 10));
+        expect(top10Vida[1]).toEqual(["blissey", 403])
+    });
+});

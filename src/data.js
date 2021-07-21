@@ -127,15 +127,14 @@ export const searchPokemon = (data, buscarPokemon) => {
     return arrayBuscar;
 };
 
-//falta que funcione
-// function buscarPorRegion(region) {
-
-//     let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-//     console.table(pokemons);
-//     limpiarContenidoBuscador();
-//     mostrarPokemones(pokemons);
-// }
-
+// function filtrar por  region
+export const ordenarPokemonRegion = (data, nombre, idRegion) => {
+    let arrayRegion = [];
+    arrayRegion = data.filter(pokemon => {
+        return pokemon.generation[nombre] == idRegion;
+    });
+    return arrayRegion;
+};
 
 export {
     filtrarData

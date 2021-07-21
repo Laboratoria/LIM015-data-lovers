@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, ordenarPokemonRegion } from './data.js';
 
 // Importando Graficos a usar
 google.charts.load('current', { packages: ['corechart', 'bar'] }); //eslint-disable-line
@@ -363,10 +363,18 @@ function limpiarContenido(limpiar) {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-// document.getElementById("region_johto").addEventListener("click", function() {
-//     buscarPorRegion("johto");
-// });
+const region = document.querySelectorAll(".menu__link2");
 
-// document.getElementById("region_kanto").addEventListener("click", function() {
-//     buscarPorRegion("kanto");
-// });
+for (let j = 0; j < region.length; j++) {
+    region[j].addEventListener("click", (e) => {
+        document.getElementById("listaPokemon").style.display = "block";
+        document.querySelector(".estadisticas").style.display = "none";
+
+        const idRegion = e.target.id;
+        const ordenarPok = ordenarPokemonRegion(data.pokemon, 'name', idRegion);
+
+        limpiarContenido(document.getElementById("listaPokemon"));
+        mostrarPokemones(ordenarPok);
+
+    });
+}
