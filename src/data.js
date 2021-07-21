@@ -1,9 +1,5 @@
-
-/*El corazón de este proyecto es la manipulación de datos a través de arreglos y objetos.
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda a obtener,
-procesar y manipular datos (tus funciones)*/
 import data from './data/pokemon/pokemon.js';
-import {mostrarPokemones}from './main.js';
+import { mostrarPokemones } from './main.js';
 
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
@@ -21,7 +17,6 @@ function filtrarData(data, condition) {
     return arrayPokemon;
 
 }
-
 
 // funcion para ordenar de manera ascendente o descendente
 export const ordenarPokemon = (data, sortBy, sortOrder) => {
@@ -58,7 +53,6 @@ export const calculoEstadistico = (data) => {
     let arrayChart = [];
 
     top10Pokemon = data.sort((a, b) => (parseInt(b.stats['max-cp']) - parseInt(a.stats['max-cp']))).slice(0, 10);
-
 
     // Crear estructura para el grafico
     arrayChart = top10Pokemon.map(pokemon => {
@@ -144,5 +138,5 @@ function buscarPorRegion(region) {
     return pokemons;
 }
 export {
-    filtrarData, buscarPorRegion
+    filtrarData
 }

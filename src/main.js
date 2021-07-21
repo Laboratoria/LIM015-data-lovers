@@ -1,5 +1,6 @@
 import data from './data/pokemon/pokemon.js';
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
+
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, ordenarPokemonRegion } from './data.js';
 
 // Importando Graficos a usar
  //eslint-disable-next-line
@@ -95,68 +96,19 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
 /* manipulacion del menu funcion para seleccionar region*/
 
-// const regionPoke = document.querySelectorAll(".menu__link2"); 
+const regionPoke = document.querySelectorAll(".menu__link2");
 
-// for (let i = 0; i < regionPoke.length; i++) {
-    
-//     regionPoke[i].addEventListener("click", (e) => {
-       
-//        const captureRegion = e.target.id;
+for (let i = 0; i < regionPoke.length; i++) {
 
-//        const mostrarRegion = data.pokemon.filter(elemento => {
-        
-//        });
+    regionPoke[i].addEventListener("click", (e) => {
 
-       /*limpiarContenido(document.getElementById("listaPokemon"));
+        const captureRegion = e.target.id;
 
-       //console.log(poke);
-       mostrarPokemones(mostrarRegion);*/
+        const mostrarRegion = data.pokemon.filter(elemento => {
 
+        });
 
-//});
-//}
-
-
-
-/* manipulacion del menu funcion para el ordenado de datos*/
-// const ordenarNombres = document.querySelectorAll(".menu__link1"); 
-
-// for (let i = 0; i < ordenarNombres.length; i++) {
-    
-//     ordenarNombres[i].addEventListener("click", (e) => {
-       
-//        const ascDesc = e.target.id;
-       
-
-//       const pokeAscDesc = data.pokemon.sort((a,b) => {
-//         let aNombre = a.name;
-//         let bNombre = b.name;
-
-//           if(ascDesc == "creciente") {
-
-//             if (aNombre > bNombre) {
-//                 return 1;
-//             }else if (aNombre < bNombre) {
-//                 return -1;
-//             } else{
-//                 return 0;
-//             }
-//           } else if(ascDesc == "decreciente") { 
-//             if (aNombre < bNombre) {
-//                 return 1;
-//             } else if (aNombre > bNombre) {
-//                 return -1;
-//             } else{
-//                 return 0;
-//             }
-//           }
-//        });
-
-//        limpiarContenido(document.getElementById("listaPokemon"));
-
-//        mostrarPokemones(pokeAscDesc);
-//     });
-// }
+        /*limpiarContenido(document.getElementById("listaPokemon"));
 
 
 //funcion para pora ordednar A-Z y Z-A
@@ -409,14 +361,8 @@ function limpiarContenido(limpiar) {
 //     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
 // });
 
-/*function buscarPorRegion(region) {
+const region = document.querySelectorAll(".menu__link2");
 
-    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
-    console.table(pokemons);
-    limpiarContenidoBuscador();
-    mostrarPokemones(pokemons);
-}
-*/
 function limpiarContenidoBuscador() {
     document.getElementById("listaPokemon").innerHTML = "";
 }
@@ -435,7 +381,5 @@ document.getElementById("region_kanto").addEventListener("click", function() {
     mostrarPokemones(pokemonsFiltrados);
 });
 
-// document.getElementsByClassName("modal_cerrar")[0].addEventListener("click", function() {
-//     document.getElementsByClassName("fondo_transparente")[0].style.display = "none";
-// });
-
+    });
+}
