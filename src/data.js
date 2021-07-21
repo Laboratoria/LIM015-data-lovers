@@ -128,9 +128,9 @@ export const searchPokemon = (data, buscarPokemon) => {
 };
 
 
-function buscarPorRegion(region) {
+function buscarPorRegion(data, region) {
 
-    let pokemons = data.pokemon.filter((pokemon) => pokemon.generation.name == region);
+    let pokemons = data.filter((pokemon) => pokemon.generation.name == region);
     console.log(pokemons);
     return pokemons;
 }

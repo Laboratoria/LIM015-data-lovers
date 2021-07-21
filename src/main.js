@@ -96,21 +96,21 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
 
 /* manipulacion del menu funcion para seleccionar region*/
 
-const regionPoke = document.querySelectorAll(".menu__link2");
+// const regionPoke = document.querySelectorAll(".menu__link2");
 
-for (let i = 0; i < regionPoke.length; i++) {
+// for (let i = 0; i < regionPoke.length; i++) {
 
-    regionPoke[i].addEventListener("click", (e) => {
+//     regionPoke[i].addEventListener("click", (e) => {
 
-        const captureRegion = e.target.id;
+//         const captureRegion = e.target.id;
 
-        const mostrarRegion = data.pokemon.filter(elemento => {
+//         const mostrarRegion = data.pokemon.filter(elemento => {
 
-        });
+//         });
     
-    });
-}
-        /*limpiarContenido(document.getElementById("listaPokemon"));
+//     });
+// }
+        //limpiarContenido(document.getElementById("listaPokemon"));
 
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
@@ -369,7 +369,7 @@ function limpiarContenidoBuscador() {
 }
 
 document.getElementById("johto").addEventListener("click", function() {
-     let pokemonsFiltrados=buscarPorRegion("johto");
+     let pokemonsFiltrados=buscarPorRegion(data.pokemon, "johto");
      limpiarContenidoBuscador();
      mostrarPokemones(pokemonsFiltrados);
 
@@ -377,7 +377,7 @@ document.getElementById("johto").addEventListener("click", function() {
 });
 
 document.getElementById("kanto").addEventListener("click", function() {
-    let pokemonsFiltrados=buscarPorRegion("kanto");
+    let pokemonsFiltrados=buscarPorRegion(data.pokemon, "kanto");
     limpiarContenidoBuscador();
     mostrarPokemones(pokemonsFiltrados);
 });
