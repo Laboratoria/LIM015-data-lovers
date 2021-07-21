@@ -291,6 +291,7 @@ header {
     text-align: center;
     border-radius: 0px 0px 15px 15px;
     text-transform: capitalize;
+    
 }
 
 .num {
@@ -421,6 +422,7 @@ header {
     background-position: center;
     background-color: #fafafa6e;
     border-radius: 1em;
+  justify-content: center;
 }
 
 
@@ -518,10 +520,6 @@ header {
     cursor: pointer;
     /* cursor manito */
 }
-
-
-
-/* **********************ESTILOS PARA EL PIE DE PAGINA ****************************/
 
 footer {
     display: fixed;
