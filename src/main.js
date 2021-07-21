@@ -109,12 +109,6 @@ for (let i = 0; i < regionPoke.length; i++) {
 
         /*limpiarContenido(document.getElementById("listaPokemon"));
 
-        //console.log(poke);
-        mostrarPokemones(mostrarRegion);*/
-
-
-    });
-}
 
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
