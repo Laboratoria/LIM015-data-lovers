@@ -1,9 +1,9 @@
 import { filtrarData, searchPokemon, calculoEstadistico, ordenarPokemon, calculoEstadPeso, calcularEstadVida } from '../src/data.js';
+
 import data from '../src/data/pokemon/pokemon.js';
 
 
 describe('filtrarData', () => {
-
     // Resultados
     const tipoPokemon = data.pokemon.filter(pokemon => pokemon.type.includes('water'));
 
@@ -18,9 +18,11 @@ describe('filtrarData', () => {
     it('Filtra todos los pokemone de tipo agua', () => {
         expect(filtrarData(data.pokemon, 'water')).toEqual(tipoPokemon);
     });
+
 });
 
 describe('searchPokemon', () => {
+
 
     // Resultados
     const buscarNombre = data.pokemon.filter(pokemon => pokemon.name.includes('pikachu'));

@@ -1,3 +1,6 @@
+import data from './data/pokemon/pokemon.js';
+import { mostrarPokemones } from './main.js';
+
 // funcion para mostrar los pokemones y  filtrar por tipo
 function filtrarData(data, condition) {
     let arrayPokemon = [];
@@ -126,6 +129,7 @@ export const searchPokemon = (data, buscarPokemon) => {
     }
     return arrayBuscar;
 };
+
 
 // function filtrar por  region
 export const ordenarPokemonRegion = (data, nombre, idRegion) => {
