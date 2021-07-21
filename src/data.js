@@ -138,5 +138,5 @@ function buscarPorRegion(region) {
     return pokemons;
 }
 export {
-    filtrarData
+    filtrarData,buscarPorRegion
 }

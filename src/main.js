@@ -1,6 +1,6 @@
 import data from './data/pokemon/pokemon.js';
 
-import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, ordenarPokemonRegion } from './data.js';
+import { filtrarData, searchPokemon, ordenarPokemon, calculoEstadistico, calculoEstadPeso, calcularEstadVida, buscarPorRegion } from './data.js';
 
 // Importando Graficos a usar
  //eslint-disable-next-line
@@ -107,9 +107,10 @@ for (let i = 0; i < regionPoke.length; i++) {
         const mostrarRegion = data.pokemon.filter(elemento => {
 
         });
-
+    
+    });
+}
         /*limpiarContenido(document.getElementById("listaPokemon"));
-
 
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
@@ -367,7 +368,7 @@ function limpiarContenidoBuscador() {
     document.getElementById("listaPokemon").innerHTML = "";
 }
 
-document.getElementById("region_johto").addEventListener("click", function() {
+document.getElementById("johto").addEventListener("click", function() {
      let pokemonsFiltrados=buscarPorRegion("johto");
      limpiarContenidoBuscador();
      mostrarPokemones(pokemonsFiltrados);
@@ -375,11 +376,8 @@ document.getElementById("region_johto").addEventListener("click", function() {
 
 });
 
-document.getElementById("region_kanto").addEventListener("click", function() {
+document.getElementById("kanto").addEventListener("click", function() {
     let pokemonsFiltrados=buscarPorRegion("kanto");
     limpiarContenidoBuscador();
     mostrarPokemones(pokemonsFiltrados);
 });
-
-    });
-}
