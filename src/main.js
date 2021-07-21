@@ -92,30 +92,6 @@ for (let i = 0; i < seleccionarTipo.length; i++) {
     });
 }
 
-
-/* manipulacion del menu funcion para seleccionar region*/
-
-const regionPoke = document.querySelectorAll(".menu__link2");
-
-for (let i = 0; i < regionPoke.length; i++) {
-
-    regionPoke[i].addEventListener("click", (e) => {
-
-        const captureRegion = e.target.id;
-
-        const mostrarRegion = data.pokemon.filter(elemento => {
-
-        });
-
-        /*limpiarContenido(document.getElementById("listaPokemon"));
-
-        //console.log(poke);
-        mostrarPokemones(mostrarRegion);*/
-
-
-    });
-}
-
 //funcion para pora ordednar A-Z y Z-A
 const ordenarNombres = document.querySelectorAll(".menu__link1");
 
